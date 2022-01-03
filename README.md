@@ -27,4 +27,4 @@ Things you may want to cover:
 npm install webpack webpack-cli react react-dom redux react-redux @babel/core babel-loader @babel/preset-react @babel/preset-env
 
 
-npm install webpack webpack-cli react react-dom react-router-dom redux react-redux @babel/core @babel/preset-core @babel/preset-env babel-loader react-redux react-dom
+npm install webpack webpack-cli react react-dom react-router-dom redux react-redux @babel/core @babel/preset-env babel-loader react-redux @babel/preset-react
