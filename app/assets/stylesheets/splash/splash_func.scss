@@ -1,6 +1,7 @@
 body {
     background-color: #FFF; 
     font-family: 'Merriweather', serif;
+    border: dotted red 5px; 
 }
 
 .header {
@@ -24,11 +25,21 @@ body {
 //     // font-family: 'Courier New', Courier, monospace;
 // }
 
-.choice-awards-text { 
+.choice-awards { 
     color: white; 
     font-size: 60px; 
     width: 500px; 
     border: solid blueviolet 10px; 
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.choice-awards-book-text {
+    font-size: 40px; 
+    background: rgb(236,188,108);
+    color: rgb(50,54,45); 
+    padding: 10px; 
 }
 
 .horizontal {
@@ -38,6 +49,7 @@ body {
     display: flex; 
     justify-content: space-between;
     background-color: rgb(50,54,45); 
+    height: 300px; 
 }
 
 .discover {

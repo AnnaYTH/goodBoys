@@ -10,6 +10,7 @@ class Splash extends React.Component {
 
                 <div className='horizontal'>
                     <div className='choice-awards'> 
+                        <div className='choice-awards-book-text'>goodBoys choice awards 2021</div>
                         <div className='choice-awards-text'> Announcing the Best Relationships of 2021</div>
                     </div>
                     <div className = "interactive-buttons">
