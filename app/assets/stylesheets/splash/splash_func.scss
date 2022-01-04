@@ -1,4 +1,5 @@
-body {
+
+.body {
     background-color: #FFF; 
     font-family: 'Merriweather', serif;
     border: dotted red 5px; 
@@ -61,3 +62,29 @@ body {
 .love-lists {
     font-size: 30px; 
 }
+
+.footer {
+    background-color: #F4F1EA; 
+    height: 100px; 
+    border: solid red 5px;
+}
+
+.socials {
+    border: solid red 5px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 48px; 
+}
+
+.fa {
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px; 
+    color: rgb(50,54,45);
+    border: solid rgb(50,54,45) 2px;
+  }

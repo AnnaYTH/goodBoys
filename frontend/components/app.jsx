@@ -19,6 +19,7 @@ const App = () => (
     <header>
         <h1>Hey Buddy</h1>
         <GreetingContainer/>
+        <p>GoodBoys Logo</p>
     </header>
 
     <Switch>
