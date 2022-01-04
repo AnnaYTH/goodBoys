@@ -8,6 +8,7 @@ class SignupForm extends React.Component {
         this.state = {
             email: "",
             password: "",
+            name: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -43,12 +44,19 @@ class SignupForm extends React.Component {
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <form onSubmit = {this.handleSubmit}>
                     {this.errorMessages()}
+                    
+                    <label> Name:
+                         <input type="text" value = {this.state.name} onChange = {this.update("name")} />
+                    </label>
+
                     <label> Email:
                          <input type="text" value = {this.state.email} onChange = {this.update("email")} />
                     </label>
+
                     <label> Password:
                             <input type="password" value = {this.state.password} onChange = {this.update("password")} />
                     </label>
+                    
                     <input type="submit" value = "Create Account" />
                 </form>
                 <Link to='/login'>Sign In Instead</Link>

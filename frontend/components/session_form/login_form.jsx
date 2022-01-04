@@ -7,7 +7,8 @@ class LoginForm extends React.Component {
         super(props)
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            name: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleDemoUser = this.handleDemoUser.bind(this);
@@ -47,13 +48,24 @@ class LoginForm extends React.Component {
         );
     }
 
+    // errorMessages() {
+    //     return (
+    //         <ul>
+    //             {this.props.errors.map((error, i) => (
+    //             <li key={`error-${i}`}>
+    //                 NOOOOO 
+    //             </li>
+    //         </ul>
+    //     )
+    // }
+
     render() {
         return (
             <div>
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <h2>Sign In</h2>
                 <form onSubmit = {this.handleSubmit}>
-                    {this.errorMessages()}
+                    {/* {this.errorMessages()} */}
                     <label> Email:
                         <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
                     </label>
