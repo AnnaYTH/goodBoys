@@ -1,15 +1,51 @@
 body {
+    background-color: #FFF; 
+    font-family: 'Merriweather', serif;
+}
+
+.header {
     background-color: #F4F1EA; 
+    color: rgb(50,54,45);
+    font-size: 30px
 }
 
 .interactive-buttons {
     border: solid #000 10px; 
     padding: 50px; 
     background-color: #FFF;
-    justify-content: left;
+    justify-content: right;
     width: 100px; 
 }
 
-.choice-awards {
-    background-color: rgb(50,54,45);
+// .choice-awards {
+//     background-color: rgb(50,54,45); 
+//     height: 295px; 
+//     border: solid red 10px; 
+//     // font-family: 'Courier New', Courier, monospace;
+// }
+
+.choice-awards-text { 
+    color: white; 
+    font-size: 60px; 
+    width: 500px; 
+    border: solid blueviolet 10px; 
+}
+
+.horizontal {
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: solid yellowgreen 10px; 
+    display: flex; 
+    justify-content: space-between;
+    background-color: rgb(50,54,45); 
+}
+
+.discover {
+    background-color: rgb(244,242,233); 
+    height: 50px; 
+    font-size: 30px; 
+}
+
+.love-lists {
+    font-size: 30px; 
 }

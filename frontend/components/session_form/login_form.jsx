@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <h2>Sign In</h2>
                 <form onSubmit = {this.handleSubmit}>
-                    {/* {this.errorMessages()} */}
+                    {this.errorMessages()}
                     <label> Email:
                         <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
                     </label>
