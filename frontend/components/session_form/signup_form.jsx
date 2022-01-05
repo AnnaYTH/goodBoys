@@ -41,28 +41,59 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className='body'>
-                <h2>Create Account</h2>
-                <button onClick = {this.handleDemoUser}>Demo User</button>
-                <form onSubmit = {this.handleSubmit}>
-                    {this.errorMessages()}
-                    
-                    <label> Name:
-                         <input type="text" value = {this.state.name} onChange = {this.update("name")} />
-                    </label>
+                <div className='header'> 
+                    <img src={window.gdby_logo} alt='logo' /> 
+                </div>
 
-                    <label> Email:
-                         <input type="text" value = {this.state.email} onChange = {this.update("email")} />
-                    </label>
+                <div className='signup-body'>
+                    <form className='signup-form' onSubmit = {this.handleSubmit}>
+                        <h2>Sign up for GoodBoys</h2>
+                        <h3> Sign up to see what your friends are thinking, get referrals, and join the world’s largest community of friends.</h3>
 
-                    <label> Password:
-                            <input type="password" value = {this.state.password} onChange = {this.update("password")} />
-                    </label>
-                    
-                    <input type="submit" value = "Create Account" />
-                </form>
+                        {this.errorMessages()}
+                        
+                        <div className='name-input input'>
+                            <label> Name
+                                <div className='input-box'>
+                                    <input type="text" value = {this.state.name} onChange = {this.update("name")} />
+                                </div>
+                            </label>
+                        </div>
 
-                <div> Already a Member? 
-                    <Link to='/login'>Sign In Instead</Link>
+                        <div className='email-input input'>
+                            <label> Email
+                                <div className='input-box'>
+                                    <input type="text" value = {this.state.email} onChange = {this.update("email")} />
+                                </div>
+                            </label>
+                        </div>
+
+                        <div className='password-input input'>
+                            <label> Password
+                                <div className='input-box'>
+                                    <input type="password" value = {this.state.password} onChange = {this.update("password")} />
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <input className='signup-buttons' type="submit" value = "Sign up" />
+                        </div>
+                        
+                        <div>
+                            <button  className='signup-buttons' onClick = {this.handleDemoUser}>Demo User</button>
+                        </div>
+
+                        <div> 
+                            <p className='already-text'>
+                                Already a Member? 
+                            </p>       
+                            <Link to='/login'>Sign In</Link>
+                        </div>
+
+                        <p className='terms-service-sign'> By clicking 'Sign up', I agree to the goodBoys Terms of Service and confirm that I am at least 13 years of age. Read our Privacy Policy.</p>
+                    </form>
+
                 </div>
             </div>
         )
