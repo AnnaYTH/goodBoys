@@ -16,12 +16,12 @@ import Splash from './splash';
 
 const App = () => (
   <div>
-    <header>
+    {/* <header>
         <h1>Hey Buddy</h1>
         <GreetingContainer/>
         <p>GoodBoys Logo</p>
-    </header>
-
+    </header> */}
+    <p> </p>
     <Switch>
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/signup" component={SignupFormContainer} />

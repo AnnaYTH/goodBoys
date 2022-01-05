@@ -40,7 +40,7 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='body'>
                 <h2>Create Account</h2>
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <form onSubmit = {this.handleSubmit}>
@@ -60,7 +60,10 @@ class SignupForm extends React.Component {
                     
                     <input type="submit" value = "Create Account" />
                 </form>
-                <Link to='/login'>Sign In Instead</Link>
+
+                <div> Already a Member? 
+                    <Link to='/login'>Sign In Instead</Link>
+                </div>
             </div>
         )
     }

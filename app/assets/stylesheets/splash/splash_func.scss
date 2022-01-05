@@ -1,112 +1,199 @@
 
 .body {
-    background-color: #FFF; 
-    font-family: 'Merriweather', serif;
-    border: dotted red 5px; 
+    background-color: #F4F1EA; 
+    // font-family: 'Spline Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 .header {
     background-color: #F4F1EA; 
-    color: rgb(50,54,45);
-    font-size: 30px
+    height: 60px; 
 }
 
-.interactive-buttons {
-    border: solid #000 10px; 
-    padding: 50px; 
-    background-color: #FFF;
-    justify-content: right;
-    width: 100px; 
+.header img {
+    max-width:100%;
+    height:auto;
 }
 
-// .choice-awards {
-//     background-color: rgb(50,54,45); 
-//     height: 295px; 
-//     border: solid red 10px; 
-//     // font-family: 'Courier New', Courier, monospace;
-// }
-
-.choice-awards { 
-    color: white; 
-    font-size: 60px; 
-    width: 500px; 
-    border: solid blueviolet 10px; 
+.column {
     display: flex; 
-    justify-content: space-between;
-    padding: 20px; 
+    flex-direction: row;
+    padding-top: 50px;
 }
 
-.choice-awards-book-text {
-    font-size: 40px; 
-    background: rgb(236,188,108);
-    color: rgb(50,54,45); 
-    padding: 10px; 
+.left-col {
+    width: 1000px; 
 }
+
+.right-col {
+    float: inline-end; 
+    height: 300px; 
+}
+
+.right-right-col {
+    padding-top: 60px; 
+    color: rgb(50,54,45); 
+}
+
 
 .horizontal {
     flex-wrap: wrap;
     flex-direction: row;
-    border: solid yellowgreen 10px; 
+    // border: solid yellowgreen 10px; 
     display: flex; 
     justify-content: space-between;
     background-color: rgb(50,54,45); 
     height: 300px; 
 }
 
+.choice-awards-book-text {
+    font-size: 40px; 
+    background: rgb(236,188,108);
+    color: rgb(50,54,45); 
+    padding: 30px; 
+    display: flex; 
+    justify-content: space-around; 
+    height: 70%; 
+    border-radius: 10%;
+}
+
+.choice-awards { 
+    color: white; 
+    font-size: 60px; 
+    width: 500px; 
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+
+.choice-awards-text {
+    padding-left: 50px;
+    font-weight: 200; 
+    font-size: 55px; 
+}
+
+.interactive-buttons {
+    padding: 50px; 
+    background-color: #FFF;
+    // justify-content: right;
+    width: 250px; 
+    height: 180px;  
+    border: 1px solid grey; 
+    border-radius: 5px;
+    height: 120%; 
+    // float: right; 
+}
+
+.terms-service {
+    color: grey; 
+    font-size: 12px; 
+    width: 200px; 
+}
+
+.interactive-buttons p {
+    padding: 10px; 
+}
+
+.interactive-buttons button {
+    background-color: #382110;
+    color: #FFF; 
+    font-size: 14px; 
+    padding: 14px; 
+    border-radius: 5px; 
+    width: 250px; 
+}
+
 .mid-horizontal {
     flex-wrap: wrap;
     flex-direction: row;
-    border: solid orange 10px; 
     display: flex; 
-    justify-content: space-between;
-    font-size: 20px; 
+    justify-content: space-around;
+    font-size: 14px; 
+    height: 150px; 
+    padding: 3px;
+    line-height: 18px; 
 }
 
 .next-friend {
     width: 300px; 
+    padding: 5px;
+}
+
+.next-friend-head {
+    font-size: 18px; 
+    padding-bottom: 20px; 
+    padding-top: 20px; 
 }
 
 .friends-friending {
     width: 300px; 
+    padding: 5px;
 }
 
-.bottom-horizontal {
-    flex-wrap: wrap;
-    flex-direction: row;
-    border: solid yellow 10px; 
-    display: flex; 
-    justify-content: space-between;
+.friends-friending-head {
+    font-size: 18px; 
+    padding-bottom: 20px; 
+    padding-top: 20px; 
 }
 
-.discover {
-    background-color: rgb(244,242,233); 
-    width: 500px;  
-    font-size: 25px; 
-}
+// .bottom-horizontal {
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     border: solid yellow 10px; 
+//     display: flex; 
+//     justify-content: space-between;
+// }
 
-.love-lists {
-    font-size: 25px; 
-    width: 300px; 
-}
+// .discover {
+//     background-color: rgb(244,242,233); 
+//     width: 500px;  
+//     font-size: 25px; 
+// }
 
-.quote {
-    border: dotted blue 5px;  
+// .love-lists {
+//     font-size: 25px; 
+//     width: 300px; 
+// }
+
+// .quote {
+//     border: dotted blue 5px;  
+// }
+
+.searchbar {
+    height: 50px; 
+    padding: 20px; 
 }
 
 .footer {
-    background-color: #F4F1EA; 
-    border: solid red 5px;
-    font-size: 25px; 
+    background-color: #ceccc9; 
+    font-size: 20px; 
+    display: flex; 
+    flex-direction: row;
+    padding: 10px; 
+    padding-top: 20px; 
+}
+
+.footer-company {
+    padding-left: 10px; 
+    width: 300px; 
+}
+
+.footer-work {
+    width: 300px;
+}
+
+.footer-connect {
+    width: 300px
 }
 
 .socials {
-    border: solid red 5px;
     display: flex; 
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
     border-radius: 20px;
-    font-size: 48px; 
+    font-size: 36px; 
 }
 
 .fa {
