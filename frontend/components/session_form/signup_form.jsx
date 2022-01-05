@@ -52,7 +52,7 @@ class SignupForm extends React.Component {
 
                         {this.errorMessages()}
                         
-                        <div className='name-input input'>
+                        <div className='input'>
                             <label> Name
                                 <div className='input-box'>
                                     <input type="text" value = {this.state.name} onChange = {this.update("name")} />
@@ -60,7 +60,7 @@ class SignupForm extends React.Component {
                             </label>
                         </div>
 
-                        <div className='email-input input'>
+                        <div className='input'>
                             <label> Email
                                 <div className='input-box'>
                                     <input type="text" value = {this.state.email} onChange = {this.update("email")} />
@@ -68,7 +68,7 @@ class SignupForm extends React.Component {
                             </label>
                         </div>
 
-                        <div className='password-input input'>
+                        <div className='input'>
                             <label> Password
                                 <div className='input-box'>
                                     <input type="password" value = {this.state.password} onChange = {this.update("password")} />
