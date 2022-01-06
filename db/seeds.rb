@@ -7,5 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: 'Anna', email: 'demo@demo.com', password: 'password');
-
 User.create(name: 'Buddy', email: 'buddy@gmail.com', password: 'hunter12')
+
+
+# definitions and pronounciations from Oxford Languages
+Relationship.create(
+    relationship_name: 'Mother',
+    pronounciation: '/ˈməT͟Hər/', 
+    relationship_definition: 'a woman in relation to her child or children.'
+)
+Relationship.create(
+    relationship_name: 'Father',
+    pronounciation: '/ˈfäT͟Hər/', 
+    relationship_definition: 'a man in relation to his child or children.'
+)
