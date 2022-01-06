@@ -2,6 +2,7 @@
 
 .signup-body {
     justify-content: center;
+    display: flex; 
     background-color: #F4F1EA; 
     font-family: 'Source Sans 3', sans-serif;
     padding: 10px; 
@@ -19,35 +20,34 @@
 }
 
 .signup-form {
-    padding: 50px; 
-    background-color: #FFF;
-    height: 180px;  
+    background-color: #FFF; 
     border: 1px solid grey; 
     border-radius: 5px;
     height: 120%; 
     width: 500px; 
-    text-align: center; 
-    margin: auto; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: red 2px solid; 
 }
 
 .input {
     padding: 10px; 
-    padding-left: 100px; 
-    padding-right: 100px; 
     font-size: 12px; 
-    text-align: left;
+    // text-align: left;
 }
 
-.input-box {
-    height: 50px; 
-    text-align: center;
-}
+// .input-box {
+//     height: 50px; 
+//     text-align: center;
+// }
 
 .input input {
     border: grey 1px solid; 
-    width: 100%; 
+    width: 230px; 
     padding: 10px; 
-    margin: 10px; 
     border-radius: 4px;
 }
 
