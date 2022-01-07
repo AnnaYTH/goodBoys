@@ -1,3 +1,4 @@
+
 import * as APIUtil from '../util/sessions_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
@@ -40,6 +41,7 @@ export const signup = user => dispatch => {
 //so we tried .responseText
 
 export const login = user => dispatch => {
+  debugger
   return APIUtil.login(user)
   .then(user => (
     dispatch(receiveCurrentUser(user))
