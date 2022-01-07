@@ -80,9 +80,9 @@ class SignupForm extends React.Component {
                             <input className='signup-buttons' type="submit" value = "Sign up" />
                         </div>
                         
-                        <div>
+                        {/* <div>
                             <button  className='signup-buttons' onClick = {this.handleDemoUser}>Demo User</button>
-                        </div>
+                        </div> */}
 
                         <div> 
                             <p className='already-text'>

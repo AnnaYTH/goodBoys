@@ -22,10 +22,10 @@ class LoginForm extends React.Component {
 
     handleDemoUser(e) {
         e.preventDefault();
+        debugger
         const user = {
             email: "buddy@gmail.com",
             password: "hunter12",
-            name: 'Buddy'
         };
         this.props.login(user);
     }
