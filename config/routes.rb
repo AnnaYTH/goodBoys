@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   end
 
   resource :relationships, only: [:show, :index] do 
-    resource :reviews
   end
 
   root "static_pages#root"
