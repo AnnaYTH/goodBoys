@@ -1,4 +1,4 @@
-class AddColumn < ActiveRecord::Migration[6.1]
+class CreateReview < ActiveRecord::Migration[6.1]
   def change
     create_table :reviews do |t|
       t.integer :reviewer_id, null:false
@@ -9,8 +9,7 @@ class AddColumn < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
-    
+
     add_index :reviews, [:reviewer_id, :name]
   end
 end
-
