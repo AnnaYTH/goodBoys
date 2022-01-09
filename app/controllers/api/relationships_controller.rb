@@ -2,8 +2,8 @@ class Api::RelationshipsController < ApplicationController
 
     def show 
         @relationship = Relationship.find_by(id: params[:id])
-        # render :show
-        render "api/relationships/show"
+         render :show
+        # render "api/relationships/show"
     end
 
     def index 

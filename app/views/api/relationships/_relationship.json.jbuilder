@@ -1,1 +1,1 @@
-json.extract! relationship, :id, :relationship_name
+json.extract! relationship, :id, :relationship_name, :pronounciation, :relationship_definition
