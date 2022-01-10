@@ -15,21 +15,14 @@ class Relationship extends React.Component {
 
     render() {
         return (
-        <div>
+        <div className='body'>
             <p> Hey Buddy </p>
-            {/* <ul>
-                {this.props.relationships.map((relation) => 
-                <li>
-                    {relation.pronounciation}
-                </li>
-                )}
-            </ul> */}
             <ul>
                 {Object.values(this.props.relationships).map((ship) =>
                     <li>
                         {ship.id}
-                        {ship.relationship_name}
-                        {ship.pronounciation}
+                        <h1> {ship.relationship_name} </h1>
+                        <h2> {ship.pronounciation} </h2>
                         {ship.relationship_definition}
                     </li>
                 )}
