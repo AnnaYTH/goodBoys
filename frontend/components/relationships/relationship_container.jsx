@@ -3,15 +3,16 @@ import Relationship from './relationship';
 import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 
 const mSTP = (state, ownProps) => {
+    // debugger  
     return({
-        relationship: state.entities.songs[ownProps.match.params.id], 
-        relationships: Object.values(state.entities.relationships)
+        relationship: state.entities.relationships[ownProps.match.params.id], 
+        relationships: (state.entities.relationships),
     })
 }
 
 const mDTP = dispatch => ({
-    getRelationships: () => dispatch (getRelationships()),
-    getRelationship: () => dispatch(getRelationship(relationshipId))
+    getRelationships: () => dispatch(getRelationships()),
+    getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId))
 })
 
 export default connect(mSTP, mDTP)(Relationship); 

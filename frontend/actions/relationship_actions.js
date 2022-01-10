@@ -17,12 +17,15 @@ const receiveRelationships = (relationships) => {
     }
 }
 
+
+
 export const getRelationship = (id) => dispatch => {
     return RelationshipApiUtil.getRelationship(id)
         .then(relationship => dispatch(receiveRelationship(relationship)))
 }
 
 export const getRelationships = () => dispatch => {
-    return RelationshipApiUtil.getRelationships(relationships)
+    debugger 
+    return RelationshipApiUtil.getRelationships()
         .then(relationships => dispatch(receiveRelationships(relationships)))
 }

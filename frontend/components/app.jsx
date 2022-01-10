@@ -11,7 +11,7 @@ import GreetingContainer from "./greeting/greeting_container";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import Splash from './splash';
-
+import RelationshipContainer from './relationships/relationship_container'; 
 
 
 const App = () => (
@@ -25,6 +25,8 @@ const App = () => (
     <Switch>
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/signup" component={SignupFormContainer} />
+      <Route exact path="/relationships" component={RelationshipContainer} />
+      <Route path="/relationships/:id" component={RelationshipContainer} />
       <Route exact path= "/" component={Splash}/>
     </Switch>
     
