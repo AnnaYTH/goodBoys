@@ -25,7 +25,7 @@ export const getRelationship = (id) => dispatch => {
 }
 
 export const getRelationships = () => dispatch => {
-    debugger 
+    // debugger 
     return RelationshipApiUtil.getRelationships()
         .then(relationships => dispatch(receiveRelationships(relationships)))
 }
