@@ -1,0 +1,12 @@
+.header {
+    background-color: #F4F1EA; 
+    height: 60px; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header img {
+    max-width:100%;
+    height:auto;
+}

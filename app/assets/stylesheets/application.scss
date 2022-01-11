@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ // splash has the css for header and footer - refactor that
+
 
 
 @import"./reset.scss"; 
 @import"./splash/splash_func.scss"; 
+@import"./header.scss"; 
+@import"./footer.scss"; 
 @import"./login.scss"; 
-// @import"./signup.scss"; 
 @import"./relationship.scss"; 

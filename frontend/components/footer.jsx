@@ -1,11 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div className='footer'> 
-            <div className='footer-company'> COMPANY </div>
-            <div className='footer-work'> WORK WITH ME </div>
+            <div className='footer-company'> 
+                <h1>COMPANY</h1>
+                <p>You don't really need company</p>
+                <p>You have me</p>
+                <p>I am all you will ever need</p>
+            </div>
+
+            <div className='footer-work'>
+                <h1>WORK WITH ME </h1>
+                <p>This is not a joke</p>
+                <p>Someone please</p>
+                <p>Hire me</p>
+            </div>
+
             <div className='footer-connect'> CONNECT
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <div className='socials'>
@@ -15,6 +26,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
+            
         </div>
     )
 }

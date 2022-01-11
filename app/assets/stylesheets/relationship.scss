@@ -1,0 +1,91 @@
+.main-body {
+    font-family: 'Lato', sans-serif;
+    // display: flex; 
+    flex-direction: column;
+    display: inline-flex; 
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.title_head {
+    font-family: 'Merriweather', serif;
+    font-size: 24px; 
+    font-weight: bolder;
+    margin: 20px; 
+    padding-bottom: 10px; 
+}
+
+.ship_list h1 {
+    font-size: 19px;
+    margin-bottom: 8px;
+    font-weight: bolder; 
+}
+
+.ship_list h2 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #00635D; 
+}
+
+.ship_list h2 {
+    font-size: 13px;
+}
+
+
+.ship_list_item {
+    height: 400px; 
+    width: 700px; 
+    margin-left: 150px; 
+}
+
+.ship_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    // border: 1px black solid; 
+    margin: 10px; 
+    margin-bottom: 30px;
+}
+
+.column_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    margin-left: 10px; 
+    margin-right: 10px;
+    width: 550px; 
+}
+
+.image_place {
+    // border: 1px blue solid; 
+    height: 100px; 
+    width: 75px; 
+    margin-bottom: 10px; 
+}
+
+
+.column_3 {
+    display: flex;
+    // justify-content: right;
+    // align-self: flex-end;
+    // width: 50px; 
+    margin: auto; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    // border: red 2px solid; 
+}
+
+.column_3 button {
+    background-color: #3d9363;
+    font-size: 13px; 
+    color: white; 
+    border-radius: 10px;
+    padding: 3px; 
+    margin: 3px; 
+    font-weight: bolder; 
+    border: none; 
+}
+
+.column_3 button:hover {
+    background-color: #409D69;
+}
