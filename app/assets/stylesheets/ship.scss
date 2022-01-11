@@ -1,0 +1,19 @@
+.ship_horizontal {
+    display: flex;
+    flex-direction: horizontal;
+}
+.ship_col1 {
+    margin-left: 50px; 
+}
+
+.ship_profile_image {
+    border: 1px blue solid; 
+    height: 300px; 
+    width: 200px; 
+    box-shadow: 5px 5px 4px #888888;
+}
+
+.ship_col2 {
+
+    border: 2px gold solid; 
+}

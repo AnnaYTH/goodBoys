@@ -30,7 +30,9 @@ class Relationship extends React.Component {
                                 <p className='image_place'> IMAGE GOES HERE</p>
 
                                 <div className='column_2'>
-                                    <h1> {ship.relationship_name} </h1>
+                                    <Link to = {`/relationships/${ship.id}`}>
+                                        <h1> {ship.relationship_name} </h1>
+                                    </Link>
                                     <h2> pronounced {ship.pronounciation} </h2>
                                     <h3>{ship.relationship_definition} </h3>
                                 </div>
