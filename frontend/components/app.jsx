@@ -25,19 +25,11 @@ const App = () => (
     </header> */}
     <p> </p>
     <Switch>
-      {/* <AuthRoute path="/login" component={LoginFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/relationships" component={RelationshipContainer} />
       <ProtectedRoute exact path="/relationships/:id" component={RelationshipShipContainer} />
-      <AuthRoute exact path= "/" component={Splash}/> */}
-
-
-      
-      <Route path="/login" component={LoginFormContainer} />
-      <Route path="/signup" component={SignupFormContainer} />
-      <Route exact path="/relationships" component={RelationshipContainer} />
-      <Route exact path="/relationships/:id" component={RelationshipShipContainer} />
-      <Route exact path= "/" component={Splash}/>
+      <AuthRoute exact path= "/" component={Splash}/>
     </Switch>
     
   </div>
@@ -46,3 +38,9 @@ const App = () => (
 export default App;
 
   {/* <Route exact path="/" component={SearchContainer} /> */}
+
+  {/* <Route path="/login" component={LoginFormContainer} />
+      <Route path="/signup" component={SignupFormContainer} />
+      <Route exact path="/relationships" component={RelationshipContainer} />
+      <Route exact path="/relationships/:id" component={RelationshipShipContainer} />
+      <Route exact path= "/" component={Splash}/> */}
