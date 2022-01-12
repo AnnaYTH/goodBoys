@@ -202,13 +202,13 @@ Relationship.create(
     relationship_definition: 'a person who occupies land or property rented from a landlord.'
 )
 
-# Review.create(
-#     reviewer_id: 1, 
-#     relationship_type: 1, 
-#     name: 'Harry Potter', 
-#     rating: 5, 
-#     review: 'He\'s a wizard'
-# )
+Review.create(
+    reviewer_id: 1, 
+    relationship_type: 1, 
+    name: 'Harry Potter', 
+    rating: 5, 
+    review: 'He\'s a wizard'
+)
 
 
 
