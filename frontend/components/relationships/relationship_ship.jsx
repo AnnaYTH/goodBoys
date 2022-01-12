@@ -30,6 +30,7 @@ class RelationshipShip extends React.Component {
                 <Header/>
 
                 <p>Hey Buddy This is Ship # {this.props.match.params.id}</p>
+                
                 <div className='ship_horizontal'>
                     <div className='ship_col1'>
                         <p className='ship_profile_image'> This is an image </p>
