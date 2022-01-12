@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
             render :show
             # render :create 
         else 
-            render json: ['Please make sure you have filled out all the fields'], status 206
+            render json: ['Please make sure you have filled out all the fields'], status: 422
         end
     end
 
@@ -27,7 +27,7 @@ class Api::ReviewsController < ApplicationController
             render :create 
             # render :show
         else 
-            render json: ['Failed to update'], status 206
+            render json: ['Failed to update'], status: 422
         end
     end
 
