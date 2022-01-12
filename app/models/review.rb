@@ -1,6 +1,6 @@
 class Review < ApplicationRecord 
     validates :reviewer_id, :relationship_type, :name, :rating, :review, presence:true 
-    validates :rating, numericality: { in: 1..5}
+    validates :rating, numericality: { in: 1..5 }
 
     belongs_to :user, 
         class_name: :User, 
