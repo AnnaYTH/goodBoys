@@ -31,7 +31,7 @@ class Relationship extends React.Component {
 
                                 <div className='column_2'>
                                     <h1>
-                                        <Link className='h1' to = {`/relationships/${ship.id}`}>
+                                        <Link to = {`/relationships/${ship.id}`}>
                                         {ship.relationship_name}
                                         </Link>
                                     </h1>
@@ -45,10 +45,11 @@ class Relationship extends React.Component {
                             </li>
                         )}
                     </ul>
+
                 </div>
 
-
                 <Footer />
+
             
 
             </div>

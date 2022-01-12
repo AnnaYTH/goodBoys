@@ -14,6 +14,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
         if @review.save!
             render :show
+            # render :create 
         else 
             render json: ['Please make sure you have filled out all the fields'], status 206
         end
@@ -23,7 +24,8 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find_by(id: params[:id])
         # gotta fix this so only the author can edit their own reviews
         if @review.update(review_params) 
-            render :show
+            render :create 
+            # render :show
         else 
             render json: ['Failed to update'], status 206
         end

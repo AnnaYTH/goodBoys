@@ -1,5 +1,9 @@
 //components/relationships/relationship_ship.jsx
 
+.one-ship-body {
+    font-family: 'Libre Baskerville', serif
+}
+
 .ship_horizontal {
     display: flex;
     flex-direction: horizontal;
@@ -15,7 +19,53 @@
     box-shadow: 5px 5px 4px #888888;
 }
 
+.ship_profile_image img {
+    max-width:100%;
+    height:auto;
+}
+
 .ship_col2 {
     border: 2px gold solid; 
     margin-left: 30px; 
+}
+
+.ship_col2 h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.ship_col2 h2 {
+    font-size: 20px; 
+    margin-bottom: 15px; 
+}
+
+.ship_col2 h3 {
+    font-size: 15px; 
+    margin-bottom: 15px; 
+}
+
+.ship_col2 h4 {
+    font-size: 16px; 
+   
+}
+
+.ship_subtitle {
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+
+.ship_horizontal button {
+    background-color: #3d9363;
+    font-size: 13px; 
+    color: white; 
+    border-radius: 30px;
+    padding: 15px; 
+    margin: 15px; 
+    font-weight: bolder; 
+    border: none; 
+}
+
+.ship_horizontal button:hover {
+    background-color: #409D69;
 }
