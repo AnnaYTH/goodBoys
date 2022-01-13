@@ -41,7 +41,7 @@ export const signup = user => dispatch => {
 //so we tried .responseText
 
 export const login = user => dispatch => {
-  debugger
+  // debugger
   return APIUtil.login(user)
   .then(user => (
     dispatch(receiveCurrentUser(user))
