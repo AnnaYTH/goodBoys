@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
             email: "buddy@gmail.com",
             password: "hunter12",
         };
-        debugger 
+        // debugger 
         this.props.login(user);
     }
 
