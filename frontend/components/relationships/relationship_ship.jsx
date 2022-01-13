@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../footer'; 
 import Header from '../header'; 
+import RelationshipReview from '../reviews/relationship_reviews';
 
 
 class RelationshipShip extends React.Component {
@@ -44,6 +45,7 @@ class RelationshipShip extends React.Component {
                         <h4>
                             <div className='ship_subtitle'> More Details </div>
                             <div className='ship_subtitle'>Ratings and Reviews</div>
+                            <RelationshipReview />
                             <div className='ship_subtitle'>Friends and Following</div>
                         </h4>
                     </div>

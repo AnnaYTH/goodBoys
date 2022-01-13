@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserReview from '../reviews/user_reviews';
 
 // nbsp non breaking space 
 
@@ -23,6 +24,7 @@ const UserProfile = ({ currentUser, logout }) => {
     return (
         <div>
             This is the current User's profile page content
+            <UserReview />
         </div>
     )
 };
