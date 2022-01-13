@@ -28,6 +28,7 @@ export const getReviews = () => (
         url: `/api/review`
     })
 )
+
 export const getReview = (id) => (
     $.ajax({
         method: 'GET',
