@@ -12,7 +12,6 @@ class RelationshipShip extends React.Component {
     }
 
     componentDidMount() {
-        // debugger;
         this.props.getRelationships(); 
         // this.props.getRelationship(this.props.match.params.id); 
         // this is unnecessary because I just need to populate once with all relationships
