@@ -15,7 +15,8 @@ const Header = () => {
             <Link to ="/relationships"> All Relationships </Link>
 
             <p>Search Bar</p>
-            <p>Profile Drop Down</p>
+
+            <Link to='/users/:id'> Profile </Link>
         </div>
     )
 }

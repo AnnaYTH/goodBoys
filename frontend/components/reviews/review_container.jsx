@@ -4,6 +4,7 @@ import UserReview from './user_reviews';
 const mSTP = (state, ownProps) => {
     return ({
         reviews: state.entities.reviews,
+        currentUser: state.entities.users[state.session.id],
     })
 }
 

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const mSTP = (state, ownProps) => {
     return ({
         reviews: state.entities.reviews,
-        currentUser: users[session.id]
+        currentUser: state.entities.users[state.session.id],
     })
 }
 

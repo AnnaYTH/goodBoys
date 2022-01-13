@@ -14,7 +14,6 @@ import Splash from './splash';
 import RelationshipContainer from './relationships/relationship_container'; 
 import RelationshipShipContainer from './relationships/relationship_ship'; 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import UserProfile from './users/user_profile';
 // comment in auth routes, but while testing it's a pain
 
 const App = () => (
@@ -26,20 +25,20 @@ const App = () => (
     </header> */}
     <p> </p>
     <Switch>
-      {/* <AuthRoute path="/login" component={LoginFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/relationships" component={RelationshipContainer} />
       <ProtectedRoute exact path="/relationships/:id" component={RelationshipShipContainer} />
-      <ProtectedRoute exact path="/users/:id" component={UserProfile} />
-      <AuthRoute exact path= "/" component={Splash}/> */}
+      <ProtectedRoute exact path="/users/:id" component={GreetingContainer} />
+      <AuthRoute exact path= "/" component={Splash}/>
 
 
-      <Route path="/login" component={LoginFormContainer} />
+      {/* <Route path="/login" component={LoginFormContainer} />
       <Route path="/signup" component={SignupFormContainer} />
       <Route exact path="/relationships" component={RelationshipContainer} />
       <Route exact path="/relationships/:id" component={RelationshipShipContainer} />
       <Route exact path="/users/:id" component={UserProfile} />
-      <Route exact path= "/" component={Splash}/>
+      <Route exact path= "/" component={Splash}/> */}
     </Switch>
     
   </div>
