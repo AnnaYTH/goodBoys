@@ -100,7 +100,7 @@ class LoginForm extends React.Component {
                             <p className='already-text'>
                                 Not a member? 
                             </p>       
-                            <Link to ="signup">Sign up</Link>
+                            <Link to ="/signup">Sign up</Link>
                         </div>
                     </form>
                 </div>

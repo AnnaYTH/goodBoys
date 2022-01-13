@@ -3,6 +3,23 @@ import { Link } from 'react-router-dom';
 import Footer from '../footer'; 
 import Header from '../header'; 
 import RelationshipReview from '../reviews/relationship_reviews';
+import { getRelationship, getRelationships } from '../../actions/relationship_actions';
+import { connect } from 'react-redux'; 
+
+
+const mSTP = (state, ownProps) => {
+    return({
+        relationship: state.entities.relationships[ownProps.match.params.id], 
+        relationships: (state.entities.relationships),
+    })
+}
+
+const mDTP = dispatch => ({
+    getRelationships: () => dispatch(getRelationships()),
+    getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId))
+})
+
+
 
 
 class RelationshipShip extends React.Component {
@@ -59,4 +76,5 @@ class RelationshipShip extends React.Component {
     }
 }
 
-export default RelationshipShip; 
+// export default RelationshipShip; 
+export default connect(mSTP, mDTP)(RelationshipShip); 
