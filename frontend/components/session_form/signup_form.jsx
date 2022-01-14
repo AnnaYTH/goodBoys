@@ -83,7 +83,7 @@ class SignupForm extends React.Component {
                             <button  className='signup-buttons' onClick = {this.handleDemoUser}>Demo User</button>
                         </div> */}
 
-                        <div> 
+                        <div className='redirect'> 
                             <p className='already-text'>
                                 Already a Member? 
                             </p>       
@@ -94,6 +94,13 @@ class SignupForm extends React.Component {
                     </form>
 
                 </div>
+
+
+                    <div className='bookshelf-footer'> 
+                        <img src={window.bookshelf} alt='bookshelf' /> 
+                    </div>
+
+                    
             </div>
         )
     }

@@ -5,24 +5,26 @@
     background-color: #F4F1EA; 
     font-family: 'Source Sans 3', sans-serif;
     padding: 10px; 
+    // line-height: 110%; 
+    height: 600px; 
 }
 
 .signup-body h2 {
     font-size: 30px;
-    margin: 20px; 
+    margin: 30px; 
     font-weight: bold; 
 }
 
 .signup-body h3 {
     font-size: 17px; 
-    margin: 5px; 
+    margin: 20px; 
 }
 
 .signup-form {
     background-color: #FFF; 
     border: 1px solid grey; 
     border-radius: 5px;
-    height: 120%; 
+    // height: 120%; 
     width: 500px; 
 
     display: flex;
@@ -58,11 +60,28 @@
     width: 250px; 
     border: 1px solid #D6D0C4; 
     margin: 10px;  
+    border: green solid 2px; 
 }
 
 .already-text {
     padding: 10px; 
     margin: 5px; 
+    margin-bottom: 20px; 
+}
+
+.redirect a {
+    border: red solid 1px; 
+    background-color: #F4F1EA;
+    color: #382110; 
+    font-size: 14px; 
+    padding: 14px; 
+    border-radius: 5px; 
+    width: 250px; 
+    border: 1px solid #D6D0C4; 
+    // margin: 10px;  
+    text-decoration: none;
+    margin-top: 20px; 
+    margin-left: 40px; 
 }
 
 .terms-service-sign {
@@ -70,4 +89,19 @@
     font-size: 12px; 
     padding: 10px; 
     padding-top: 30px; 
+    margin: 10px; 
 }
+
+.bookshelf-footer {
+    max-width: 100%;
+    height: 70px; 
+    border: red 2px solid; 
+    background-image: url("bookshelf.png")
+}
+
+// .bookshelf-footer {
+//     // max-width:100%;
+//     // border: red 2px solid; 
+//     background-repeat: repeat-x;
+//     background: url("bookshelf.png")
+// }

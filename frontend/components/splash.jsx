@@ -9,9 +9,12 @@ class Splash extends React.Component {
             <div className='body'>
                 <div className='column'>
                     <div className='left-col'> 
-                        <div className='header'> 
+                        <div className='header-logo'> 
                             <img src={window.gdby_logo} alt='logo' /> 
                         </div>
+
+                        {/* <div className='horizontal-background'> </div> */}
+
                         <div className='horizontal'>
                             <div className='choice-awards'> 
                                 <div className='choice-awards-book-text'>goodBoys CHOICE AWARDS 2021</div>

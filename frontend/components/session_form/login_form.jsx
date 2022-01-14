@@ -96,14 +96,21 @@ class LoginForm extends React.Component {
                             <button  className='signup-buttons' onClick = {this.handleDemoUser}>Demo User</button>
                         </div>
 
-                        <div> 
+                        <div className='redirect'> 
                             <p className='already-text'>
                                 Not a member? 
                             </p>       
                             <Link to ="/signup">Sign up</Link>
                         </div>
+
+                        <p className='terms-service-sign'> © 2022 GoodBoys Inc </p>
                     </form>
+                    
                 </div>
+
+                    <div className='bookshelf-footer'> 
+                        {/* <img src={window.bookshelf} alt='bookshelf' />  */}
+                    </div>
             </div>
         )
     }
