@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import Footer from '../footer'; 
+import Header from '../header'; 
 
 const mSTP = (state, ownProps) => {
     return ({

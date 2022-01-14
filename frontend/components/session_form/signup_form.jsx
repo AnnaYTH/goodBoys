@@ -97,10 +97,10 @@ class SignupForm extends React.Component {
 
 
                     <div className='bookshelf-footer'> 
-                        <img src={window.bookshelf} alt='bookshelf' /> 
+                        {/* <img src={window.bookshelf} alt='bookshelf' />  */}
                     </div>
 
-                    
+
             </div>
         )
     }
