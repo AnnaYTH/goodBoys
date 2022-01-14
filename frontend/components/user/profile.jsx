@@ -29,8 +29,19 @@ class Profile extends React.Component {
         this.props.logout(); 
     }
  
+    render() {
+        return (
+            <div>
+                <Header/>
+                <div>Hey Buddy</div>
+                <div> {currentUser} </div>
+
+                <Footer/>
+            </div>
+        )
+    }
 };
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mSTP, mapDispatchToProps)(Profile);

@@ -17,6 +17,8 @@ const Header = () => {
             <p>Search Bar</p>
 
             <Link to='/users/:id'> Profile </Link>
+
+            <Link to='/human/:id'> Human </Link>
         </div>
     )
 }
