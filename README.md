@@ -5,6 +5,7 @@
 2. [Functionality](#func)
 3. [Technology](#tech)
 4. [Code Snippits](#snip)
+5. [Styles](#style)
 
 
 # Background: <a name='background'></a>
@@ -23,3 +24,10 @@ Now I wanted to apply this to past relationships people have formed. It may be f
 * Ruby
 
 # Code Snippits <a name='snip'></a>
+```
+
+```
+
+# Style <a name='style'></a>
+This is my footer. Please read and abide. 
+![altText](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/footer.png)
