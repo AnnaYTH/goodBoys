@@ -6,8 +6,6 @@ const Header = () => {
         <div className='header'> 
             <img src={window.gdby_logo} alt='logo' /> 
 
-            <p>This is the header</p>
-
             <Link to ="/relationships"> Home </Link>
 
             <p>My Relationships</p>
@@ -18,7 +16,6 @@ const Header = () => {
 
             <Link to='/users/:id'> Profile </Link>
 
-            <Link to='/human/:id'> Human </Link>
         </div>
     )
 }

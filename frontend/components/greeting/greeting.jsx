@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../footer'; 
-import Header from '../header'; 
+import Header from '../header';
+import UserReview from '../reviews/user_reviews'; 
 
 // nbsp non breaking space 
 
@@ -15,17 +16,33 @@ const Greeting = ({ currentUser, logout }) => {
     </nav>
   );
 
-
   const personalGreeting = () => (
-    <hgroup className="header-group">
+    <hgroup className="profile-body">
       <Header/>
-      <h2 className="header-name">Hi, {currentUser.email}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+
+      <div className='profile_meat'>
+
+        <h1 className='user_name'> {currentUser.name} </h1>
+        <hr />
+
+        <div>Email:  {currentUser.email}</div>
+        <div>Activity: Joined goodBoys on {currentUser.created_at.split("T")[0]} </div>
+
+        <hr />
+
+        <button className="logout_button" onClick={logout}>Log Out</button>
+      </div>
+      
+
+      <UserReview/>
+
       <Footer/>
     </hgroup>
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  // return currentUser ? personalGreeting() : sessionLinks();
+
+  return personalGreeting(); 
 };
 
 

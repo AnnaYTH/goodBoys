@@ -4,9 +4,23 @@
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px; 
 }
 
 .header img {
     max-width:100%;
     height:auto;
+}
+
+.header a {
+    font-weight: bolder; 
+    padding: 20px; 
+    color: #382110;
+    text-decoration: none;
+}
+
+.header a:hover {
+    background-color: #382110;
+    color: #F4F1EA; 
 }

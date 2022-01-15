@@ -11,3 +11,4 @@ class UserReview extends React.Component {
 }
 
 export default UserReview; 
+// if a user has not written any reviews, render "No reviews yet!"

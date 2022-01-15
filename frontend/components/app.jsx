@@ -13,7 +13,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import Splash from './splash';
 import RelationshipContainer from './relationships/relationship_container'; 
 import RelationshipShipContainer from './relationships/relationship_ship'; 
-import Profile from './user/profile';
+// import Profile from './user/profile';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 // comment in auth routes, but while testing it's a pain
 
@@ -30,8 +30,11 @@ const App = () => (
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/relationships" component={RelationshipContainer} />
       <ProtectedRoute exact path="/relationships/:id" component={RelationshipShipContainer} />
+
+
       <ProtectedRoute exact path="/users/:id" component={GreetingContainer} />
-      <ProtectedRoute exact path="human/:id" component={Profile} /> 
+
+      
       <AuthRoute exact path= "/" component={Splash}/>
 
 
@@ -39,7 +42,7 @@ const App = () => (
       <Route path="/signup" component={SignupFormContainer} />
       <Route exact path="/relationships" component={RelationshipContainer} />
       <Route exact path="/relationships/:id" component={RelationshipShipContainer} />
-      <Route exact path="/users/:id" component={UserProfile} />
+      <Route exact path="/users/:id" component={GreetingContainer} />
       <Route exact path= "/" component={Splash}/> */}
     </Switch>
     
