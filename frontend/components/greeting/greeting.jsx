@@ -33,6 +33,8 @@ const Greeting = ({ currentUser, logout }) => {
         <button className="logout_button" onClick={logout}>Log Out</button>
       </div>
       
+      <div> {currentUser.name.toUpperCase()}'S RECENT ACTIVITY</div>
+      <hr />
 
       <UserReview/>
 
