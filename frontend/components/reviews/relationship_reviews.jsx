@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
+import { getReviews } from '../../actions/review_actions'
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -15,8 +16,15 @@ const mDTP = dispatch => ({
 
 
 
-
 class RelationshipReview extends React.Component {
+
+    constructor(props) {
+        super(props); 
+    }
+
+    componentDidMount() {
+        this.props.getReviews(); 
+    }
 
     render() {
         return (

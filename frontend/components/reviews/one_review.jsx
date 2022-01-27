@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
+import { getReviews, getReview } from '../../actions/review_actions'
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -11,6 +12,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
+    getReview: (id) => dispatch(getReview(id)),
 }); 
 
 class OneReview extends React.Component {

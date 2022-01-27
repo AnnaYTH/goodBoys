@@ -25,13 +25,13 @@
 export const getReviews = () => (
     $.ajax({
         method: 'GET',
-        url: `/api/review`
+        url: `/api/reviews`
     })
 )
 
 export const getReview = (id) => (
     $.ajax({
         method: 'GET',
-        url: `/api/review/${id}`
+        url: `/api/reviews/${id}`
     })
 )

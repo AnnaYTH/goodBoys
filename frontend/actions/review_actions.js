@@ -1,4 +1,4 @@
-import * as ReviewsUtil from '../util/reviews'; 
+import * as ReviewsUtil from '../util/reviews_api_util'; 
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'; 
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS'; 
@@ -10,7 +10,7 @@ const receiveReview = (review) => {
     }
 }
 
-const receiveReviews = (review) => {
+const receiveReviews = (reviews) => {
     return {
         type: RECEIVE_REVIEWS, 
         reviews: reviews,
