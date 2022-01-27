@@ -9,12 +9,10 @@ class UserReview extends React.Component {
     }
 
     componentDidMount() {
-        // debugger; 
         this.props.getReviews();  
     }
 
     sortByUser() {
-        // debugger; 
         let userReviews = []; 
         let allReviews = Object.values(this.props.reviews); 
 
@@ -23,7 +21,6 @@ class UserReview extends React.Component {
                 userReviews.push(review); 
             }
         })
-        // debugger
         return userReviews; 
     }
 
@@ -34,6 +31,7 @@ class UserReview extends React.Component {
             return (
                 <div className='userReview' key={`userReview-${idx}`}>
                     <p>relationship ID: {review.relationship_type}</p>
+                    <p>reviewer id: {review.reviewer_id} </p>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>

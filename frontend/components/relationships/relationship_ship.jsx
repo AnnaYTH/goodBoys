@@ -19,9 +19,6 @@ const mDTP = dispatch => ({
     getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId))
 })
 
-
-
-
 class RelationshipShip extends React.Component {
 
     constructor(props) {
@@ -61,7 +58,10 @@ class RelationshipShip extends React.Component {
                         <h4>
                             <div className='ship_subtitle'> More Details </div>
                             <div className='ship_subtitle'>Ratings and Reviews</div>
-                            <RelationshipReview />
+
+                            <RelationshipReview shipId={this.props.match.params.id}/>
+
+                            
                             <div className='ship_subtitle'>Friends and Following</div>
                         </h4>
                     </div>
