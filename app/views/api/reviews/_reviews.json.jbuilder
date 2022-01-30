@@ -1,3 +1,3 @@
 
 
-json.extract! reviews, :id, :reviewer_id, :name, :relationship_type, :review, :rating, :created_at
+json.extract! reviews, :id, :user_id, :name, :relationship_id, :review, :rating, :created_at

@@ -31,7 +31,7 @@ class RelationshipReview extends React.Component {
         this.props.getReviews(); 
 
         let allReviews = Object.values(this.props.reviews); 
-        let filtered = allReviews.filter(review => review.relationship_type === this.props.shipId)
+        let filtered = allReviews.filter(review => review.relationship_id === this.props.shipId)
 
         this.setState({
             shipReview: filtered,
@@ -64,8 +64,8 @@ class RelationshipReview extends React.Component {
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
-                    <p>relationship ID: {review.relationship_type}</p>
-                    <p>reviewer id: {review.reviewer_id} </p>
+                    <p>relationship ID: {review.relationship_id}</p>
+                    <p>reviewer id: {review.user_id} </p>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>

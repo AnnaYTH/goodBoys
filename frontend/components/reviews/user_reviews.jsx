@@ -17,7 +17,7 @@ class UserReview extends React.Component {
         let allReviews = Object.values(this.props.reviews); 
 
         allReviews.forEach(review => {
-            if (review.reviewer_id === this.props.currentUser.id) {
+            if (review.user_id === this.props.currentUser.id) {
                 userReviews.push(review); 
             }
         })
@@ -30,8 +30,8 @@ class UserReview extends React.Component {
         const userReviews = this.sortByUser().map((review, idx) => {
             return (
                 <div className='userReview' key={`userReview-${idx}`}>
-                    <p>relationship ID: {review.relationship_type}</p>
-                    <p>reviewer id: {review.reviewer_id} </p>
+                    <p>relationship ID: {review.relationship_id}</p>
+                    <p>reviewer id: {review.user_id} </p>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>

@@ -32,8 +32,8 @@ class AllReviews extends React.Component {
         const allReviews = reviewArr.map((review, idx) => {
             return (
                 <div className='allReviews' key={`allReviews-${idx}`}>
-                    <p>relationship ID: {review.relationship_type}</p>
-                    <p>user ID: {review.reviewer_id}</p>
+                    <p>relationship ID: {review.relationship_id}</p>
+                    <p>user ID: {review.user_id}</p>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>

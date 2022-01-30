@@ -1,3 +1,3 @@
 json.set! review.id do 
-    json.extract! review, :id, :reviewer_id, :name, :relationship_type, :review, :rating, :created_at
+    json.extract! review, :id, :user_id, :name, :relationship_id, :review, :rating, :created_at
 end
