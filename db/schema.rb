@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(version: 2022_01_09_234723) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "reviewer_id", null: false
-    t.integer "relationship_type", null: false
+    t.integer "user_id", null: false
+    t.integer "relationship_id", null: false
     t.string "name", null: false
     t.integer "rating", null: false
     t.text "review", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["reviewer_id", "name"], name: "index_reviews_on_reviewer_id_and_name"
+    t.index ["user_id", "name"], name: "index_reviews_on_user_id_and_name"
   end
 
   create_table "users", force: :cascade do |t|

@@ -203,16 +203,16 @@ Relationship.create(
 )
 
 Review.create(
-    reviewer_id: 1, 
-    relationship_type: 1, 
+    user_id: 1, 
+    relationship_id: 1, 
     name: 'Harry Potter', 
     rating: 5, 
     review: 'He\'s a wizard'
 )
 
 Review.create(
-    reviewer_id: 2, 
-    relationship_type: 1, 
+    user_id: 2, 
+    relationship_id: 1, 
     name: 'Harry Potty', 
     rating: 5, 
     review: 'He\'s a turlet'

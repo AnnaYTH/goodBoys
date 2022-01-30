@@ -5,5 +5,5 @@ class Relationship < ApplicationRecord
     has_many :reviews,
         class_name: :Review, 
         primary_key: :id, 
-        foreign_key: :relationship_type
+        foreign_key: :relationship_id
 end

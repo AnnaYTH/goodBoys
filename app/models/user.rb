@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :reviews, 
     class_name: :Review, 
     primary_key: :id, 
-    foreign_key: :reviewer_id
+    foreign_key: :user_id
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
