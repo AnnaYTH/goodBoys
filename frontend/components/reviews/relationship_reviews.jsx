@@ -31,33 +31,17 @@ class RelationshipReview extends React.Component {
         this.props.getReviews(); 
 
         let allReviews = Object.values(this.props.reviews); 
-        let filtered = allReviews.filter(review => review.relationship_id === this.props.shipId)
+        let filtered = allReviews.filter(review => review.relationship_id === parseInt(this.props.shipId))
+        // it was giving me this.props.shipId as a string and not as an integer, so I cried for a long time. 
 
         this.setState({
             shipReview: filtered,
         })
-        debugger; 
+        // debugger; 
+
+        //now this won't render the first time, only after I navigate away and then comes back
+        // window.location.reload(); 
     }
-
-    // componentDidUpdate() {
-    //     if (this.sortByRelationship === null) {
-
-    //     }
-    // }
-
-    // sortByRelationship() {
-    //     let shipReviews = []; 
-    //     let allReviews = Object.values(this.props.reviews); 
-
-    //     allReviews.forEach(review => {
-    //         debugger; 
-    //         if (review.relationship_id === this.props.shipId) {
-    //             shipReviews.push(review); 
-    //         }
-    //     })
-    //     // debugger; 
-    //     return shipReviews; 
-    // }
 
     render() {
 
@@ -70,18 +54,18 @@ class RelationshipReview extends React.Component {
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                    <hr />
                 </div>
             )
         })
 
-        // debugger; 
         return (
             <div> 
                 <div>
                     THESE ARE THE REVIEWS FOR ONE RELATIONSHIP 
                 </div>
                 <div>
-                    {shipReviews}
+                    {this.state.shipReview.length ? shipReviews : 'This relationship does not have any reviews yet'}
                 </div>
             </div>
         )
