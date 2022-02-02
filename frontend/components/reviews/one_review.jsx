@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews, getReview } from '../../actions/review_actions'
+import Header from '../header';
+import Footer from '../footer';
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -19,7 +21,14 @@ class OneReview extends React.Component {
 
     render() {
         return (
-            <div> This is a singular Review </div>
+            <div>
+                <Header />
+                <div>
+                    This is a singular Review 
+                </div>
+
+                <Footer />
+            </div>
         )
     }
 }

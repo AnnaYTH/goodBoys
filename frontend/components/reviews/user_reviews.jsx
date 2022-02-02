@@ -1,5 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 class UserReview extends React.Component {
 
@@ -25,11 +27,12 @@ class UserReview extends React.Component {
     }
 
     render() {
-        debugger; 
         
         const userReviews = this.sortByUser().map((review, idx) => {
             return (
                 <div className='userReview' key={`userReview-${idx}`}>
+                    <Link to={`/reviews/${review.id}`}> Review ID: {review.id}
+                    </Link>
                     <p>relationship ID: {review.relationship_id}</p>
                     <p>reviewer id: {review.user_id} </p>
                     <p>name: {review.name}</p>
