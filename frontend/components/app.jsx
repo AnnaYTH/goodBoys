@@ -36,22 +36,13 @@ const App = () => (
       <ProtectedRoute exact path="/relationships" component={RelationshipContainer} />
       <ProtectedRoute exact path="/relationships/:id" component={RelationshipShipContainer} />
 
-
       <ProtectedRoute exact path="/users/:id" component={GreetingContainer} />
 
       <ProtectedRoute exact path="/reviews" component={AllReviews} />
       <ProtectedRoute exact path="/reviews/:id" component={OneReview} />
-      <ProtectedRoute exact path="relationships/:id/create" component={CreateReview} />
+      <ProtectedRoute exact path="/relationships/:id/create" component={CreateReview} />
       
       <AuthRoute exact path= "/" component={Splash}/>
-
-      {/* <Route path="/login" componen
-      {/* <ProtectedRoute exact path='/rt={LoginFormContainer} />
-      <Route path="/signup" component={SignupFormContainer} />
-      <Route exact path="/relationships" component={RelationshipContainer} />
-      <Route exact path="/relationships/:id" component={RelationshipShipContainer} />
-      <Route exact path="/users/:id" component={GreetingContainer} />
-      <Route exact path= "/" component={Splash}/> */}
     </Switch>
     
   </div>

@@ -61,6 +61,10 @@ class RelationshipReview extends React.Component {
             )
         })
 
+        // if (!shipReviews) {
+        //     return null; 
+        // }
+
         return (
             <div> 
                 <div>
