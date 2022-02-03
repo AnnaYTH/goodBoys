@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Footer from '../footer'; 
 import Header from '../header'; 
 
@@ -8,6 +8,8 @@ class Relationship extends React.Component {
 
     constructor(props) {
         super(props)
+
+        // this.handleCreate = this.handleCreate.bind(this); 
     }
 
     componentDidMount() {
@@ -40,7 +42,9 @@ class Relationship extends React.Component {
                                 </div>
 
                                 <div className='column_3'> 
+                                <Link to={`/relationships/${ship.id}/create`}>
                                     <button className='button'> Rate this Relationship </button>
+                                </Link>
                                 </div>
                             </li>
                         )}

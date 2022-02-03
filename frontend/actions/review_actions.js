@@ -28,3 +28,8 @@ export const getReviews = () => dispatch => {
         .then(reviews => dispatch
         (receiveReviews(reviews)))
 }
+
+export const createReview = review => dispatch => (
+    ReviewsUtil.createReview(review)
+    .then(review => dispatch(receiveReview(review)))
+)

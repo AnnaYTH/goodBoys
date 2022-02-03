@@ -18,6 +18,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import AllReviews from './reviews/all_reviews'; 
 import OneReview from './reviews/one_review'; 
+import CreateReview from './reviews/create_review'; 
 
 // comment in auth routes, but while testing it's a pain
 
@@ -40,6 +41,7 @@ const App = () => (
 
       <ProtectedRoute exact path="/reviews" component={AllReviews} />
       <ProtectedRoute exact path="/reviews/:id" component={OneReview} />
+      <ProtectedRoute exact path="relationships/:id/create" component={CreateReview} />
       
       <AuthRoute exact path= "/" component={Splash}/>
 

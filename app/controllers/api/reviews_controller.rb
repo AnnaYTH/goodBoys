@@ -5,6 +5,11 @@ class Api::ReviewsController < ApplicationController
         render :index
     end
 
+    ##def new
+    ##    @review = Review.new
+    ##    render :index 
+    ##end
+
     def show 
         @review = Review.find_by(id: params[:id])
         render :show
@@ -14,7 +19,6 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
         if @review.save!
             render :show
-            # render :create 
         else 
             render json: ['Please make sure you have filled out all the fields'], status: 422
         end

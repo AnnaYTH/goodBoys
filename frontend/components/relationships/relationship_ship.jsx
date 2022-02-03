@@ -48,7 +48,10 @@ class RelationshipShip extends React.Component {
                 <div className='ship_horizontal'>
                     <div className='ship_col1'>
                         <p className='ship_profile_image'> <img src={window.dog_photo} alt='logo' /> </p>
+                        
+                        <Link to={`/relationships/${this.props.match.params.id}/create`}>
                         <button className='button'> Rate this Relationship </button>
+                        </Link>
                     </div>
             
                     <div className='ship_col2'>
