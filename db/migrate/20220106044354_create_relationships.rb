@@ -4,6 +4,7 @@ class CreateRelationships < ActiveRecord::Migration[6.1]
       t.string :relationship_name, null:false 
       t.string :pronounciation, null:false
       t.string :relationship_definition, null:false
+      t.string :photo_url
 
       t.timestamps
     end

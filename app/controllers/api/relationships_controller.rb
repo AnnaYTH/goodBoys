@@ -14,6 +14,6 @@ class Api::RelationshipsController < ApplicationController
     private
   
     def relationship_params
-      params.require(:relationship).permit(:relationship_name, :pronounciation, :relationship_definition)
+      params.require(:relationship).permit(:relationship_name, :pronounciation, :relationship_definition, :photo_url)
     end
 end

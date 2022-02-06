@@ -60,17 +60,20 @@ class CreateReview extends React.Component {
 
     render() {
 
-        // const ship = this.props.relationships[this.props.currentRelationshipId]; 
+        const ship = this.props.relationship
 
-        // if(!ship) {
-        //     return null; 
-        // }
+        if(!ship) {
+            return null; 
+        }
+
         // debugger; 
         return (
             <div>
                 <Header />
 
                 <h1> CREATE REVIEW FORM IS HERE! </h1>
+                <h1>You are currently reviewing relationship # {this.state.relationship_id}</h1>
+                <h1>{this.props.relationship.relationship_name}</h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <label>
@@ -79,6 +82,21 @@ class CreateReview extends React.Component {
                     </label>
 
                     <p>RADIO BUTTONS HERE FOR STAR REVIEW </p>
+
+                    <label>
+                        Rating: 
+                        <input type="radio" name='rating'/>
+                        <label for='one-star'> one </label>
+                        <input type="radio" name='rating'/>
+                        <label for='two-star'> two </label>
+                        <input type="radio" name='rating'/>
+                        <label for='three-star'> three </label>
+                        <input type="radio" name='rating'/>
+                        <label for='four-star'> four </label>
+                        <input type="radio" name='rating'/>
+                        <label for='five-star'> five </label>
+                        <br />
+                    </label>
 
                     <label>
                         Review: 

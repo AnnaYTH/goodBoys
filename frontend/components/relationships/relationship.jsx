@@ -17,19 +17,20 @@ class Relationship extends React.Component {
     }
 
     render() {
+        // debugger; 
         return (
             <div className='main-body'>
      
-            
                 <Header/>
-
 
                 <div className='ship_list_item'>
                     <p className='title_head'> All Types of Relationships </p>
                     <ul>
                         {Object.values(this.props.relationships).map((ship, idx) =>
                             <li className='ship_list' key={`ship_${idx}`}>
-                                <p className='image_place'> IMAGE GOES HERE</p>
+                                {/* <p className='image_place'>
+                                </p> */}
+                                <img className='image_place' src={ship.photo_url}/>
 
                                 <div className='column_2'>
                                     <h1>

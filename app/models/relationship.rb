@@ -1,5 +1,5 @@
 class Relationship < ApplicationRecord 
-    validates :relationship_definition, :relationship_name, :pronounciation, presence:true
+    validates :relationship_definition, :relationship_name, :pronounciation, :photo_url, presence:true
 
 
     has_many :reviews,

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_01_09_234723) do
     t.string "relationship_name", null: false
     t.string "pronounciation", null: false
     t.string "relationship_definition", null: false
+    t.string "photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["relationship_name"], name: "index_relationships_on_relationship_name"
