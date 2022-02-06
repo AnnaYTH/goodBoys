@@ -29,41 +29,47 @@ Relationship.create(
     relationship_definition: 'a woman or girl in relation to other daughters and sons of her parents.', 
     photo_url: 'https://goodboys.s3.amazonaws.com/sister.jpg'
 )
-##Relationship.create(
-##    relationship_name: 'Brother',
-##    pronounciation: 'broth·er', 
-##    relationship_definition: 'a man or boy in relation to other sons and daughters of his parents.'
-##)
-##Relationship.create(
-##    relationship_name: 'Partner',
-##    pronounciation: 'part·ner', 
-##    relationship_definition: 'either member of a married couple or of an established unmarried couple.'
-##)
-##Relationship.create(
-##    relationship_name: 'Significant Other',
-##    pronounciation: 'sig·nif·i·cant oth·er', 
-##    relationship_definition: 'a person with whom someone has an established romantic or sexual relationship.'
-##)
-##Relationship.create(
-##    relationship_name: 'Colleague',
-##    pronounciation: 'col·league', 
-##    relationship_definition: 'a person with whom one works in a profession or business.'
-##)
-##Relationship.create(
-##    relationship_name: 'Coworker',
-##    pronounciation: 'co-work·er', 
-##    relationship_definition: 'a person with whom one works, typically someone in a similar role or at a similar level within an organization.'
-##)
-##Relationship.create(
-##    relationship_name: 'Manager',
-##    pronounciation: 'man·ag·er', 
-##    relationship_definition: 'a person responsible for controlling or administering all or part of a company or similar organization.'
-##)
-##Relationship.create(
-##    relationship_name: 'Mentor',
-##    pronounciation: 'men·tor', 
-##    relationship_definition: 'an experienced and trusted adviser.'
-##)
+Relationship.create(
+    relationship_name: 'Brother',
+    pronounciation: 'broth·er', 
+    relationship_definition: 'a man or boy in relation to other sons and daughters of his parents.' ,
+    photo_url: 'https://goodboys.s3.amazonaws.com/brother.jpg'
+)
+Relationship.create(
+    relationship_name: 'Partner',
+    pronounciation: 'part·ner', 
+    relationship_definition: 'either member of a married couple or of an established unmarried couple.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/partner.jpg'
+)
+Relationship.create(
+    relationship_name: 'Significant Other',
+    pronounciation: 'sig·nif·i·cant oth·er', 
+    relationship_definition: 'a person with whom someone has an established romantic or sexual relationship.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/SigOth.jpg'
+)
+Relationship.create(
+    relationship_name: 'Colleague',
+    pronounciation: 'col·league', 
+    relationship_definition: 'a person with whom one works in a profession or business.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/colleague.jpg'
+)
+Relationship.create(
+    relationship_name: 'Coworker',
+    pronounciation: 'co-work·er', 
+    relationship_definition: 'a person with whom one works, typically someone in a similar role or at a similar level within an organization.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/coworker.jpg'
+)
+Relationship.create(
+    relationship_name: 'Manager',
+    pronounciation: 'man·ag·er', 
+    relationship_definition: 'a person responsible for controlling or administering all or part of a company or similar organization.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/manager.jpg'
+)
+Relationship.create(
+    relationship_name: 'Mentor',
+    pronounciation: 'men·tor', 
+    relationship_definition: 'an experienced and trusted adviser.'
+)
 ##Relationship.create(
 ##    relationship_name: 'Assistant',
 ##    pronounciation: 'as·sis·tant', 
