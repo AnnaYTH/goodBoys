@@ -113,112 +113,127 @@ Relationship.create(
     relationship_definition: 'a person or thing competing with another for the same objective or for superiority in the same field of activity.', 
     photo_url: 'https://goodboys.s3.amazonaws.com/rival.jpg'
 )
-##Relationship.create(
-##    relationship_name: 'Caretaker',
-##    pronounciation: 'care·tak·er', 
-##    relationship_definition: 'a person employed to look after people or animals.'
-##)
-##Relationship.create(
-##    relationship_name: 'Doctor',
-##    pronounciation: 'doc·tor', 
-##    relationship_definition: 'a qualified practitioner of medicine; a physician.'
-##)
-##Relationship.create(
-##    relationship_name: 'Housekeeper',
-##    pronounciation: 'house·keep·er', 
-##    relationship_definition: 'a person employed to manage a household.'
-##)
-##Relationship.create(
-##    relationship_name: 'Butler',
-##    pronounciation: 'but·ler', 
-##    relationship_definition: 'the chief manservant of a house.'
-##)
-##Relationship.create(
-##    relationship_name: 'Nanny',
-##    pronounciation: 'nan·ny', 
-##    relationship_definition: 'a person, typically a woman, employed to care for a child in its own home.'
-##)
-##Relationship.create(
-##    relationship_name: 'Grandmother',
-##    pronounciation: 'grand·moth·er', 
-##    relationship_definition: 'the mother of one\'s father or mother.'
-##)
-##Relationship.create(
-##    relationship_name: 'Grandfather',
-##    pronounciation: 'grand·fa·ther', 
-##    relationship_definition: 'the father of one\'s father or mother.'
-##)
-##Relationship.create(
-##    relationship_name: 'Grandfather',
-##    pronounciation: 'grand·fa·ther', 
-##    relationship_definition: 'the father of one\'s father or mother.'
-##)
-##Relationship.create(
-##    relationship_name: 'Aunt',
-##    pronounciation: 'aunt', 
-##    relationship_definition: 'the sister of one\'s father or mother or the wife of one\'s uncle.'
-##)
-##Relationship.create(
-##    relationship_name: 'Uncle',
-##    pronounciation: 'un·cle', 
-##    relationship_definition: 'the brother of one\'s father or mother or the husband of one\'s aunt.'
-##)
-##Relationship.create(
-##    relationship_name: 'Cousin',
-##    pronounciation: 'cous·in', 
-##    relationship_definition: 'a child of one\'s uncle or aunt.'
-##)
-##Relationship.create(
-##    relationship_name: 'Step Mother',
-##    pronounciation: 'step·moth·er', 
-##    relationship_definition: 'a woman who is the wife or partner of one\'s father after the divorce or separation of one\'s parents or the death of one\'s mother.'
-##)
-##Relationship.create(
-##    relationship_name: 'Step Father',
-##    pronounciation: 'step·fa·ther', 
-##    relationship_definition: 'a man who is the husband or partner of one\'s mother after the divorce or separation of one\'s parents or the death of one\'s father.'
-##)
-##Relationship.create(
-##    relationship_name: 'Sibling',
-##    pronounciation: 'sib·ling', 
-##    relationship_definition: 'each of two or more children or offspring having one or both parents in common; a brother or sister.'
-##)
-##Relationship.create(
-##    relationship_name: 'Child',
-##    pronounciation: 'child', 
-##    relationship_definition: 'a son or daughter of any age.'
-##)
-##Relationship.create(
-##    relationship_name: 'Daughter',
-##    pronounciation: 'daugh·ter', 
-##    relationship_definition: 'a girl or woman in relation to either or both of her parents.'
-##)
-##Relationship.create(
-##    relationship_name: 'Son',
-##    pronounciation: 'son', 
-##    relationship_definition: 'a boy or man in relation to either or both of his parents.'
-##)
-##Relationship.create(
-##    relationship_name: 'Niece',
-##    pronounciation: 'niece', 
-##    relationship_definition: 'a daughter of one\'s brother or sister, or of one\'s brother-in-law or sister-in-law.'
-##)
-##Relationship.create(
-##    relationship_name: 'Nephew',
-##    pronounciation: 'neph·ew', 
-##    relationship_definition: 'a son of one\'s brother or sister, or of one\'s brother-in-law or sister-in-law.'
-##)
-##Relationship.create(
-##    relationship_name: 'Landlord',
-##    pronounciation: 'land·lord', 
-##    relationship_definition: 'a person, especially a man, who rents land, a building, or an apartment to a tenant.'
-##)
-##Relationship.create(
-##    relationship_name: 'Tenant',
-##    pronounciation: 'ten·ant', 
-##    relationship_definition: 'a person who occupies land or property rented from a landlord.'
-##)
-##
+Relationship.create(
+    relationship_name: 'Caretaker',
+    pronounciation: 'care·tak·er', 
+    relationship_definition: 'a person employed to look after people or animals.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/caretaker.jpeg'
+)
+Relationship.create(
+    relationship_name: 'Doctor',
+    pronounciation: 'doc·tor', 
+    relationship_definition: 'a qualified practitioner of medicine; a physician.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/doctor.jpg'
+)
+Relationship.create(
+    relationship_name: 'Housekeeper',
+    pronounciation: 'house·keep·er', 
+    relationship_definition: 'a person employed to manage a household.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/housekeeper.jpg'
+)
+Relationship.create(
+    relationship_name: 'Butler',
+    pronounciation: 'but·ler', 
+    relationship_definition: 'the chief manservant of a house.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/butler.jpg'
+)
+Relationship.create(
+    relationship_name: 'Nanny',
+    pronounciation: 'nan·ny', 
+    relationship_definition: 'a person, typically a woman, employed to care for a child in its own home.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/nanny.jpg'
+)
+Relationship.create(
+    relationship_name: 'Grandmother',
+    pronounciation: 'grand·moth·er', 
+    relationship_definition: 'the mother of one\'s father or mother.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/grandmother.jpg'
+)
+Relationship.create(
+    relationship_name: 'Grandfather',
+    pronounciation: 'grand·fa·ther', 
+    relationship_definition: 'the father of one\'s father or mother.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/grandfather.jpg'
+)
+Relationship.create(
+    relationship_name: 'Aunt',
+    pronounciation: 'aunt', 
+    relationship_definition: 'the sister of one\'s father or mother or the wife of one\'s uncle.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/aunt.jpg'
+)
+Relationship.create(
+    relationship_name: 'Uncle',
+    pronounciation: 'un·cle', 
+    relationship_definition: 'the brother of one\'s father or mother or the husband of one\'s aunt.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/uncle.jpg'
+)
+Relationship.create(
+    relationship_name: 'Cousin',
+    pronounciation: 'cous·in', 
+    relationship_definition: 'a child of one\'s uncle or aunt.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/cousin.jpg'
+)
+Relationship.create(
+    relationship_name: 'Step Mother',
+    pronounciation: 'step·moth·er', 
+    relationship_definition: 'a woman who is the wife or partner of one\'s father after the divorce or separation of one\'s parents or the death of one\'s mother.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/mother.jpg'
+)
+Relationship.create(
+    relationship_name: 'Step Father',
+    pronounciation: 'step·fa·ther', 
+    relationship_definition: 'a man who is the husband or partner of one\'s mother after the divorce or separation of one\'s parents or the death of one\'s father.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/father.jpg'
+)
+Relationship.create(
+    relationship_name: 'Sibling',
+    pronounciation: 'sib·ling', 
+    relationship_definition: 'each of two or more children or offspring having one or both parents in common; a brother or sister.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/cousin.jpg'
+)
+Relationship.create(
+    relationship_name: 'Child',
+    pronounciation: 'child', 
+    relationship_definition: 'a son or daughter of any age.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/child.jpg'
+)
+Relationship.create(
+    relationship_name: 'Daughter',
+    pronounciation: 'daugh·ter', 
+    relationship_definition: 'a girl or woman in relation to either or both of her parents.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/daughter.jpg'
+)
+Relationship.create(
+    relationship_name: 'Son',
+    pronounciation: 'son', 
+    relationship_definition: 'a boy or man in relation to either or both of his parents.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/son.jpg'
+)
+Relationship.create(
+    relationship_name: 'Niece',
+    pronounciation: 'niece', 
+    relationship_definition: 'a daughter of one\'s brother or sister, or of one\'s brother-in-law or sister-in-law.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/neice.jpg'
+)
+Relationship.create(
+    relationship_name: 'Nephew',
+    pronounciation: 'neph·ew', 
+    relationship_definition: 'a son of one\'s brother or sister, or of one\'s brother-in-law or sister-in-law.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/nephew.jpg'
+)
+Relationship.create(
+    relationship_name: 'Landlord',
+    pronounciation: 'land·lord', 
+    relationship_definition: 'a person, especially a man, who rents land, a building, or an apartment to a tenant.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/landlord.jpg'
+)
+Relationship.create(
+    relationship_name: 'Tenant',
+    pronounciation: 'ten·ant', 
+    relationship_definition: 'a person who occupies land or property rented from a landlord.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/tenant.jpg'
+)
+
 Review.create(
     user_id: 1, 
     relationship_id: 1, 
