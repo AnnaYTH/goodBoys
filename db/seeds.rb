@@ -239,7 +239,7 @@ Review.create(
     relationship_id: 1, 
     name: 'Harry Potter', 
     rating: 5, 
-    review: 'He\'s a wizard'
+    body: 'He\'s a wizard'
 )
 
 Review.create(
@@ -247,5 +247,5 @@ Review.create(
     relationship_id: 1, 
     name: 'Harry Potty', 
     rating: 5, 
-    review: 'He\'s a turlet'
+    body: 'He\'s a turlet'
 )

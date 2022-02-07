@@ -19,17 +19,19 @@ const receiveReviews = (reviews) => {
 
 export const getReview = (id) => dispatch => {
     return ReviewsUtil.getReview(id)
-    .then(review => dispatch
-    (receiveReview(review)))
+    .then(review => dispatch(receiveReview(review)))
 }
 
 export const getReviews = () => dispatch => {
     return ReviewsUtil.getReviews()
-        .then(reviews => dispatch
-        (receiveReviews(reviews)))
+        .then(reviews => dispatch(receiveReviews(reviews)))
 }
 
-export const createReview = review => dispatch => (
-    ReviewsUtil.createReview(review)
-    .then(review => dispatch(receiveReview(review)))
-)
+export const createReview = review => dispatch => {
+    debugger; 
+    return ReviewsUtil.createReview(review)
+        .then(review => {
+            debugger; 
+            return dispatch(receiveReview(review))}
+        )
+    }

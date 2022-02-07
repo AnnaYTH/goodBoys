@@ -18,7 +18,7 @@ const mSTP = (state, ownProps) => {
             user_id: state.session.id,
             name: '', 
             relationship_id: ownProps.match.params.id,
-            review: '', 
+            body: '', 
             rating: ''
         }, 
     })
@@ -30,6 +30,10 @@ const mDTP = dispatch => ({
     getRelationships: () => dispatch(getRelationships()), 
     createReview: (review) => dispatch(createReview(review)),
 }); 
+
+
+
+
 
 class CreateReview extends React.Component {
     constructor(props) {
@@ -50,7 +54,11 @@ class CreateReview extends React.Component {
     handleSubmit(e) {
         e.preventDefault(); 
         this.props.createReview(this.state)
-        // console.log('review is created, good job')
+        // console.log('review is created, good job')\
+
+        // only if there are no errors, then I will send them back, else wish I will render the errors
+        // or just hope that the user isn't a dumbbie and doesn't create a bad review
+        this.props.history.push(`/relationships/${this.props.currentRelationshipId}`)
     }
 
     update(field) {
@@ -61,7 +69,6 @@ class CreateReview extends React.Component {
     render() {
 
         const ship = this.props.relationship
-
         if(!ship) {
             return null; 
         }
@@ -72,8 +79,8 @@ class CreateReview extends React.Component {
                 <Header />
 
                 <h1> CREATE REVIEW FORM IS HERE! </h1>
-                <h1>You are currently reviewing relationship # {this.state.relationship_id}</h1>
-                <h1>{this.props.relationship.relationship_name}</h1>
+                <h1>You are currently reviewing relationship # {ship.id}</h1>
+                <h1>{ship.relationship_name}</h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <label>
@@ -85,22 +92,26 @@ class CreateReview extends React.Component {
 
                     <label>
                         Rating: 
-                        <input type="radio" name='rating'/>
+                        <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
                         <label for='one-star'> one </label>
-                        <input type="radio" name='rating'/>
+
+                        <input type="radio" name='rating' value='2'  onChange={this.update('rating')}/>
                         <label for='two-star'> two </label>
-                        <input type="radio" name='rating'/>
+
+                        <input type="radio" name='rating' value='3'  onChange={this.update('rating')}/>
                         <label for='three-star'> three </label>
-                        <input type="radio" name='rating'/>
+
+                        <input type="radio" name='rating' value='4'  onChange={this.update('rating')}/>
                         <label for='four-star'> four </label>
-                        <input type="radio" name='rating'/>
+                        
+                        <input type="radio" name='rating' value='5'  onChange={this.update('rating')}/>
                         <label for='five-star'> five </label>
                         <br />
                     </label>
 
                     <label>
                         Review: 
-                        <input type="text" value={this.state.review} onChange={this.update('review')} />
+                        <input type="text" value={this.state.body} onChange={this.update('body')} />
                     </label>
 
 

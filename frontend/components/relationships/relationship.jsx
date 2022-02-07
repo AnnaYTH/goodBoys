@@ -17,7 +17,7 @@ class Relationship extends React.Component {
     }
 
     render() {
-        debugger; 
+        // debugger; 
         return (
             <div className='main-body'>
      
@@ -28,7 +28,7 @@ class Relationship extends React.Component {
                     <ul>
                         {Object.values(this.props.relationships).map((ship, idx) =>
                             <li className='ship_list' key={`ship_${idx}`}>
-                                
+
                                 <img className='image_place' src={ship.photo_url}/>
 
                                 <div className='column_2'>

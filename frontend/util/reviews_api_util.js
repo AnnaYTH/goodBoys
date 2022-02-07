@@ -37,7 +37,7 @@ export const getReview = (id) => (
 )
 
 export const createReview = review => {
-    $.ajax({
+    return $.ajax({
         method: 'POST', 
         url: 'api/reviews', 
         data: {review},
@@ -45,7 +45,7 @@ export const createReview = review => {
 }; 
 
 export const editReview = review => {
-    $.ajax({
+    return $.ajax({
         method: 'PATCH', 
         url: 'api/reviews', 
         data: {review},

@@ -16,8 +16,8 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create 
-        @review = Review.new(review_params)
-        if @review.save!
+        @review = Review.new(review_params) 
+        if @review.save
             render :show
         else 
             render json: ['Please make sure you have filled out all the fields'], status: 422
@@ -44,6 +44,6 @@ class Api::ReviewsController < ApplicationController
     private 
 
     def review_params
-        params.require(:review).permit(:user_id, :relationship_id, :name, :rating, :review)
+        params.require(:review).permit(:user_id, :relationship_id, :name, :rating, :body)
     end
 end
