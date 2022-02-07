@@ -68,43 +68,51 @@ Relationship.create(
 Relationship.create(
     relationship_name: 'Mentor',
     pronounciation: 'men·tor', 
-    relationship_definition: 'an experienced and trusted adviser.'
+    relationship_definition: 'an experienced and trusted adviser.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/mentor.jpg'
 )
-##Relationship.create(
-##    relationship_name: 'Assistant',
-##    pronounciation: 'as·sis·tant', 
-##    relationship_definition: 'a person who ranks below a senior person.'
-##)
-##Relationship.create(
-##    relationship_name: 'Friend',
-##    pronounciation: 'friend', 
-##    relationship_definition: 'a person whom one knows and with whom one has a bond of mutual affection, typically exclusive of sexual or family relations.'
-##)
-##Relationship.create(
-##    relationship_name: 'Teacher',
-##    pronounciation: 'teach·er', 
-##    relationship_definition: 'a person who teaches, especially in a school.'
-##)
-##Relationship.create(
-##    relationship_name: 'Student',
-##    pronounciation: 'stu·dent', 
-##    relationship_definition: 'a person who is studying at a school or college.'
-##)
-##Relationship.create(
-##    relationship_name: 'Neighbor',
-##    pronounciation: 'neigh·bor', 
-##    relationship_definition: 'a person living near or next door to the speaker or person referred to.'
-##)
-##Relationship.create(
-##    relationship_name: 'Enemy',
-##    pronounciation: 'en·e·my', 
-##    relationship_definition: 'a person who is actively opposed or hostile to someone or something.'
-##)
-##Relationship.create(
-##    relationship_name: 'Rival',
-##    pronounciation: 'ri·val', 
-##    relationship_definition: 'a person or thing competing with another for the same objective or for superiority in the same field of activity.'
-##)
+Relationship.create(
+    relationship_name: 'Assistant',
+    pronounciation: 'as·sis·tant', 
+    relationship_definition: 'a person who ranks below a senior person.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/assistant.jpg'
+)
+Relationship.create(
+    relationship_name: 'Friend',
+    pronounciation: 'friend', 
+    relationship_definition: 'a person whom one knows and with whom one has a bond of mutual affection, typically exclusive of sexual or family relations.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/friend.jfif'
+)
+Relationship.create(
+    relationship_name: 'Teacher',
+    pronounciation: 'teach·er', 
+    relationship_definition: 'a person who teaches, especially in a school.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/teacher.jfif'
+)
+Relationship.create(
+    relationship_name: 'Student',
+    pronounciation: 'stu·dent', 
+    relationship_definition: 'a person who is studying at a school or college.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/student.jpg'
+)
+Relationship.create(
+    relationship_name: 'Neighbor',
+    pronounciation: 'neigh·bor', 
+    relationship_definition: 'a person living near or next door to the speaker or person referred to.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/neighbor.jpg'
+)
+Relationship.create(
+    relationship_name: 'Enemy',
+    pronounciation: 'en·e·my', 
+    relationship_definition: 'a person who is actively opposed or hostile to someone or something.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/enemy.jpg'
+)
+Relationship.create(
+    relationship_name: 'Rival',
+    pronounciation: 'ri·val', 
+    relationship_definition: 'a person or thing competing with another for the same objective or for superiority in the same field of activity.', 
+    photo_url: 'https://goodboys.s3.amazonaws.com/rival.jpg'
+)
 ##Relationship.create(
 ##    relationship_name: 'Caretaker',
 ##    pronounciation: 'care·tak·er', 
