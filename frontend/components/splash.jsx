@@ -80,7 +80,7 @@ class Splash extends React.Component {
                     <p> - Edgar Guest, Faith, 1915</p>
                 </div> */}
 
-                <div className='searchbar'> This is a Search Bar </div>
+                {/* <div className='searchbar'> This is a Search Bar </div> */}
                 <Footer />
             </div>
         )

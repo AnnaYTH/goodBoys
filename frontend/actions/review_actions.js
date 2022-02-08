@@ -28,10 +28,19 @@ export const getReviews = () => dispatch => {
 }
 
 export const createReview = review => dispatch => {
-    debugger; 
+    // debugger; 
     return ReviewsUtil.createReview(review)
         .then(review => {
-            debugger; 
-            return dispatch(receiveReview(review))}
-        )
-    }
+            // debugger; 
+            return dispatch(receiveReview(review))
+        }
+    )
+}
+
+export const editReview = review => dispatch => {
+    return ReviewsUtil.editReview(review)
+        .then(review => {
+            return dispatch(receiveReview(review))
+        }
+    )
+}

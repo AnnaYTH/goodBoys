@@ -64,6 +64,7 @@ class RelationshipReview extends React.Component {
         // if (!shipReviews) {
         //     return null; 
         // }
+        // this null is not doing anything, reviews still do not populate on the first render
 
         return (
             <div> 

@@ -5,6 +5,7 @@ import Header from '../header';
 import RelationshipReview from '../reviews/relationship_reviews';
 import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 import { connect } from 'react-redux'; 
+import { getReviews } from '../../util/reviews_api_util';
 
 
 const mSTP = (state, ownProps) => {
@@ -16,7 +17,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     getRelationships: () => dispatch(getRelationships()),
-    getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId))
+    getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId)), 
 })
 
 class RelationshipShip extends React.Component {
@@ -32,11 +33,14 @@ class RelationshipShip extends React.Component {
     }
 
     render() {
+        // debugger; 
         const ship = this.props.relationship
         // [this.props.match.params.id]; 
         if(!ship) {
-            return null
+            return null; 
         }
+
+        // debugger; 
         return (
             <div className='one-ship-body'>
      

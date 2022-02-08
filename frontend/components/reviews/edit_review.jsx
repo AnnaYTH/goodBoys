@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
-import { getReviews, getReview, createReview } from '../../actions/review_actions'
+import { getReviews, getReview, createReview, editReview } from '../../actions/review_actions'
 import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
 import Header from '../header';
 import Footer from '../footer';
@@ -11,16 +11,16 @@ const mSTP = (state, ownProps) => {
     return ({
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
-        currentRelationshipId: ownProps.match.params.id, 
-        relationship: state.entities.relationships[ownProps.match.params.id],
+        currentReviewId: ownProps.match.params.id, 
         relationships: (state.entities.relationships),
-        review: {
-            user_id: state.session.id,
-            name: '', 
-            relationship_id: ownProps.match.params.id,
-            body: '', 
-            rating: ''
-        }, 
+        review: state.entities.reviews[ownProps.match.params.id], 
+        // review: {
+        //     user_id: state.session.id,
+        //     name: '', 
+        //     relationship_id: ownProps.match.params.id,
+        //     body: '', 
+        //     rating: ''
+        // }, 
     })
 }
 
@@ -28,14 +28,16 @@ const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
     // getReview: (id) => dispatch(getReview(id)),
     getRelationships: () => dispatch(getRelationships()), 
-    createReview: (review) => dispatch(createReview(review)),
+    // createReview: (review) => dispatch(createReview(review)),
+    editReview: (review) => dispatch(editReview(review)), 
 }); 
 
 
 
 
 
-class CreateReview extends React.Component {
+
+class EditReview extends React.Component {
     constructor(props) {
         super(props); 
         this.state = this.props.review; 
@@ -53,12 +55,12 @@ class CreateReview extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault(); 
-        this.props.createReview(this.state)
+        this.props.editReview(this.state)
         // console.log('review is created, good job')\
 
         // only if there are no errors, then I will send them back, else wish I will render the errors
         // or just hope that the user isn't a dumbbie and doesn't create a bad review
-        this.props.history.push(`/relationships/${this.props.currentRelationshipId}`) ;
+        this.props.history.push(`/reviews/${this.props.currentReviewId}`) ;
     }
 
     update(field) {
@@ -67,20 +69,26 @@ class CreateReview extends React.Component {
 
 
     render() {
-
-        const ship = this.props.relationship
-        if(!ship) {
+        
+        const rev = this.props.review
+        if(!rev) {
             return null; 
         }
 
-        // debugger; 
+        const stateName = this.state.name; 
+        if(!stateName) {
+            return null; 
+        }
+
+        debugger; 
         return (
             <div>
                 <Header />
 
-                <h1> CREATE REVIEW FORM IS HERE! </h1>
-                <h1>You are currently reviewing relationship # {ship.id}</h1>
-                <h1>{ship.relationship_name}</h1>
+                <h1> EDIT REVIEW FORM IS HERE! </h1>
+                {/* <h1>You are currently reviewing relationship # {ship.id}</h1>
+                <h1>{ship.relationship_name}</h1> */}
+                <h1>You are currently editing review # {this.props.currentReviewId} for the relationship of {rev.relationship_id} </h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <label>
@@ -114,8 +122,8 @@ class CreateReview extends React.Component {
                         <input type="text" value={this.state.body} onChange={this.update('body')} />
                     </label>
 
-
-                    <button type='submit' value='Create Review'> Create Review </button>
+                    
+                    <button type='submit' value='Create Review'> Edit Review </button>
 
                 </form>
 
@@ -125,4 +133,4 @@ class CreateReview extends React.Component {
     }
 }
 
-export default connect(mSTP, mDTP)(CreateReview); 
+export default connect(mSTP, mDTP)(EditReview); 
