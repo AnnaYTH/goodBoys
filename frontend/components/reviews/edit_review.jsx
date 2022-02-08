@@ -80,7 +80,7 @@ class EditReview extends React.Component {
             return null; 
         }
 
-        debugger; 
+        // debugger; 
         return (
             <div>
                 <Header />

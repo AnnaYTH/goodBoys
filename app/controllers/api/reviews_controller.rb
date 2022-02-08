@@ -25,11 +25,9 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update 
-        debugger; 
         @review = Review.find_by(id: params[:id])
         # gotta fix this so only the author can edit their own reviews
         if @review
-            debugger; 
             @review.update(review_params)  
             render :show
         else 
