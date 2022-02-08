@@ -43,6 +43,10 @@ class RelationshipReview extends React.Component {
         // window.location.reload(); 
     }
 
+    // componentDidUpdate(prevState) {
+    //     if(this.state.shipReview.length !== prevState.shipReview.length)
+    // }
+
     render() {
 
         const shipReviews = this.state.shipReview.map((review, idx) => {

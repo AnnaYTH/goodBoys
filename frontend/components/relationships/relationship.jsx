@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Footer from '../footer'; 
 import Header from '../header'; 
 
@@ -14,6 +14,7 @@ class Relationship extends React.Component {
 
     componentDidMount() {
         this.props.getRelationships(); 
+        this.props.getReviews(); 
     }
 
     render() {

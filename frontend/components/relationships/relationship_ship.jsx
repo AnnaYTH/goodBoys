@@ -12,12 +12,14 @@ const mSTP = (state, ownProps) => {
     return({
         relationship: state.entities.relationships[ownProps.match.params.id], 
         relationships: (state.entities.relationships),
+        // reviews: state.entities.reviews
     })
 }
 
 const mDTP = dispatch => ({
     getRelationships: () => dispatch(getRelationships()),
     getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId)), 
+    // getReviews: () => dispatch(getReviews()), 
 })
 
 class RelationshipShip extends React.Component {
@@ -66,6 +68,7 @@ class RelationshipShip extends React.Component {
                         <h3>{ship.relationship_definition}</h3>
                         <h4>
                             <div className='ship_subtitle'> More Details </div>
+                            <div>Average Rating Goes Here</div>
                             <div className='ship_subtitle'>Ratings and Reviews</div>
 
                             <RelationshipReview shipId={this.props.match.params.id}/>

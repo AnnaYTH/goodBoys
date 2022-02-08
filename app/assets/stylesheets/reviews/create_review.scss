@@ -1,0 +1,36 @@
+// frontend/reviews/create_reviews
+
+.review-body {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin: 25px 50px; 
+
+}
+
+.review-body > * {
+    line-height: 150%;
+}
+
+.review-header {
+    font-size: 20px; 
+    font-weight: bolder; 
+}
+
+.review-bottom {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.review-bottom > * {
+    margin-right: 30px; 
+}
+
+.review-right-col > h1 {
+    font-weight: bolder; 
+    font-size: 14.4px; 
+}
+
+.review-right-col > h2 {
+    font-size: 12px; 
+}

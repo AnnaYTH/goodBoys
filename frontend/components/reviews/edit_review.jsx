@@ -1,41 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
-import { getReviews, getReview, createReview, editReview } from '../../actions/review_actions'
+import { getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/review_actions'
 import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
 import Header from '../header';
 import Footer from '../footer';
+import ReactStars from "react-rating-stars-component";
 
 const mSTP = (state, ownProps) => {
-    // debugger; 
     return ({
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
         currentReviewId: ownProps.match.params.id, 
         relationships: (state.entities.relationships),
         review: state.entities.reviews[ownProps.match.params.id], 
-        // review: {
-        //     user_id: state.session.id,
-        //     name: '', 
-        //     relationship_id: ownProps.match.params.id,
-        //     body: '', 
-        //     rating: ''
-        // }, 
     })
 }
 
 const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
-    // getReview: (id) => dispatch(getReview(id)),
     getRelationships: () => dispatch(getRelationships()), 
-    // createReview: (review) => dispatch(createReview(review)),
     editReview: (review) => dispatch(editReview(review)), 
+    deleteReview: (id) => dispatch(deleteReview(id)), 
 }); 
-
-
-
-
-
 
 class EditReview extends React.Component {
     constructor(props) {
@@ -43,6 +30,7 @@ class EditReview extends React.Component {
         this.state = this.props.review; 
 
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.handleDelete = this.handleDelete.bind(this); 
     }
 
     componentDidMount() {
@@ -63,6 +51,13 @@ class EditReview extends React.Component {
         this.props.history.push(`/reviews/${this.props.currentReviewId}`) ;
     }
 
+    handleDelete(e) {
+        e.preventDefault(); 
+        debugger; 
+        this.props.deleteReview(this.state.id)
+        this.props.history.push(`/users/${this.props.currentUser.id}`); 
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
@@ -80,14 +75,21 @@ class EditReview extends React.Component {
             return null; 
         }
 
+        const starRating = {
+            size: 25, 
+            onChange: (newValue) => {
+                this.setState({rating: newValue})
+            }
+            // activeColor: '#F6B443',This is not working, i'll figure it out later
+        }
+
         // debugger; 
         return (
             <div>
                 <Header />
 
                 <h1> EDIT REVIEW FORM IS HERE! </h1>
-                {/* <h1>You are currently reviewing relationship # {ship.id}</h1>
-                <h1>{ship.relationship_name}</h1> */}
+              
                 <h1>You are currently editing review # {this.props.currentReviewId} for the relationship of {rev.relationship_id} </h1>
 
                 <form onSubmit={this.handleSubmit}>
@@ -100,7 +102,8 @@ class EditReview extends React.Component {
 
                     <label>
                         Rating: 
-                        <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
+                        <ReactStars {... starRating} activeColor='#F6B443'/>
+                        {/* <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
                         <label for='one-star'> one </label>
 
                         <input type="radio" name='rating' value='2'  onChange={this.update('rating')}/>
@@ -113,7 +116,7 @@ class EditReview extends React.Component {
                         <label for='four-star'> four </label>
                         
                         <input type="radio" name='rating' value='5'  onChange={this.update('rating')}/>
-                        <label for='five-star'> five </label>
+                        <label for='five-star'> five </label> */}
                         <br />
                     </label>
 
@@ -127,6 +130,7 @@ class EditReview extends React.Component {
 
                 </form>
 
+                <button onClick={this.handleDelete}> Delete Review </button>
                 <Footer />
             </div>
         )
