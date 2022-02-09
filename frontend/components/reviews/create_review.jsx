@@ -109,38 +109,25 @@ class CreateReview extends React.Component {
                         <label className='review-rating'>
                             My rating: 
                             <ReactStars {... starRating} />
-                            {/* <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
-                            <label for='one-star'> one </label>
-
-                            <input type="radio" name='rating' value='2'  onChange={this.update('rating')}/>
-                            <label for='two-star'> two </label>
-
-                            <input type="radio" name='rating' value='3'  onChange={this.update('rating')}/>
-                            <label for='three-star'> three </label>
-
-                            <input type="radio" name='rating' value='4'  onChange={this.update('rating')}/>
-                            <label for='four-star'> four </label>
-                            
-                            <input type="radio" name='rating' value='5'  onChange={this.update('rating')}/>
-                            <label for='five-star'> five </label> */}
                         </label>
 
 
-                        <label>
+                        <label className='name-rating'>
                             Name of Subject: 
                             <input type="text" value={this.state.name} onChange={this.update('name')} />
                         </label>
-                        <br />
-                        {/* <p>RADIO BUTTONS HERE FOR STAR REVIEW </p> */}
 
-                        <label>
+                        <br />
+
+                        <label className='think-rating'>
                             What did you think? 
+                            <br />
                             <input type="text" value={this.state.body} onChange={this.update('body')} />
                         </label>
 
                         <br />
 
-                        <button type='submit' value='Create Review'> Create Review </button>
+                        <button className='review-button' type='submit' value='Create Review'> Save </button>
 
                     </form>
                 </div>

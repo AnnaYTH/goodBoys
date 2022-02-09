@@ -40,12 +40,47 @@
 
 .create-review-bottom {
     font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
 }
 
 .review-rating {
     display: flex; 
     flex-direction: row; 
     flex-wrap: wrap;
-    font-size: 14px; 
-    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px; 
+}
+
+.name-rating {
+    // border: solid red 1px; 
+    // margin-bottom: 10px; 
+    // padding-bottom: 10px; 
+}
+
+.name-rating > input {
+    border: solid 1px lightgray; 
+    padding: 5px; 
+    margin: 5px; 
+    border-radius: 1px; 
+}
+
+.think-rating {
+    // border: solid pink 1px; 
+    // padding-top: 10px; 
+    // margin-top: 10px; 
+}
+
+.think-rating > input {
+    border: solid 1px lightgray; 
+    padding: 5px; 
+    margin: 5px 5px 5px 0px; 
+    border-radius: 1px; 
+
+    width: 700px; 
+    height: 300px; 
+}
+
+.review-button {
+    border: solid 1px lightgray;
+    padding: 8px 12px; 
+    border-radius: 3px; 
 }
