@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
-import { getReviews, getReview } from '../../actions/review_actions'
+import { getReviews, getReview } from '../../actions/review_actions'; 
 import Header from '../header';
 import Footer from '../footer';
 

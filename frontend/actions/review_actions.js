@@ -36,10 +36,8 @@ export const getReviews = () => dispatch => {
 }
 
 export const createReview = review => dispatch => {
-    // debugger; 
     return ReviewsUtil.createReview(review)
         .then(review => {
-            // debugger; 
             return dispatch(receiveReview(review))
         }
     )
