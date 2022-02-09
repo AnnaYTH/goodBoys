@@ -81,15 +81,17 @@ class OneReview extends React.Component {
                         <div className='review-right-col'>
                             <h1> {currentRelationship.relationship_name} </h1>
                             <h2> pronounced: {currentRelationship.pronounciation} </h2>
-                            {/* <h1>{currentReview.id}</h1> */}
-                            {/* <p>relationship ID: {currentReview.relationship_id}</p> */}
-                            {/* <p>user ID: {currentReview.user_id}</p> */}
                             <h2> {this.props.currentUser.name}'s review</h2>
-                            {/* <p> <ReactStars /></p> */}
-                            {/* <p>name: {currentReview.name}</p> */}
                             <p>rating: {currentReview.rating}</p> 
                             {/* change this to a star rating with pictures of stars⭐ */}
                             <p>{currentReview.body} </p>
+
+
+                            {/* <h1>{currentReview.id}</h1> */}
+                            {/* <p>relationship ID: {currentReview.relationship_id}</p> */}
+                            {/* <p>user ID: {currentReview.user_id}</p> */}
+                            {/* <p> <ReactStars /></p> */}
+                            {/* <p>name: {currentReview.name}</p> */}
                         </div>
 
                         <div className='review-options'>

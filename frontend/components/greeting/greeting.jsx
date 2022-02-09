@@ -31,10 +31,10 @@ const Greeting = ({ currentUser, logout }) => {
         <hr />
 
         <button className="logout_button" onClick={logout}>Log Out</button>
+        <hr />
+        <div> {currentUser.name.toUpperCase()}'s recent activity</div>
       </div>
       
-      <div> {currentUser.name.toUpperCase()}'S RECENT ACTIVITY</div>
-      <hr />
 
       <UserReview/>
 

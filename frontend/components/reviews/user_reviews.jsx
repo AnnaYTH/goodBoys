@@ -46,9 +46,9 @@ class UserReview extends React.Component {
         return (
             <div> 
 
-                <div>
+                {/* <div>
                     THESE ARE THE REVIEWS THAT ONE USER HAS WRITTEN
-                </div>
+                </div> */}
                 
                 <div>
                     {userReviews}

@@ -72,9 +72,9 @@ class RelationshipReview extends React.Component {
 
         return (
             <div> 
-                <div>
+                {/* <div>
                     THESE ARE THE REVIEWS FOR ONE RELATIONSHIP 
-                </div>
+                </div> */}
                 <div>
                     {this.state.shipReview.length ? shipReviews : 'This relationship does not have any reviews yet'}
                 </div>
