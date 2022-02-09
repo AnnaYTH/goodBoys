@@ -75,6 +75,11 @@ class EditReview extends React.Component {
             return null; 
         }
 
+        const ship = this.props.relationships[rev.relationship_id]
+        if(!ship) {
+            return null; 
+        }
+
         const starRating = {
             size: 25, 
             onChange: (newValue) => {
@@ -87,50 +92,53 @@ class EditReview extends React.Component {
         return (
             <div>
                 <Header />
-
-                <h1> EDIT REVIEW FORM IS HERE! </h1>
               
-                <h1>You are currently editing review # {this.props.currentReviewId} for the relationship of {rev.relationship_id} </h1>
+                {/* <h1>You are currently editing review # {this.props.currentReviewId} for the relationship of {ship.name} </h1> */}
 
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name: 
-                        <input type="text" value={this.state.name} onChange={this.update('name')} />
-                    </label>
+                <div className='review-body'>
 
-                    <p>RADIO BUTTONS HERE FOR STAR REVIEW </p>
+                    <h1 className='create-review-header'>
+                        <p> {ship.relationship_name} {'>'} Review {'>'} Edit </p>
+                    </h1>
 
-                    <label>
-                        Rating: 
-                        <ReactStars {... starRating} activeColor='#F6B443'/>
-                        {/* <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
-                        <label for='one-star'> one </label>
 
-                        <input type="radio" name='rating' value='2'  onChange={this.update('rating')}/>
-                        <label for='two-star'> two </label>
+                    <div className='create-review-middle'>
+                        <div className='create-review-middle-left'>
+                            <img src={ship.photo_url} alt={ship.relationship_name} className='image-create' /> 
+                        </div >
+                        <div className='create-review-middle-right'>
+                            <h1> {ship.relationship_name} </h1>
+                            <h2> pronounced: {ship.pronounciation} </h2>
+                        </div>
+                    </div>
 
-                        <input type="radio" name='rating' value='3'  onChange={this.update('rating')}/>
-                        <label for='three-star'> three </label>
 
-                        <input type="radio" name='rating' value='4'  onChange={this.update('rating')}/>
-                        <label for='four-star'> four </label>
-                        
-                        <input type="radio" name='rating' value='5'  onChange={this.update('rating')}/>
-                        <label for='five-star'> five </label> */}
+                    <form onSubmit={this.handleSubmit} className='create-review-bottom'>
+                        <label className='review-rating'>
+                            My rating: 
+                            <ReactStars {... starRating} />
+                        </label>
+
+                        <label className='name-rating'>
+                            Name of Subject: 
+                            <input type="text" value={this.state.name} onChange={this.update('name')} />
+                        </label>
+
                         <br />
-                    </label>
 
-                    <label>
-                        Review: 
-                        <input type="text" value={this.state.body} onChange={this.update('body')} />
-                    </label>
+                        <label className='think-rating'>
+                            What did you think? 
+                            <br />
+                            <input type="text" value={this.state.body} onChange={this.update('body')} />
+                        </label>
 
-                    
-                    <button type='submit' value='Create Review'> Edit Review </button>
+                        <br />
+                        <button className='review-button'  type='submit' value='Create Review'> Save </button>
+                        
+                    </form>
 
-                </form>
-
-                <button onClick={this.handleDelete}> Delete Review </button>
+                    <button className='review-button' onClick={this.handleDelete}> Delete </button>
+                </div>
                 <Footer />
             </div>
         )
