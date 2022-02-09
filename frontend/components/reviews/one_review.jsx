@@ -5,6 +5,7 @@ import { getReviews, getReview, deleteReview } from '../../actions/review_action
 import Header from '../header';
 import Footer from '../footer';
 import { getRelationships } from '../../actions/relationship_actions'; 
+import ReactStars from "react-rating-stars-component";
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -59,18 +60,19 @@ class OneReview extends React.Component {
             <div>
                 <Header />
                 
-                <div>
+                {/* <div>
                     <p>
                     This is a singular Review -  # {this.props.match.params.id}
                     </p>
                     <p> It is reviewing the relationship of {currentRelationship.relationship_name}</p>
-                </div>
+                </div> */}
 
                 <div className='review-body'>
-                    <h1 className='review-header'> {this.props.currentUser.name}'s Reviews {'>'} {currentRelationship.relationship_name}</h1>
 
                     <div className='review-bottom'>
                         <div className='review-left-col'> 
+                            <h1 className='review-header'> {this.props.currentUser.name}'s Reviews {'>'}  {currentRelationship.relationship_name}</h1>
+
                             <p className='ship_profile_image'> 
                                 <img src={currentRelationship.photo_url} alt='cover' /> 
                             </p>
@@ -83,13 +85,16 @@ class OneReview extends React.Component {
                             {/* <p>relationship ID: {currentReview.relationship_id}</p> */}
                             {/* <p>user ID: {currentReview.user_id}</p> */}
                             <h2> {this.props.currentUser.name}'s review</h2>
+                            {/* <p> <ReactStars /></p> */}
                             {/* <p>name: {currentReview.name}</p> */}
-                            <p>rating: {currentReview.rating}</p>
-                            <p>review: {currentReview.body} </p>
-                            <p>date reviewed: {currentReview.created_at.split("T")[0]}</p>
+                            <p>rating: {currentReview.rating}</p> 
+                            {/* change this to a star rating with pictures of stars⭐ */}
+                            <p>{currentReview.body} </p>
                         </div>
 
                         <div className='review-options'>
+                            <p>{currentReview.created_at.split("T")[0]}</p>
+                            · 
                             <Link to={`/reviews/${this.props.match.params.id}/edit`} className='review-options'>
                                 <button> Edit </button>
                             </Link>
@@ -99,6 +104,10 @@ class OneReview extends React.Component {
                             </button>
                         </div>
                     </div>
+
+
+                    {/* <p>Comments</p> */}
+
 
                 </div>
 

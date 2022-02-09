@@ -3,7 +3,7 @@
 .review-body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     margin: 25px 50px; 
-
+    min-height: 400px; 
 }
 
 .review-body > * {
@@ -13,6 +13,7 @@
 .review-header {
     font-size: 20px; 
     font-weight: bolder; 
+    margin-bottom: 25px; 
 }
 
 .review-bottom {
@@ -23,12 +24,14 @@
 }
 
 .review-bottom > * {
-    margin-right: 30px; 
+    margin-right: 50px; 
+    // border: red solid 1px; 
 }
 
 .review-right-col > h1 {
     font-weight: bolder; 
     font-size: 14.4px; 
+    margin-top: 43px; 
 }
 
 .review-right-col > h2 {
