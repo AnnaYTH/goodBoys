@@ -49,7 +49,7 @@ class AllReviews extends React.Component {
             <div>
                 <Header />
                 
-                <h2  className='title_head'>This is All Reviews Ever Written</h2>
+                <h2  className='title_head'>All Reviews</h2>
                 <div>
                     {allReviews}
                 </div>

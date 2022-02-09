@@ -12,13 +12,12 @@ const mSTP = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+    getReviews: () => dispatch(getReviews()),
+    getRelationships: () => dispatch(getRelationships()), 
 });
 
 
-
-
-class Profile extends React.Component {
+class FriendProfile extends React.Component {
 
 
     constructor(props) {
@@ -26,13 +25,16 @@ class Profile extends React.Component {
     }
     
     componentDidMount() {
-        this.props.logout(); 
+        this.props.getRelationships(); 
+        this.props.getReviews(); 
     }
  
     render() {
         return (
             <div>
                 <Header/>
+
+                <p>This is where I show you a friend</p>
                 <div>Hey Buddy</div>
                 <div> {currentUser} </div>
 
@@ -44,4 +46,4 @@ class Profile extends React.Component {
 
 
 
-export default connect(mSTP, mapDispatchToProps)(Profile);
+export default connect(mSTP, mapDispatchToProps)(FriendProfile);
