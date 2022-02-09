@@ -16,7 +16,6 @@
     margin-bottom: 25px; 
 }
 
-
 .create-review-middle {
     display:flex; 
     flex-direction: row; 
@@ -50,23 +49,11 @@
     margin-bottom: 10px; 
 }
 
-.name-rating {
-    // border: solid red 1px; 
-    // margin-bottom: 10px; 
-    // padding-bottom: 10px; 
-}
-
 .name-rating > input {
     border: solid 1px lightgray; 
     padding: 5px; 
     margin: 5px; 
     border-radius: 1px; 
-}
-
-.think-rating {
-    // border: solid pink 1px; 
-    // padding-top: 10px; 
-    // margin-top: 10px; 
 }
 
 .think-rating > input {

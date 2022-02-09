@@ -49,7 +49,7 @@ class RelationshipShip extends React.Component {
             
                 <Header/>
 
-                <p>Hey Buddy This is Ship # {this.props.match.params.id}</p>
+                {/* <p>Hey Buddy This is Ship # {this.props.match.params.id}</p> */}
                 
                 <div className='ship_horizontal'>
                     <div className='ship_col1'>
