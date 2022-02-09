@@ -89,15 +89,25 @@ class CreateReview extends React.Component {
                 <Header />
                 
                 <div className='review-body'>
-                    <h1> CREATE REVIEW FORM IS HERE! </h1>
-                    <h1>You are currently reviewing relationship # {ship.id}</h1>
-                    <h1 className='review-header'> 
-                        {ship.relationship_name} {'>'} Review {'>'} Create 
+                    {/* <h1> CREATE REVIEW FORM IS HERE! </h1>
+                    <h1>You are currently reviewing relationship # {ship.id}</h1> */}
+                    <h1 className='create-review-header'>
+                        <p> {ship.relationship_name} {'>'} Review {'>'} Create </p>
                     </h1>
 
-                    <form onSubmit={this.handleSubmit}>
-                        <label>
-                            My Rating: 
+                    <div className='create-review-middle'>
+                        <div className='create-review-middle-left'>
+                            <img src={ship.photo_url} alt={ship.relationship_name} className='image-create' /> 
+                        </div >
+                        <div className='create-review-middle-right'>
+                            <h1> {ship.relationship_name} </h1>
+                            <h2> pronounced: {ship.pronounciation} </h2>
+                        </div>
+                    </div>
+
+                    <form onSubmit={this.handleSubmit} className='create-review-bottom'>
+                        <label className='review-rating'>
+                            My rating: 
                             <ReactStars {... starRating} />
                             {/* <input type="radio" name='rating' value='1'  onChange={this.update('rating')}/>
                             <label for='one-star'> one </label>
@@ -117,14 +127,14 @@ class CreateReview extends React.Component {
 
 
                         <label>
-                            Name: 
+                            Name of Subject: 
                             <input type="text" value={this.state.name} onChange={this.update('name')} />
                         </label>
                         <br />
                         {/* <p>RADIO BUTTONS HERE FOR STAR REVIEW </p> */}
 
                         <label>
-                            Review: 
+                            What did you think? 
                             <input type="text" value={this.state.body} onChange={this.update('body')} />
                         </label>
 
