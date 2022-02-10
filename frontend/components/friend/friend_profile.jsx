@@ -7,6 +7,8 @@ import React from 'react';
 import Footer from '../footer'; 
 import Header from '../header'; 
 
+import { followBuddy, unfollowBuddy } from '../../actions/follow_actions'
+
 const mSTP = (state, ownProps) => {
     // debugger; 
     return ({
@@ -55,7 +57,7 @@ class FriendProfile extends React.Component {
                 {/* Eventually I can add all the reviews that this one user wrote */}
 
                 <button> Follow </button>
-                
+
                 <Footer/>
             </div>
         )
