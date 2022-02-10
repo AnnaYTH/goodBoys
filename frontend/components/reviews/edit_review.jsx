@@ -129,7 +129,9 @@ class EditReview extends React.Component {
                         <label className='think-rating'>
                             What did you think? 
                             <br />
-                            <input type="text" value={this.state.body} onChange={this.update('body')} />
+                            <textarea value={this.state.body} onChange={this.update('body')} cols="100" rows="20"> {this.state.body}
+                            </textarea>
+                            {/* <input type="text" value={this.state.body} onChange={this.update('body')} /> */}
                         </label>
 
                         <br />

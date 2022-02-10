@@ -21,7 +21,7 @@ const removeBuddy = user => ({
 
 export const followBuddy = object => dispatch => {
     return FollowAPIUtil.addBuddy(object['follow_id'], object['user_id'])
-    .then(obj => 
+    .then(obj =>      
         dispatch(addBuddy(obj['follow_id'], obj['user_id'])))
 }
 

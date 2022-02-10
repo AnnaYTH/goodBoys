@@ -19,6 +19,7 @@ class Api::ReviewsController < ApplicationController
 
         @review = Review.new(review_params) 
         if @review.save
+            @relationship = Relationship.find(params[:review][:review_id])
             render :show
         else 
             render json: ['Please make sure you have filled out all the fields'], status: 422

@@ -4,6 +4,16 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS'; 
 export const REMOVE_REVIEW = 'REMOVE_REVIEW'; 
 
+
+export const RECEIVE_RELATIONSHIP = 'RECEIVE_RELATIONSHIP'; 
+const receiveRelationship = (relationship) => {
+    return {
+        type: RECEIVE_RELATIONSHIP, 
+        relationship: relationship,
+    }
+}
+
+
 const receiveReview = (review) => {
     return {
         type: RECEIVE_REVIEW, 
@@ -35,10 +45,18 @@ export const getReviews = () => dispatch => {
         .then(reviews => dispatch(receiveReviews(reviews)))
 }
 
+// export const createReview = review => dispatch => {
+//     return ReviewsUtil.createReview(review)
+//         .then(review => {
+//             return dispatch(receiveReview(review))
+//         }
+//     )
+// }
+
 export const createReview = review => dispatch => {
     return ReviewsUtil.createReview(review)
-        .then(review => {
-            return dispatch(receiveReview(review))
+        .then(relationship => {
+            dispatch(receiveRelationship(relationship))
         }
     )
 }
