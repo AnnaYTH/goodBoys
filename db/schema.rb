@@ -15,19 +15,19 @@ ActiveRecord::Schema.define(version: 2022_02_10_002428) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "followings", force: :cascade do |t|
+  create_table "follows", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "follow_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id", "follow_id"], name: "index_followings_on_user_id_and_follow_id", unique: true
+    t.index ["user_id", "follow_id"], name: "index_follows_on_user_id_and_follow_id", unique: true
   end
 
   create_table "relationships", force: :cascade do |t|
     t.string "relationship_name", null: false
     t.string "pronounciation", null: false
     t.string "relationship_definition", null: false
-    t.string "photo_url"
+    t.string "photo_url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["relationship_name"], name: "index_relationships_on_relationship_name"
