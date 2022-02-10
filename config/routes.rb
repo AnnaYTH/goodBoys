@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
     resources :reviews
 
-    resources :follows, only: [:create, :destroy]
+    resources :follows, only: [:create, :destroy, :show]
   end
 
   root "static_pages#root"
