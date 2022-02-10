@@ -2,14 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews, getReview, deleteReview } from '../../actions/review_actions'
+// import { getRelationships, getRelationship, getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/relationship_actions'; 
+import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
 import Header from '../header';
 import Footer from '../footer';
-import { getRelationships } from '../../actions/relationship_actions'; 
+// import { getRelationships } from '../../actions/relationship_actions'; 
 import ReactStars from "react-rating-stars-component";
 
 const mSTP = (state, ownProps) => {
     return ({
         reviews: state.entities.reviews,
+        // relationships: state.entities.relationships,
         currentUser: state.entities.users[state.session.id],
         currentReview: state.entities.reviews[ownProps.match.params.id], 
         relationships: state.entities.relationships, 

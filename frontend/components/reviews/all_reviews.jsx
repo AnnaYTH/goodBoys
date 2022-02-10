@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews, getReview } from '../../actions/review_actions'; 
+// import { getRelationship, getRelationships, getReviews, getReview } from '../../actions/relationship_actions';
+import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 import Header from '../header';
 import Footer from '../footer';
 
@@ -24,10 +26,15 @@ class AllReviews extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.getReviews(); 
     }
 
     render() {
+        debugger; 
+        if(!(this.props.reviews.length < 1)) {
+            return null; 
+        }
         const reviewArr = Object.values(this.props.reviews); 
         const allReviews = reviewArr.map((review, idx) => {
             return (

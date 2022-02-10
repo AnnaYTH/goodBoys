@@ -5,13 +5,13 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW'; 
 
 
-export const RECEIVE_RELATIONSHIP = 'RECEIVE_RELATIONSHIP'; 
-const receiveRelationship = (relationship) => {
-    return {
-        type: RECEIVE_RELATIONSHIP, 
-        relationship: relationship,
-    }
-}
+// export const RECEIVE_RELATIONSHIP = 'RECEIVE_RELATIONSHIP'; 
+// const receiveRelationship = (relationship) => {
+//     return {
+//         type: RECEIVE_RELATIONSHIP, 
+//         relationship: relationship,
+//     }
+// }
 
 
 const receiveReview = (review) => {
@@ -45,21 +45,22 @@ export const getReviews = () => dispatch => {
         .then(reviews => dispatch(receiveReviews(reviews)))
 }
 
-// export const createReview = review => dispatch => {
-//     return ReviewsUtil.createReview(review)
-//         .then(review => {
-//             return dispatch(receiveReview(review))
-//         }
-//     )
-// }
-
 export const createReview = review => dispatch => {
     return ReviewsUtil.createReview(review)
-        .then(relationship => {
-            dispatch(receiveRelationship(relationship))
+        .then(review => {
+            return dispatch(receiveReview(review))
         }
     )
 }
+// to implement this i need to move this into the relationship actions, but then i run into the issue where I can't access all reviews at one point in time
+
+// export const createReview = review => dispatch => {
+//     return ReviewsUtil.createReview(review)
+//         .then(relationship => {
+//             dispatch(receiveRelationship(relationship))
+//         }
+//     )
+// }
 
 export const editReview = review => dispatch => {
     return ReviewsUtil.editReview(review)

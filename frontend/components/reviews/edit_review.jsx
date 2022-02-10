@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/review_actions'
 import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
+// import { getRelationships, getRelationship, getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/relationship_actions'; 
 import Header from '../header';
 import Footer from '../footer';
 import ReactStars from "react-rating-stars-component";

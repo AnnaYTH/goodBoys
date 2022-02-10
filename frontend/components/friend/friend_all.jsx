@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { fetchUsers } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
-import { getReviews, getReview } from '../../actions/review_actions'; 
-import { getRelationship, getRelationships } from '../../actions/relationship_actions';
+// import { getReviews, getReview } from '../../actions/review_actions'; 
+import { getRelationship, getRelationships, getReviews, getReview } from '../../actions/relationship_actions';
 import React from 'react';
 import Footer from '../footer'; 
 import Header from '../header'; 

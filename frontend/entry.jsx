@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ReactDOM.render(<h1>Welcome to goodBoys</h1>, root);
 
   
-  // TESTING START
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // TESTING END
   
   let store;
   if (window.currentUser) {
@@ -30,6 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // const store = configureStore();
   
   
+  // TESTING START
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // TESTING END
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);

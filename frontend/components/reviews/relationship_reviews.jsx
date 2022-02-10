@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews } from '../../actions/review_actions'
+import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
+// import { getRelationships, getRelationship, getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/relationship_actions'; 
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -48,7 +50,7 @@ class RelationshipReview extends React.Component {
     // }
 
     render() {
-
+        debugger; 
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
