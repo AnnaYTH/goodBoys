@@ -8,7 +8,6 @@ class Api::FollowsController < ApplicationController
     def create 
         @follow = Follow.new(follow_params)
         if @follow.save
-            console.log('YOU HAVE FOLLOWED THEM HURRAH')
             render :show
         else 
             render json: ['You Already Follow This User'], status: 404

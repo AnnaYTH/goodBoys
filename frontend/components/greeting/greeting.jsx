@@ -33,10 +33,15 @@ const Greeting = ({ currentUser, logout }) => {
         <button className="logout_button" onClick={logout}>Log Out</button>
         <hr />
         <div> {currentUser.name.toUpperCase()}'s recent activity</div>
+        <UserReview/>
+
+        <hr />
+
+        <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
+        <div> {currentUser.followIds} </div>
       </div>
       
 
-      <UserReview/>
 
       <Footer/>
     </hgroup>

@@ -47,6 +47,9 @@ class FriendProfile extends React.Component {
         e.preventDefault(); 
         let obj = {'follow_id': this.props.match.params.id, 'user_id': this.props.currentUser.id}
         this.props.followBuddy(obj); 
+
+        // codeFairies - insert error handling here!
+        this.props.history.push(`/relationships`) ;
     }
  
     render() {
