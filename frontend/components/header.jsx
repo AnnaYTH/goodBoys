@@ -12,7 +12,7 @@ const Header = () => {
 
             <Link to ="/relationships"> All Relationships </Link>
 
-            <Link to="/friends"> All Friends </Link>
+            <Link to="/friends"> All Users </Link>
 
             <p>Search Bar</p>
 

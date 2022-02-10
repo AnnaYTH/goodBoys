@@ -8,6 +8,7 @@ import Footer from '../footer';
 import Header from '../header'; 
 
 const mSTP = (state, ownProps) => {
+    // debugger
     return ({
         currentUser: state.entities.users[state.session.id],
         users: state.entities.users, 
@@ -37,30 +38,31 @@ class AllFriends extends React.Component {
     }
  
     render() {
-        // if(Object.keys(this.props.users) < 2) {
-        //     return null; 
-        // }
         const usersArr = Object.values(this.props.users)
         if (!usersArr) {
             return null; 
         }
-
+        // I will eventually put an if conditional so that the currentuser won't be shown to themself
         const allUsers = usersArr.map((user, idx) => {
             return (
                 <div key={`allUsers-${idx}`}>
                     {/* insert link to individual profile page here */}
-                    <p> name: {user.name}</p>
-                    <p> email: {user.email} </p>
-                    <p> member since:{user.created_at.split("T")[0]} </p>
+                    <Link to={`/friends/${user.id}`}>
+                        <p> id: {user.id} </p>
+                        <p> name: {user.name}</p>
+                        <p> email: {user.email} </p>
+                        <p> member since: {user.created_at.split("T")[0]} </p>
+                    </Link>
                     <br />
                 </div>
             )
         })
+
         return (
             <div>
                 <Header/>
 
-                <p>This is where I show you all the possible friends</p>
+                <h2  className='title_head'>All Users</h2>
                 <p> {allUsers} </p>
 
                 <Footer/>

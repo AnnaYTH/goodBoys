@@ -35,7 +35,9 @@ class AllReviews extends React.Component {
                     <Link to={`/reviews/${review.id}`}> Review ID: {review.id}
                     </Link>
                     <p>relationship ID: {review.relationship_id}</p>
-                    <p>user ID: {review.user_id}</p>
+                    <Link to={`/friends/${review.user_id}`}>
+                        <p>user ID: {review.user_id}</p>
+                    </Link>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>
