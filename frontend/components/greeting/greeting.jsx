@@ -6,8 +6,10 @@ import UserReview from '../reviews/review_container';
 
 // nbsp non breaking space 
 
-const Greeting = ({ currentUser, logout }) => {
 
+
+const Greeting = ({ currentUser, logout }) => {
+  
   const sessionLinks = () => (
     <nav className="login-signup">
       <Link to="/login">Login</Link>
@@ -16,7 +18,9 @@ const Greeting = ({ currentUser, logout }) => {
     </nav>
   );
 
-  const personalGreeting = () => (
+  const personalGreeting = () => {
+    // debugger; 
+    return (
     <hgroup className="profile-body">
       <Header/>
 
@@ -38,14 +42,15 @@ const Greeting = ({ currentUser, logout }) => {
         <hr />
 
         <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
-        <div> {currentUser.followIds} </div>
+        <div>
+          {currentUser.followIds.join(", ")}
+        </div>
       </div>
-      
-
 
       <Footer/>
     </hgroup>
-  );
+    )
+  };  
 
   // return currentUser ? personalGreeting() : sessionLinks();
 

@@ -14,7 +14,7 @@ class User < ApplicationRecord
     foreign_key: :user_id
 
   has_many :follows, 
-    class_name: :Follows, 
+    class_name: :Follow, 
     primary_key: :id, 
     foreign_key: :user_id 
 

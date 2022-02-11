@@ -7,8 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: 'Anna', email: 'demo@demo.com', password: 'password');
-User.create(name: 'Buddy', email: 'buddy@gmail.com', password: 'hunter12')
+User.create(name: 'Buddy', email: 'buddy@gmail.com', password: 'hunter12');
+User.create(name: 'Tashi Sangpo', email: 'tashi@gmail.com', password: 'password'); 
+User.create(name: 'Marco Countryman', email: 'marco@gmail.com', password: 'password'); 
+User.create(name: 'Christian Lee', email: 'clee@gmail.com', password: 'password'); 
 
+Follow.create(user_id: 2, follow_id: 1); 
 
 # definitions and pronounciations from Oxford Languages
 Relationship.create(

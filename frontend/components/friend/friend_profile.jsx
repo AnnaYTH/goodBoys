@@ -45,9 +45,11 @@ class FriendProfile extends React.Component {
 
     toggleFollow(e) {
         e.preventDefault(); 
-        let obj = {'follow_id': this.props.match.params.id, 'user_id': this.props.currentUser.id}
-        this.props.followBuddy(obj); 
+        let humanNumber = parseInt(this.props.match.params.id)
+        let obj = {'follow_id': humanNumber, 'user_id': this.props.currentUser.id}
 
+        this.props.followBuddy(obj); 
+        debugger; 
         // codeFairies - insert error handling here!
         this.props.history.push(`/relationships`) ;
     }

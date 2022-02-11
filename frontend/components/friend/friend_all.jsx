@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import { fetchUsers } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
-// import { getReviews, getReview } from '../../actions/review_actions'; 
-import { getRelationship, getRelationships, getReviews, getReview } from '../../actions/relationship_actions';
+import { getReviews, getReview } from '../../actions/review_actions'; 
+// import { getRelationship, getRelationships, getReviews, getReview } from '../../actions/relationship_actions';
+import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 import React from 'react';
 import Footer from '../footer'; 
 import Header from '../header'; 
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return ({
         currentUser: state.entities.users[state.session.id],
         users: state.entities.users, 
@@ -39,7 +39,7 @@ class AllFriends extends React.Component {
  
     render() {
         const usersArr = Object.values(this.props.users)
-        if (!usersArr) {
+        if (usersArr < 2) {
             return null; 
         }
         // I will eventually put an if conditional so that the currentuser won't be shown to themself

@@ -1,4 +1,4 @@
-class Follows < ApplicationRecord
+class Follow < ApplicationRecord
     validates :user_id, :follow_id, presence:true
     validates :user_id, uniqueness: { scope: :follow_id }
 

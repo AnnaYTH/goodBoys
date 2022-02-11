@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 import { getReviews, getReview, createReview } from '../../actions/review_actions'
-import { getRelationships, getRelationship, getReviews, getReview, createReview } from '../../actions/relationship_actions'; 
+// import { getRelationships, getRelationship, getReviews, getReview, createReview } from '../../actions/relationship_actions'; 
 import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
 import Header from '../header';
 import Footer from '../footer';
@@ -123,7 +123,7 @@ class CreateReview extends React.Component {
                         <label className='think-rating'>
                             What did you think? 
                             <br />
-                            <textarea value={this.state.body} onChange={this.update('body')} cols="100" rows="20"> Review...
+                            <textarea value={this.state.body} onChange={this.update('body')} cols="100" rows="20" placeholder="Review..."> 
                             </textarea>
                                 {/* <input type="text" value={this.state.body} onChange={this.update('body')} /> */}
                         </label>
