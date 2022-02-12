@@ -77,14 +77,14 @@ import * as FollowAPIUtil from "../util/follows_api_util";
 export const ADD_BUDDY = 'ADD_BUDDY'; 
 export const REMOVE_BUDDY = 'REMOVE_BUDDY'; 
 
-const addBuddy = user => ({
+const addBuddy = obj => ({
     type: ADD_BUDDY, 
-    user: user, 
+    obj: obj, 
 })
 
-const removeBuddy = user => ({
+const removeBuddy = followId => ({
     type: REMOVE_BUDDY, 
-    user: user, 
+    followId: followId, 
 })
 
 // export const followBuddy = follow => dispatch => {
