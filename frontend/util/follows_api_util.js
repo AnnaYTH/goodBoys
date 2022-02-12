@@ -1,9 +1,9 @@
-export const addBuddy = (follow_id, user_id) => {
-    debugger; 
+export const addBuddy = (follow) => {
+    // debugger; 
     return $.ajax({
         method: 'POST', 
         url: 'api/follows', 
-        data: { follow_id, user_id }
+        data: { follow }
     })
 }; 
 

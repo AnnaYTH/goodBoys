@@ -93,8 +93,8 @@ const removeBuddy = followId => ({
 //         dispatch(addBuddy(follow)))
 // }
 
-export const followBuddy = object => dispatch => {
-    return FollowAPIUtil.addBuddy(object['follow_id'], object['user_id'])
+export const followBuddy = follow => dispatch => {
+    return FollowAPIUtil.addBuddy(follow)
     .then(user => dispatch(receiveUser(user)))}; 
 
 export const unfollowBuddy = followId => dispatch => {
