@@ -18,6 +18,12 @@ class User < ApplicationRecord
     primary_key: :id, 
     foreign_key: :user_id 
 
+
+    ##wow the naming convention is horrid, but I didn't want to call the "people they follow", but I don't care about people who are following my currentUser, only the people my currentUser is following
+  has_many :leaders, 
+    through: :follows
+
+  
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user

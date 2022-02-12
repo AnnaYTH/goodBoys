@@ -1,13 +1,20 @@
 class Api::FollowsController < ApplicationController
+    skip_before_action :verify_authenticity_token
 
     def show 
         @follow = Follow.find(params[:id])
         render :show
     end
 
+    def index
+        @follows = Follow.all 
+        render :index
+    end
+
     def create 
         @follow = Follow.new(follow_params)
-        if @follow.save
+        if @follow
+            @follow.save
             render :show
         else 
             render json: ['You Already Follow This User'], status: 404
