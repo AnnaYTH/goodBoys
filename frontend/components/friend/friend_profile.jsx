@@ -7,7 +7,8 @@ import React from 'react';
 import Footer from '../footer'; 
 import Header from '../header'; 
 
-import { followBuddy, unfollowBuddy } from '../../actions/follow_actions'
+// import { followBuddy, unfollowBuddy } from '../../actions/follow_actions'
+import { followBuddy, unfollowBuddy } from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => {
     // debugger; 
