@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
   );
 
   const personalGreeting = () => {
-    debugger;
+    // debugger;
     return (
     <hgroup className="profile-body">
       <Header/>
