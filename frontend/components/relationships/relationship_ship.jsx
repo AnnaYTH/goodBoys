@@ -35,14 +35,13 @@ class RelationshipShip extends React.Component {
     }
 
     render() {
-        // debugger; 
+ 
         const ship = this.props.relationship
         // [this.props.match.params.id]; 
         if(!ship) {
             return null; 
         }
-
-        // debugger; 
+ 
         return (
             <div className='one-ship-body'>
      

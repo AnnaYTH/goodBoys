@@ -12,9 +12,8 @@ class Api::FollowsController < ApplicationController
     end
 
     def create 
-        debugger; 
         @follow = Follow.new(follow_params)
-        debugger; 
+
         if @follow
             @follow.save
             render :show

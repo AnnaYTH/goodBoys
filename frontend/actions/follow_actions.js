@@ -20,7 +20,7 @@
 // // }
 
 // export const followBuddy = object => dispatch => {
-//     debugger; 
+
 //     return FollowAPIUtil.addBuddy(object['follow_id'], object['user_id'])
 //     .then(obj =>      
 //         dispatch(addBuddy(obj['follow_id'], obj['user_id'])))

@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
   );
 
   const personalGreeting = () => {
-    debugger; 
+    debugger;
     return (
     <hgroup className="profile-body">
       <Header/>
@@ -42,9 +42,9 @@ const Greeting = ({ currentUser, logout }) => {
         <hr />
 
         <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
-        {/* <div>
-          {currentUser.followIds.join(", ")}
-        </div> */}
+        <div>
+          {Object.values(currentUser.followIds).join(", ")}
+        </div>
       </div>
 
       <Footer/>

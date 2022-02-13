@@ -1,5 +1,5 @@
 export const addBuddy = (follow) => {
-    // debugger; 
+
     return $.ajax({
         method: 'POST', 
         url: 'api/follows', 

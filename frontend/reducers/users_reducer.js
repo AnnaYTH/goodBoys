@@ -11,7 +11,7 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_CURRENT_USER:
       return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
     case ADD_BUDDY: 
-      // debugger; 
+
     case REMOVE_BUDDY: 
       const nextState = Object.assign({}, state)
       delete nextState[action.user.id]

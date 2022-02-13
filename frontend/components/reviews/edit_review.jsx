@@ -35,7 +35,6 @@ class EditReview extends React.Component {
     }
 
     componentDidMount() {
-        // debugger; 
         this.props.getReviews(); 
         // this.props.getReview(this.props.match.params.id); 
         this.props.getRelationships(); 
@@ -54,7 +53,7 @@ class EditReview extends React.Component {
 
     handleDelete(e) {
         e.preventDefault(); 
-        debugger; 
+
         this.props.deleteReview(this.state.id)
         this.props.history.push(`/users/${this.props.currentUser.id}`); 
     }
@@ -89,7 +88,6 @@ class EditReview extends React.Component {
             // activeColor: '#F6B443',This is not working, i'll figure it out later
         }
 
-        // debugger; 
         return (
             <div>
                 <Header />

@@ -18,7 +18,7 @@ class Relationship extends React.Component {
     }
 
     render() {
-        // debugger; 
+
         return (
             <div className='main-body'>
      

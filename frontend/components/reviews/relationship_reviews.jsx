@@ -29,7 +29,6 @@ class RelationshipReview extends React.Component {
     }
 
     componentDidMount() {
-        // debugger; 
         this.props.getReviews(); 
 
         let allReviews = Object.values(this.props.reviews); 
@@ -39,18 +38,13 @@ class RelationshipReview extends React.Component {
         this.setState({
             shipReview: filtered,
         })
-        // debugger; 
 
         //now this won't render the first time, only after I navigate away and then comes back
         // window.location.reload(); 
     }
 
-    // componentDidUpdate(prevState) {
-    //     if(this.state.shipReview.length !== prevState.shipReview.length)
-    // }
-
     render() {
-        debugger; 
+
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>

@@ -10,7 +10,7 @@ import Footer from '../footer';
 import ReactStars from "react-rating-stars-component";
 
 const mSTP = (state, ownProps) => {
-    // debugger; 
+
     return ({
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
@@ -47,7 +47,7 @@ class CreateReview extends React.Component {
     }
 
     componentDidMount() {
-        // debugger; 
+
         this.props.getReviews(); 
         // this.props.getReview(this.props.match.params.id); 
         this.props.getRelationships(); 
@@ -84,7 +84,6 @@ class CreateReview extends React.Component {
             }
         }
 
-        // debugger; 
         return (
             <div>
                 <Header />

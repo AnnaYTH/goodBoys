@@ -11,7 +11,7 @@ import Header from '../header';
 import { followBuddy, unfollowBuddy } from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => {
-    // debugger; 
+
     return ({
         currentUser: state.entities.users[state.session.id],
         users: state.entities.users, 
@@ -50,18 +50,18 @@ class FriendProfile extends React.Component {
         let follow = {'follow_id': humanNumber, 'user_id': this.props.currentUser.id}
 
         this.props.followBuddy(follow); 
-        debugger; 
+
         // codeFairies - insert error handling here!
         this.props.history.push(`/relationships`) ;
     }
  
     render() {
-        // debugger; 
+ 
         const buddy = this.props.userProfile; 
         if(!buddy) {
             return null; 
         }
-        // debugger; 
+
         return (
             <div>
                 <Header/>

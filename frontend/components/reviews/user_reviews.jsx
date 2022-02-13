@@ -14,7 +14,7 @@ class UserReview extends React.Component {
     }
 
     sortByUser() {
-        // debugger; 
+
         let userReviews = []; 
         let allReviews = Object.values(this.props.reviews); 
 
@@ -42,7 +42,7 @@ class UserReview extends React.Component {
                 </div>
             )
         })
-        // debugger; 
+
         return (
             <div> 
 

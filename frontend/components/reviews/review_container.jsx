@@ -5,7 +5,7 @@ import { getRelationships, getRelationship } from '../../actions/relationship_ac
 // import { getRelationships, getRelationship, getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/relationship_actions'; 
 
 const mSTP = (state) => {
-    // debugger; 
+
     return ({
         reviews: state.entities.reviews,
         // relationships: state.entities.relationships, 
