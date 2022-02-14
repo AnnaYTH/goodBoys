@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
   );
 
   const personalGreeting = () => {
-    // debugger;
+
     return (
     <hgroup className="profile-body">
       <Header/>
@@ -41,10 +41,11 @@ const Greeting = ({ currentUser, logout }) => {
 
         <hr />
 
-        <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
+        {/* THIS IS NOT WORKING, THE DEBUGGER IS ABLE TO SEE THE FOLLOWID, BUT THEN IT CANNOT READ LENGTH?  */}
+        {/* <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
         <div>
-          {currentUser.followIds.length > 1 ? (Object.values(currentUser.followIds)).join(", ") : 'You Are Not Following Anyone Yet!'}
-        </div>
+          {currentUser.followIds.length < 1 ? (Object.values(currentUser.followIds)).join(", ") : 'You Are Not Following Anyone Yet!'}
+        </div> */}
       </div>
 
       <Footer/>
