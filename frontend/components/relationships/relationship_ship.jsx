@@ -19,7 +19,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     getRelationships: () => dispatch(getRelationships()),
     getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId)), 
-    getReviews: () => dispatch(getReviews()), 
+    // getReviews: () => dispatch(getReviews()), 
 })
 
 class RelationshipShip extends React.Component {
@@ -30,7 +30,7 @@ class RelationshipShip extends React.Component {
 
     componentDidMount() {
         this.props.getRelationships(); 
-        this.props.getReviews(); 
+        // this.props.getReviews(); 
     }
 
     render() {

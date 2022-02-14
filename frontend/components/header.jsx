@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import SearchBar from './searchbar/search_bar'; 
 
 const Header = () => {
-
-    // if(!SearchBar) {
-    //     return null; 
-    // }
-
     return (
         <div className='header'> 
             <img src={window.gdby_logo} alt='logo' /> 

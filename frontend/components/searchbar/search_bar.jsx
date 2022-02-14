@@ -29,25 +29,24 @@ class SearchBar extends React.Component{
         }
 
         // this.sendToReview = this.sendToReview.bind(this); 
-        this.sendToShip = this.sendToShip.bind(this); 
-        this.sendToUser = this.sendToUser.bind(this); 
+        // this.sendToShip = this.sendToShip.bind(this); 
+        // this.sendToUser = this.sendToUser.bind(this); 
         this.handleChange = this.handleChange.bind(this); 
         // this.handleSearch = this.handleSearch.bind(this); 
     }
 
     componentDidMount() {
-        debugger;
         this.props.fetchUsers(); 
         this.props.getRelationships(); 
     }
 
-    sendToShip(id) {
-        this.props.history.push(`/relationships/${id}`)
-    }
+    // sendToShip(id) {
+    //     this.props.history.push(`/relationships/${id}`)
+    // }
 
-    sendToUser(id) {
-        this.props.history.push(`/friends/${id}`)
-    }
+    // sendToUser(id) {
+    //     this.props.history.push(`/friends/${id}`)
+    // }
 
     // sendToReview(id) {
     //     //not sure if I want to let them search by review... but why not...? errrr, maybe I'll come back to this later, for now it is unneccessary 
@@ -85,7 +84,7 @@ class SearchBar extends React.Component{
         if(Object.values(this.props.users).length < 2) {
             return null; 
         }
-        
+
         const shipArr = Object.values(this.props.relationships); 
         const userArr = Object.values(this.props.users); 
 
@@ -100,11 +99,24 @@ class SearchBar extends React.Component{
                 />
 
                 <div className='search-result'>
-                    {shipArr.map((ship, idx) => (
-                        <li key={`ship-result-${idx}`} onClick={() => this.sendToShip(ship.id)}>
-
-                        </li>
-                    ))}
+                    {shipArr.map((ship, idx) => {
+                        if((ship.relationship_name).toLowerCase().includes(this.state.search.toLowerCase())){
+                            return (
+                                <Link key={`ship-result-${idx}`} to={`/relationships/${ship.id}`}> 
+                                    <p>{ship.relationship_name}</p>
+                                </Link>
+                            )
+                        }
+                    })}
+                    {userArr.map((user, idx) => {
+                        if((user.name).toLowerCase().includes(this.state.search.toLowerCase())){
+                            return (
+                                <Link key={`ship-result-${idx}`} to={`/friends/${user.id}`}> 
+                                    <p>{user.name}</p>
+                                </Link>
+                            )
+                        }
+                    })}
                 </div>
             </div>
         )
