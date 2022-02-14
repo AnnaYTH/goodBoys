@@ -38,6 +38,13 @@ class SignupForm extends React.Component {
     }
 
     render() {
+
+        const renderError = (errors ? (
+            errors.map((err, idx) => {
+                return <div> {err} </div>
+            })
+        ) : "")
+
         return (
             <div className='body'>
                 <div className='header'> 
@@ -49,7 +56,7 @@ class SignupForm extends React.Component {
                         <h2>Sign up for GoodBoys</h2>
                         <h3> Sign up to see what your friends are thinking, get referrals, and join the world’s largest community of friends.</h3>
 
-                        {this.errorMessages()}
+                        {renderError}
                         
                         <div className='input'>
                             <label> Name
