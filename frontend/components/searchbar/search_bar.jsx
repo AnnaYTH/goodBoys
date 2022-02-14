@@ -53,9 +53,29 @@ class SearchBar extends React.Component{
 
     render() {
 
+        if(!Object.values(this.props.relationships).length < 2) {
+            return null; 
+        }
+
+        if(!Object.values(this.props.reviews).length < 2) {
+            return null; 
+        }
+
+        if(!Object.values(this.props.users).length < 2) {
+            return null; 
+        }
+
+        const results = []; 
+
         return(
             <div>
                 This is the Search Bar 
+                <input 
+                type="text" 
+                placeholder='Search goodBoys' 
+                value={this.state.search}
+                onChange={this.handleChange}
+                />
             </div>
         )
     }
