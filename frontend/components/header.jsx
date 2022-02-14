@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './searchbar/search_bar'; 
 
 const Header = () => {
+
+    // if(!SearchBar) {
+    //     return null; 
+    // }
+
     return (
         <div className='header'> 
             <img src={window.gdby_logo} alt='logo' /> 
@@ -14,7 +20,8 @@ const Header = () => {
 
             <Link to="/friends"> All Users </Link>
 
-            <p>Search Bar</p>
+            {/* <p>Search Bar</p> */}
+            <SearchBar />
 
             <Link to='/users/:id'> Profile </Link>
 

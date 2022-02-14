@@ -28,9 +28,17 @@ class SearchBar extends React.Component{
             search: "", 
         }
 
-        this.sendToReview = this.sendToReview.bind(this); 
+        // this.sendToReview = this.sendToReview.bind(this); 
         this.sendToShip = this.sendToShip.bind(this); 
-        this.sendToReview = this.sendToReview.bind(this)
+        this.sendToUser = this.sendToUser.bind(this); 
+        this.handleChange = this.handleChange.bind(this); 
+        // this.handleSearch = this.handleSearch.bind(this); 
+    }
+
+    componentDidMount() {
+        debugger;
+        this.props.fetchUsers(); 
+        this.props.getRelationships(); 
     }
 
     sendToShip(id) {
@@ -41,41 +49,63 @@ class SearchBar extends React.Component{
         this.props.history.push(`/friends/${id}`)
     }
 
-    sendToReview(id) {
-        //not sure if I want to let them search by review... but why not...?
-        this.props.history.push(`/reviews/${id}`)
+    // sendToReview(id) {
+    //     //not sure if I want to let them search by review... but why not...? errrr, maybe I'll come back to this later, for now it is unneccessary 
+    //     this.props.history.push(`/reviews/${id}`)
+    // }
+
+    handleChange(e) {
+        e.preventDefault()
+        this.setState({
+            search: e.target.value,
+        }) 
     }
 
-    setSearch(e){
-        e.preventDefault(); 
-        this.setState({search: e.target.value})
-    }
+    // handleSearch() {
+    //     const results = []; 
+
+    //     this.props.relationships.forEach(ship => {
+    //         if(ship.relationship_name.toLowerCase().includes(this.state.search.toLowerCase())) {
+    //             results.push(ship); 
+    //             // pushing the entire object of the ship
+    //         }
+    //     })
+    // }
 
     render() {
 
-        if(!Object.values(this.props.relationships).length < 2) {
+        if(Object.values(this.props.relationships).length < 2) {
             return null; 
         }
 
-        if(!Object.values(this.props.reviews).length < 2) {
+        // if(!Object.values(this.props.reviews).length < 2) {
+        //     return null; 
+        // }
+
+        if(Object.values(this.props.users).length < 2) {
             return null; 
         }
-
-        if(!Object.values(this.props.users).length < 2) {
-            return null; 
-        }
-
-        const results = []; 
+        
+        const shipArr = Object.values(this.props.relationships); 
+        const userArr = Object.values(this.props.users); 
 
         return(
-            <div>
-                This is the Search Bar 
+            <div className='search-body'>
+                <p> This is the Search Bar </p>
                 <input 
                 type="text" 
                 placeholder='Search goodBoys' 
                 value={this.state.search}
                 onChange={this.handleChange}
                 />
+
+                <div className='search-result'>
+                    {shipArr.map((ship, idx) => (
+                        <li key={`ship-result-${idx}`} onClick={() => this.sendToShip(ship.id)}>
+
+                        </li>
+                    ))}
+                </div>
             </div>
         )
     }

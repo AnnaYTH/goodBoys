@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 import Footer from '../footer'; 
 import Header from '../header'; 
 import RelationshipReview from '../reviews/relationship_reviews';
-import { getRelationship, getRelationships, getReviews } from '../../actions/relationship_actions';
+import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 import { connect } from 'react-redux'; 
-// import { getReviews } from '../../util/reviews_api_util';
+import { getReviews } from '../../util/reviews_api_util';
 
 
 const mSTP = (state, ownProps) => {
     return({
         relationship: state.entities.relationships[ownProps.match.params.id], 
         relationships: (state.entities.relationships),
-        // reviews: state.entities.reviews
+        reviews: state.entities.reviews
     })
 }
 
 const mDTP = dispatch => ({
     getRelationships: () => dispatch(getRelationships()),
     getRelationship: (relationshipId) => dispatch(getRelationship(relationshipId)), 
-    // getReviews: () => dispatch(getReviews()), 
+    getReviews: () => dispatch(getReviews()), 
 })
 
 class RelationshipShip extends React.Component {
@@ -30,14 +30,13 @@ class RelationshipShip extends React.Component {
 
     componentDidMount() {
         this.props.getRelationships(); 
-        // this.props.getRelationship(this.props.match.params.id); 
-        // this is unnecessary because I just need to populate once with all relationships
+        this.props.getReviews(); 
     }
 
     render() {
  
         const ship = this.props.relationship
-        // [this.props.match.params.id]; 
+    
         if(!ship) {
             return null; 
         }
