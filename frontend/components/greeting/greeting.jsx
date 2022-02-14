@@ -43,7 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
 
         <div> {currentUser.name}'s following these buddies (just the Ids for now) </div>
         <div>
-          {Object.values(currentUser.followIds).join(", ")}
+          {currentUser.followIds.length > 1 ? (Object.values(currentUser.followIds)).join(", ") : 'You Are Not Following Anyone Yet!'}
         </div>
       </div>
 
