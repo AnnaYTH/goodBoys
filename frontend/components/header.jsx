@@ -14,8 +14,7 @@ const Header = () => {
             <Link to ="/relationships"> All Relationships </Link>
 
             <Link to="/friends"> All Users </Link>
-
-            {/* <p>Search Bar</p> */}
+            
             <SearchBar />
 
             <Link to='/users/:id'> Profile </Link>

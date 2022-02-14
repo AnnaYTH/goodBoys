@@ -28,11 +28,7 @@ class SearchBar extends React.Component{
             search: "", 
         }
 
-        // this.sendToReview = this.sendToReview.bind(this); 
-        // this.sendToShip = this.sendToShip.bind(this); 
-        // this.sendToUser = this.sendToUser.bind(this); 
         this.handleChange = this.handleChange.bind(this); 
-        // this.handleSearch = this.handleSearch.bind(this); 
     }
 
     componentDidMount() {
@@ -40,18 +36,6 @@ class SearchBar extends React.Component{
         this.props.getRelationships(); 
     }
 
-    // sendToShip(id) {
-    //     this.props.history.push(`/relationships/${id}`)
-    // }
-
-    // sendToUser(id) {
-    //     this.props.history.push(`/friends/${id}`)
-    // }
-
-    // sendToReview(id) {
-    //     //not sure if I want to let them search by review... but why not...? errrr, maybe I'll come back to this later, for now it is unneccessary 
-    //     this.props.history.push(`/reviews/${id}`)
-    // }
 
     handleChange(e) {
         e.preventDefault()
@@ -59,17 +43,6 @@ class SearchBar extends React.Component{
             search: e.target.value,
         }) 
     }
-
-    // handleSearch() {
-    //     const results = []; 
-
-    //     this.props.relationships.forEach(ship => {
-    //         if(ship.relationship_name.toLowerCase().includes(this.state.search.toLowerCase())) {
-    //             results.push(ship); 
-    //             // pushing the entire object of the ship
-    //         }
-    //     })
-    // }
 
     render() {
 
@@ -90,7 +63,7 @@ class SearchBar extends React.Component{
 
         return(
             <div className='search-body'>
-                <p> This is the Search Bar </p>
+                {/* <p> This is the Search Bar </p> */}
                 <input 
                 type="text" 
                 placeholder='Search goodBoys' 
