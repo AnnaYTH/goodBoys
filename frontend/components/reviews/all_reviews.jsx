@@ -44,6 +44,7 @@ class AllReviews extends React.Component {
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                    {/* <hr /> */}
                 </div>
             )
         })

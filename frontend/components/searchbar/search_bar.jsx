@@ -26,9 +26,11 @@ class SearchBar extends React.Component{
 
         this.state = {
             search: "", 
+            active: false,
         }
 
         this.handleChange = this.handleChange.bind(this); 
+        this.setActive = this.setActive.bind(this); 
     }
 
     componentDidMount() {
@@ -36,12 +38,21 @@ class SearchBar extends React.Component{
         this.props.getRelationships(); 
     }
 
-
     handleChange(e) {
         e.preventDefault()
         this.setState({
             search: e.target.value,
         }) 
+    }
+
+    setActive() {
+        if (this.state.active) {
+            setTimeout(() => {
+                this.setState({active: false})
+            }, 200)
+        }else {
+            this.setState({active: true})
+        }
     }
 
     render() {
@@ -65,28 +76,35 @@ class SearchBar extends React.Component{
             <div className='search-body'>
                 {/* <p> This is the Search Bar </p> */}
                 <input 
+                className='search-bar-input'
                 type="text" 
                 placeholder='Search goodBoys' 
                 value={this.state.search}
                 onChange={this.handleChange}
+                onFocus={this.setActive}
+                onBlur={this.setActive}
                 />
 
-                <div className='search-result'>
+                <div className={this.state.active ? 'search-result-body' : 'search-result-body-hidden'}>
                     {shipArr.map((ship, idx) => {
                         if((ship.relationship_name).toLowerCase().includes(this.state.search.toLowerCase())){
                             return (
-                                <Link key={`ship-result-${idx}`} to={`/relationships/${ship.id}`}> 
-                                    <p>{ship.relationship_name}</p>
+                                <div className='search-result-ship'>
+                                <Link className='search-result-link' key={`ship-result-${idx}`} to={`/relationships/${ship.id}`}> 
+                                    {ship.relationship_name}
                                 </Link>
+                                </div>
                             )
                         }
                     })}
                     {userArr.map((user, idx) => {
                         if((user.name).toLowerCase().includes(this.state.search.toLowerCase())){
                             return (
-                                <Link key={`ship-result-${idx}`} to={`/friends/${user.id}`}> 
-                                    <p>{user.name}</p>
+                                <div className='search-result-ship'>
+                                <Link className='search-result-link' key={`ship-result-${idx}`} to={`/friends/${user.id}`}> 
+                                    {user.name}
                                 </Link>
+                                </div>
                             )
                         }
                     })}

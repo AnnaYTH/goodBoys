@@ -45,7 +45,7 @@ class AllFriends extends React.Component {
         // I will eventually put an if conditional so that the currentuser won't be shown to themself
         const allUsers = usersArr.map((user, idx) => {
             return (
-                <div key={`allUsers-${idx}`}>
+                <div className='friend-all' key={`allUsers-${idx}`}>
                     {/* insert link to individual profile page here */}
                     <Link to={`/friends/${user.id}`}>
                         <p> id: {user.id} </p>

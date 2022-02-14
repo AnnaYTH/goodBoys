@@ -3,4 +3,12 @@
 .allReviews {
     padding: 20px; 
     // border: red solid 3px;
+    font-family: 'Lato', sans-serif;
+    line-height: 120%; 
+}
+
+.allReviews a {
+    text-decoration: none; 
+    color:  #382110; 
+    font-weight: bolder; 
 }
