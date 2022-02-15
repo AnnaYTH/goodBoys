@@ -30,11 +30,14 @@ const Greeting = ({ currentUser, logout }) => {
         <div>Activity: Joined goodBoys on {currentUser.created_at.split("T")[0]} </div>
 
         <hr />
+
         <Link to='/'>
           <button className="logout_button" onClick={logout}>Log Out</button>
         </Link>
+
         <hr />
         <div> {currentUser.name.toUpperCase()}'s recent activity</div>
+        
         <UserReview/>
 
         <hr />
