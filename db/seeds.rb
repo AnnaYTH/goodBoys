@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.DESTROY_ALL
-Follow.DESTROY_ALL
-Relationship.DESTROY_ALL
-Review.DESTROY_ALL
+User.destroy_all
+Follow.destroy_all
+Relationship.destroy_all
+Review.destroy_all
 
 User.create(name: 'Anna TroHer', email: 'demo@demo.com', password: 'password');
 User.create(name: 'Buddy Demogod', email: 'buddy@gmail.com', password: 'hunter12');
