@@ -25,8 +25,10 @@ Now I wanted to apply this to past relationships people have formed. It may be f
 
 # Code Snippits <a name='snip'></a>
 ```
-
+let allReviews = Object.values(this.props.reviews); 
+        let filtered = allReviews.filter(review => review.relationship_id === parseInt(this.props.shipId))
 ```
+I cannot believe how long it took me to figure out that I was trying to compare a '2' and a 2 and that of course js won't ever think strings and numbers are the same. Took me back to day one of looking at code. 
 
 # Style <a name='style'></a>
 This is my footer. Please read and abide. 
