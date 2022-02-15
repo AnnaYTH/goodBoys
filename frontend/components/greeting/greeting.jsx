@@ -5,9 +5,6 @@ import Header from '../header';
 import UserReview from '../reviews/review_container'; 
 
 // nbsp non breaking space 
-
-
-
 const Greeting = ({ currentUser, logout }) => {
   
   const sessionLinks = () => (
@@ -53,9 +50,9 @@ const Greeting = ({ currentUser, logout }) => {
     )
   };  
 
-  // return currentUser ? personalGreeting() : sessionLinks();
+  return currentUser ? personalGreeting() : sessionLinks();
 
-  return personalGreeting(); 
+  // return personalGreeting(); 
 };
 
 
