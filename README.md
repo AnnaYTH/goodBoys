@@ -16,6 +16,12 @@ Now I wanted to apply this to past relationships people have formed. It may be f
 
 # Functionality and MVPs: <a name='func'></a>
 
+* Relationships are akin to Books and readers can browse them and rate at will!
+* Reviews can be written by each user with a name of the subject, a star rating, and a body text
+* Users can come back to previously written reviews and edit or delete them with full CRUD functionality
+* Users can search for relationships and other users
+* Users can choose to follow other users
+
 # Technology <a name='tech'></a>
 * React 
 * Rails
