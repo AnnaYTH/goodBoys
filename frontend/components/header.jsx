@@ -9,11 +9,11 @@ const Header = () => {
 
             <Link to ="/relationships"> Home </Link>
 
-            <Link to='/reviews'> All Reviews </Link>
+            {/* <Link to='/reviews'> All Reviews </Link> */}
 
             <Link to ="/relationships"> All Relationships </Link>
 
-            <Link to="/friends"> All Users </Link>
+            {/* <Link to="/friends"> All Users </Link> */}
             
             <SearchBar />
 
