@@ -70,7 +70,9 @@ class LoginForm extends React.Component {
                     <form className='signup-form' onSubmit = {this.handleSubmit}>
                         <h2>Sign in to GoodBoys</h2>
 
-                        {this.errorMessages()}
+                        <div className='error-messages'>
+                            {this.errorMessages()}
+                        </div>
 
                         <div className='email-input input'>
                             <label> Email

@@ -66,13 +66,13 @@ class RelationshipShip extends React.Component {
                         <h3>{ship.relationship_definition}</h3>
                         <h4>
                             {/* <div className='ship_subtitle'> More Details </div> */}
-                            <div>Average Rating Goes Here</div>
+                            {/* <div>Average Rating Goes Here</div> */}
                             <div className='ship_subtitle'>Ratings and Reviews</div>
 
                             <RelationshipReview shipId={this.props.match.params.id}/>
 
                             
-                            <div className='ship_subtitle'>Friends and Following</div>
+                            {/* <div className='ship_subtitle'>Friends and Following</div> */}
                         </h4>
                     </div>
                 </div>

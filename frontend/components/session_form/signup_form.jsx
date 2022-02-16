@@ -56,7 +56,9 @@ class SignupForm extends React.Component {
                         <h2>Sign up for GoodBoys</h2>
                         <h3> Sign up to see what your friends are thinking, get referrals, and join the world’s largest community of friends.</h3>
 
-                        {this.errorMessages()}
+                        <div className='error-messages'>
+                            {this.errorMessages()}
+                        </div>
                         
                         <div className='input'>
                             <label> Name
