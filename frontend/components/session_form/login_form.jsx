@@ -109,10 +109,6 @@ class LoginForm extends React.Component {
                     </form>
                     
                 </div>
-
-                    <div className='bookshelf-footer'> 
-                        {/* <img src={window.bookshelf} alt='bookshelf' />  */}
-                    </div>
             </div>
         )
     }

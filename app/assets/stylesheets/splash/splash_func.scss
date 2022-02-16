@@ -7,7 +7,6 @@
     font-family: 'Lato', sans-serif;
 }
 
-
 .column {
     display: flex; 
     flex-direction: row;
@@ -15,7 +14,6 @@
 }
 
 .header-logo {
-    // background-color: #F4F1EA; 
     height: 60px; 
     display: flex; 
     margin-left: 10vw; 
@@ -33,13 +31,11 @@
 .horizontal {
     flex-wrap: wrap;
     flex-direction: row;
-    // border: solid yellowgreen 10px; 
     display: flex; 
     justify-content: space-between;
     background-color: rgb(50,54,45); 
     height: 300px; 
     margin-left: 10vw; 
-    // font-family: 'Gideon Roman', cursive;
 }
 
 .horizontal-background {
@@ -50,7 +46,6 @@
     position: absolute;
     left: 0px;
     top: 110px; 
-    // border: red solid 5px; 
 }
 .choice-awards-book-text {
     font-size: 40px; 
@@ -61,7 +56,6 @@
     justify-content: space-around; 
     height: 70%; 
     border-radius: 10%;
-    // font-family: 'Gideon Roman', cursive;
 }
 
 .choice-awards { 
@@ -84,19 +78,18 @@
 .interactive-buttons {
     padding: 50px; 
     background-color: #FFF;
-    // justify-content: right;
     width: 250px; 
     height: 180px;  
     border: 1px solid grey; 
     border-radius: 5px;
     height: 120%; 
-    // float: right; 
+    line-height: 150%; 
 }
 
 .terms-service {
     color: grey; 
     font-size: 12px; 
-    width: 200px; 
+    width: 240px; 
 }
 
 .interactive-buttons p {
@@ -170,7 +163,7 @@
 //     border: dotted blue 5px;  
 // }
 
-.searchbar {
-    height: 50px; 
-    padding: 20px; 
-}
+// .searchbar {
+//     height: 50px; 
+//     padding: 20px; 
+// }

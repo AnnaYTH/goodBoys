@@ -60,11 +60,6 @@ class SearchBar extends React.Component{
         if(Object.values(this.props.relationships).length < 2) {
             return null; 
         }
-
-        // if(!Object.values(this.props.reviews).length < 2) {
-        //     return null; 
-        // }
-
         if(Object.values(this.props.users).length < 2) {
             return null; 
         }

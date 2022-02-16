@@ -8,8 +8,6 @@ class Relationship extends React.Component {
 
     constructor(props) {
         super(props)
-
-        // this.handleCreate = this.handleCreate.bind(this); 
     }
 
     componentDidMount() {
