@@ -42,7 +42,7 @@ class AllReviews extends React.Component {
                     </Link>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
-                    <p>review: {review.review} </p>
+                    <p>review: {review.body} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
                     {/* <hr /> */}
                 </div>
