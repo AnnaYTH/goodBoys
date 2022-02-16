@@ -4,13 +4,23 @@
     font-family: 'Lato', sans-serif;
     display: flex; 
     flex-direction: column;
-    // display: inline-flex; 
     justify-content: space-evenly;
     width: 100vw;
 }
 
+.ship_list_item {
+    width: 800px; 
+    margin-left: 50px; 
+}
+
+.ship_list {
+    display: flex;
+    flex-direction: row;
+    margin: 10px; 
+    margin-bottom: 30px;
+}
+
 .title_head {
-    // font-family: 'Merriweather', serif;
     font-size: 24px; 
     font-weight: bolder;
     margin: 20px; 
@@ -22,35 +32,16 @@
     font-size: 19px;
     margin-bottom: 8px;
     font-weight: bolder; 
-    // border: red 1px solid; 
     text-decoration: none;
-    //Links are a tags under the hood
-}
-
-.ship_list h2 {
-    font-size: 12px;
-    margin-bottom: 8px;
-    color: #00635D; 
 }
 
 .ship_list h2 {
     font-size: 13px;
+    margin-bottom: 8px;
+    color: #00635D; 
 }
 
 
-.ship_list_item {
-    width: 700px; 
-    margin-left: 150px; 
-}
-
-.ship_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    // border: 1px black solid; 
-    margin: 10px; 
-    margin-bottom: 30px;
-}
 
 .column_2 {
     display: flex;
@@ -62,7 +53,6 @@
 }
 
 .image_place {
-    // border: 1px blue solid; 
     height: 100px; 
     width: 150px; 
     margin-bottom: 10px; 

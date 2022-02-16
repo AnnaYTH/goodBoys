@@ -80,10 +80,11 @@ class OneReview extends React.Component {
                                 <img src={currentRelationship.photo_url} alt='cover' /> 
                             </p>
                         </div>
-
                         <div className='review-right-col'>
                             <h1> {currentRelationship.relationship_name} </h1>
                             <h2> pronounced: {currentRelationship.pronounciation} </h2>
+                            <hr />
+                            <br />
                             <h2> {this.props.currentUser.name}'s review</h2>
                             <p>rating: {currentReview.rating}</p> 
                             {/* change this to a star rating with pictures of stars⭐ */}
