@@ -64,6 +64,8 @@ class RelationshipShip extends React.Component {
                         <h1> {ship.relationship_name} </h1>
                         <h2> {ship.pronounciation} </h2>
                         <h3>{ship.relationship_definition}</h3>
+                        <br />
+                        <hr />
                         <h4>
                             {/* <div className='ship_subtitle'> More Details </div> */}
                             {/* <div>Average Rating Goes Here</div> */}

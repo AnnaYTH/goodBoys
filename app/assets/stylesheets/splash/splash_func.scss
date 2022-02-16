@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lato:wght@300&family=Libre+Baskerville&family=Merriweather:wght@300&family=Source+Sans+3:wght@200&display=swap');
 
 .body {
-    background-color: #F4F1EA; 
+    // background-color: #F4F1EA;
+    // z-index: -2; 
     // font-family: 'Spline Sans', sans-serif;
     font-family: 'Lato', sans-serif;
 }
+
 
 .column {
     display: flex; 
@@ -12,10 +15,10 @@
 }
 
 .header-logo {
-    background-color: #F4F1EA; 
+    // background-color: #F4F1EA; 
     height: 60px; 
     display: flex; 
-
+    margin-left: 10vw; 
 }
 
 .left-col {
@@ -40,17 +43,20 @@
     justify-content: space-between;
     background-color: rgb(50,54,45); 
     height: 300px; 
+    margin-left: 10vw; 
+    // font-family: 'Gideon Roman', cursive;
 }
 
-// .horizontal-background {
-//     background-color: rgb(50,54,45);
-//     height: 300px; 
-//     width: 100vw; 
-//     z-index: -1;
-//     position: absolute;
-//     left: 0px;
-//     top: 0px; 
-// }
+.horizontal-background {
+    background-color: rgb(50,54,45);
+    height: 300px; 
+    width: 100vw; 
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    top: 110px; 
+    // border: red solid 5px; 
+}
 .choice-awards-book-text {
     font-size: 40px; 
     background: rgb(236,188,108);
@@ -60,6 +66,7 @@
     justify-content: space-around; 
     height: 70%; 
     border-radius: 10%;
+    // font-family: 'Gideon Roman', cursive;
 }
 
 .choice-awards { 
@@ -76,6 +83,7 @@
     padding-left: 50px;
     font-weight: 200; 
     font-size: 55px; 
+    font-family: 'Gideon Roman', cursive;
 }
 
 .interactive-buttons {
@@ -118,6 +126,7 @@
     height: 150px; 
     padding: 3px;
     line-height: 18px; 
+    margin-left: 7vw; 
 }
 
 .next-friend {

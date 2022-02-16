@@ -49,13 +49,13 @@ class RelationshipReview extends React.Component {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
                     <Link to={`/reviews/${review.id}`}> Review ID: {review.id}
-                    </Link>
                     <p>relationship ID: {review.relationship_id}</p>
                     <p>reviewer id: {review.user_id} </p>
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.review} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                    </Link>
                     <hr />
                 </div>
             )

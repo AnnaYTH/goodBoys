@@ -13,7 +13,7 @@ class Splash extends React.Component {
                             <img src={window.gdby_logo} alt='logo' /> 
                         </div>
 
-                        {/* <div className='horizontal-background'> </div> */}
+                        <div className='horizontal-background'> </div>
 
                         <div className='horizontal'>
                             <div className='choice-awards'> 
@@ -48,11 +48,11 @@ class Splash extends React.Component {
                         </div>
                     </div>
 
-                    <div className='right-right-col'>
+                    {/* <div className='right-right-col'>
                         <div className='horizontal'>
                             Hey
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 
