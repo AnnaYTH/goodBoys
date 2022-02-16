@@ -5,18 +5,14 @@
     flex-direction: row;
     padding: 10px; 
     padding-top: 20px; 
-
-    // position: absolute; 
-    // bottom: 0; 
-    // width: 100%; 
-    // width: 100vw;
+    justify-content: space-between;
     font-family: 'Lato', sans-serif;
-
+    padding-bottom: 30px; 
 }
 
 .footer-company {
-    padding-left: 10px; 
-    width: 300px; 
+    padding-left: 11vw; 
+    // width: 300px;
 }
 
 .footer-company h1 {
@@ -27,10 +23,6 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 4px; 
-}
-
-.footer-work {
-    width: 300px;
 }
 
 .footer-work h1 {
@@ -44,19 +36,24 @@
 }
 
 .footer-connect {
-    width: 300px
+    padding-right: 10vw; 
+}
+
+.footer-connect h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px; 
 }
 
 .socials {
     display: flex; 
     flex-direction: row;
     justify-content: space-evenly;
-    // padding: 10px;
     margin-right: 10px; 
     margin-top: 10px; 
     border-radius: 20px;
     font-size: 36px; 
-    margin-left: -30px; 
 }
 
 .fa {
@@ -67,4 +64,5 @@
     border-radius: 10px; 
     color: rgb(50,54,45);
     border: solid rgb(50,54,45) 2px;
+    margin-right: 10px; 
 }

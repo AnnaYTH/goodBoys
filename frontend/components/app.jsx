@@ -31,7 +31,6 @@ const App = () => (
         <GreetingContainer/>
         <p>GoodBoys Logo</p>
     </header> */}
-    <p> </p>
     <Switch>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />

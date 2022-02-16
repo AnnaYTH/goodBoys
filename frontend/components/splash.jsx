@@ -47,12 +47,6 @@ class Splash extends React.Component {
                             <p className='terms-service'> By creating an account, you agree to the goodBoys Terms of Service and Privacy Policy.</p>
                         </div>
                     </div>
-
-                    {/* <div className='right-right-col'>
-                        <div className='horizontal'>
-                            Hey
-                        </div>
-                    </div> */}
                 </div>
 
 
