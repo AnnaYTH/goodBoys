@@ -58,4 +58,4 @@ When you've got a library card."
 ![LibraryCard](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/library_card.jpg)
 
 Each relationships has can have multiple reviews from any user
-![Manager]()
+![Manager](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/manager_ss.jpg)
