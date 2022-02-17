@@ -109,7 +109,7 @@ class UserReview extends React.Component {
                 <hr />
                 <br />
 
-                <div> {this.props.currentUser.name}'s following these buddies (just the Ids for now)</div>
+                <div> {this.props.currentUser.name}'s following these buddies </div>
 
                 <div>
                     {buddies}
