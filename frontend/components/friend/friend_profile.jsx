@@ -65,7 +65,7 @@ class FriendProfile extends React.Component {
         const friendReviews = Object.values(this.props.reviews).map((review, idx) => {
             if(this.props.userProfile.id === review.user_id) {
                 return (
-                <div>
+                <div className='userReview' key={`buddyReview-${idx}`}>
                     <Link to={`/reviews/${review.id}`}>
                         <p>name: {review.name}</p>
                         <p>rating: {review.rating}</p>
@@ -107,6 +107,7 @@ class FriendProfile extends React.Component {
                         <button className="logout_button" onClick={this.toggleFollow}> Follow </button>
                         <hr />
                         <div className='userReview'>
+                            <p className='profile-subheader'> Reviews Written by {buddy.name} </p>
                             {friendReviews}
                         </div>
                     </div>

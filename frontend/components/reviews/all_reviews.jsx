@@ -59,7 +59,9 @@ class AllReviews extends React.Component {
                     <Link to={`/reviews/${review.id}`}> 
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
+                    <br />
                     <p>review: {review.body} </p>
+                    <br />
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
                     <br />
                     <br />

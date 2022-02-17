@@ -641,7 +641,7 @@ Review.create(
 Review.create(
     user_id: 3, 
     relationship_id: 17, 
-    name: 'Benjamin', 
+    name: 'Benjamin',
     rating: 5, 
     body: 'At sunset they stopped to rest in a churchyard, where two men were sitting patching a Punch-and-Judy show booth, while the figures of Punch, the doctor, the executioner and the devil were lying on the grass waiting to be mended.'
 )

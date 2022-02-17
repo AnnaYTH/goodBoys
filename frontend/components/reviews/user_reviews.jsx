@@ -82,7 +82,7 @@ class UserReview extends React.Component {
         const buddies = this.listBuddies().map((buddy, idx) => {
             return (
                 <div className='userBuddy' key={`userBuddy-${idx}`}>
-                    <Link to={`/friends/${buddy.id}`}>{buddy.name}</Link>
+                    <Link to={`/friends/${buddy.user_id}`}>{buddy.name}</Link>
                 </div>
             )
         }); 
