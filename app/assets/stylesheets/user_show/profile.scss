@@ -1,4 +1,6 @@
 // components/greeting
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lato:ital,wght@0,300;0,700;0,900;1,400&family=Libre+Baskerville&family=Source+Sans+3:wght@200&display=swap');
+
 
 .profile-body {
     font-family: 'Lato', sans-serif;
@@ -6,12 +8,10 @@
 }
 
 .profile_meat {
-    margin: 20px; 
-    margin-left: 60px;
+    margin: 40px 20px 20px 60px; 
 }
 
 .profile_meat div {
-    // margin: 10px; 
     line-height: 140%; 
 }
 
@@ -32,4 +32,47 @@
 
 .profile-subheader {
     font-size: 16px; 
+}
+
+
+// friend_profile
+.friend-library-card {
+    border: solid 3px #c2e7df; 
+    margin-left: 50px; 
+    width: 350px; 
+    height: 170px; 
+    margin-top: 40px; 
+    border-radius: 20px; 
+    padding: 20px; 
+    background-color: #519CC0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 10px 5px 5px #a29d97;
+}
+
+.nypl-logo {
+    height: 120px; 
+    width: auto;
+}
+
+.nypl {
+    font-family: Lato;
+    font-size: 20px; 
+    line-height: 130%;
+    font-weight: 300; 
+}
+
+.nypl-bold {
+    font-family: Lato;
+    font-size: 20px; 
+    font-weight: 900; 
+    line-height: 150%;
+    margin-bottom: 5px; 
+}
+
+.friend-details {
+    font-size: 16px; 
+    line-height: 130%; 
+    font-weight: 400; 
 }

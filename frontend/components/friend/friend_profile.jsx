@@ -60,17 +60,20 @@ class FriendProfile extends React.Component {
         const buddy = this.props.userProfile; 
         if(!buddy) {
             return null; 
-        }
+        } 
 
-        const friendReviews = this.props.reviews.map((review, idx) => {
-            if(ownProps.match.params.id === review.reviewer_id) {
+        const friendReviews = Object.values(this.props.reviews).map((review, idx) => {
+            if(this.props.userProfile.id === review.user_id) {
                 return (
-                    <Link to={`reviews/${review.id}`}>
+                <div>
+                    <Link to={`/reviews/${review.id}`}>
                         <p>name: {review.name}</p>
                         <p>rating: {review.rating}</p>
                         <p>review: {review.body} </p>
                         <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                        <br />
                     </Link>
+                </div>
                 )
             }
         })
@@ -79,13 +82,34 @@ class FriendProfile extends React.Component {
             <div>
                 <Header/>
 
-                <div className='friend-body'>
+                <div className='profile-body'>
 
-                    <p> Name: {buddy.name} </p>
-                    <p> Email: {buddy.email} </p>
-                    <p> Member Since: {buddy.created_at.split("T")[0]} </p>
+                    <div className='friend-library-card'>
+                        <div className='friend-library-card-left'>
+                            <img className='nypl-logo' src={window.nypl_logo} alt="nypl-logo" />
+                        </div>
 
-                    <button onClick={this.toggleFollow}> Follow </button>
+                    {/* logo and colors taken from the NYPL github, thank you! */}
+
+
+                        <div className='friend-library-card-right'>
+                            <p className='nypl'> New York </p>
+                            <p className='nypl'> Public </p>
+                            <p className='nypl-bold'>   Relationships</p>
+                            <p className='friend-details'> Name: {buddy.name} </p>
+                            <p className='friend-details'> Email: {buddy.email} </p>
+                            <p className='friend-details'> Member Since: {buddy.created_at.split("T")[0]} </p>
+                        </div>
+                    </div>
+
+                    <div className='profile_meat'>
+                        <hr />
+                        <button className="logout_button" onClick={this.toggleFollow}> Follow </button>
+                        <hr />
+                        <div className='userReview'>
+                            {friendReviews}
+                        </div>
+                    </div>
 
                 </div>
 
