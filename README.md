@@ -31,11 +31,31 @@ Now I wanted to apply this to past relationships people have formed. It may be f
 
 # Code Snippits <a name='snip'></a>
 ```
-let allReviews = Object.values(this.props.reviews); 
-        let filtered = allReviews.filter(review => review.relationship_id === parseInt(this.props.shipId))
+toggleFollow(e) {
+        e.preventDefault(); 
+        let humanNumber = parseInt(this.props.match.params.id)
+        let follow = {'follow_id': humanNumber, 'user_id': this.props.currentUser.id}
+
+        this.props.followBuddy(follow); 
+    }
+
+
+export const addBuddy = (follow) => {
+    return $.ajax({
+        method: 'POST', 
+        url: 'api/follows', 
+        data: { follow }
+    })
+};
 ```
-I cannot believe how long it took me to figure out that I was trying to compare a '2' and a 2 and that of course js won't ever think strings and numbers are the same. Took me back to day one of looking at code. 
+This is the first time I can remember passing back more than one argument to the backend, it took me so long to figure out I was not desconstructing the data I was passing back on my util file correctly.
 
 # Style <a name='style'></a>
-This is my footer. Please read and abide. 
-![altText](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/footer.png)
+"Having fun isn't hard,
+When you've got a library card." 
+-Arthur's Almost Live Not Real Music Festival
+
+![LibraryCard](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/library_card.jpg)
+
+Each relationships has can have multiple reviews from any user
+![Manager]()
