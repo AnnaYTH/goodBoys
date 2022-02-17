@@ -17,7 +17,7 @@ const Header = () => {
             
             <SearchBar />
 
-            <Link to='/users/:id' className='header_profile'> Profile </Link>
+            {/* <Link to='/users/:id' className='header_profile'> Profile </Link> */}
 
         </div>
     )

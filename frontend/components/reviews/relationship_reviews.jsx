@@ -4,16 +4,20 @@ import { connect } from 'react-redux';
 import { getReviews } from '../../actions/review_actions'
 // import { getRelationships, getRelationship } from '../../actions/relationship_actions'; 
 // import { getRelationships, getRelationship, getReviews, getReview, createReview, editReview, deleteReview } from '../../actions/relationship_actions'; 
+import { fetchUsers } from '../../actions/session_actions';
+
 
 const mSTP = (state, ownProps) => {
     return ({
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
+        users: state.entities.users, 
     })
 }
 
 const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
+    fetchUsers: () => dispatch(fetchUsers()), 
 }); 
 
 
@@ -30,6 +34,7 @@ class RelationshipReview extends React.Component {
 
     componentDidMount() {
         this.props.getReviews(); 
+        this.props.fetchUsers(); 
 
         let allReviews = Object.values(this.props.reviews); 
         let filtered = allReviews.filter(review => review.relationship_id === parseInt(this.props.shipId))
@@ -44,10 +49,21 @@ class RelationshipReview extends React.Component {
     }
 
     render() {
+        const usersArr = Object.values(this.props.users)
+        // this is when I insert loop to track by user_id from the array
 
+        debugger; 
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
+
+                    <Link to={`/friends/${(review.user_id)}`}>
+                    <p>{usersArr[(review.user_id)-1].name}'s Review</p>
+                    </Link>
+                    <br />
+                    {/* I'll go back and not hardcode this later, i promise */}
+
+
                     <Link to={`/reviews/${review.id}`}> 
                     {/* <p>Review ID: {review.id}</p> */}
                     {/* <p>relationship ID: {review.relationship_id}</p> */}
@@ -61,6 +77,10 @@ class RelationshipReview extends React.Component {
                 </div>
             )
         })
+
+        if(Object.values(this.props.users).length < 2) {
+            return null; 
+        }; 
 
         return (
             <div> 

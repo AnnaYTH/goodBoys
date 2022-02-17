@@ -18,7 +18,7 @@ const Footer = () => {
 
                     <a href="https://angel.co/u/anna-trott-herdrich" target="_blank" className="fa-brands fa fa-angellist"> </a>
 
-                    <a href="https://annayth.github.io/" target="_blank" class="fa-solid fa fa-dragon">
+                    <a href="https://annayth.github.io/" target="_blank" className="fa-solid fa fa-dragon">
                 </a>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const Footer = () => {
                 <div className='socials'>
                     <a href="https://www.linkedin.com/in/annatrottherdrich/" target="_blank" className="fa fa-linkedin"></a>
 
-                    <a href="https://www.goodreads.com/user/show/5722666-anna-trott-herdrich" target="_blank" class="fa-brands fa fa-goodreads"></a>
+                    <a href="https://www.goodreads.com/user/show/5722666-anna-trott-herdrich" target="_blank" className="fa-brands fa fa-goodreads"></a>
 
                     <a href="https://www.instagram.com/roaringdragonite/?hl=en" target="_blank" class="fa fa-instagram"> </a>
                 </div>

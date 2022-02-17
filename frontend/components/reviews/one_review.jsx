@@ -84,7 +84,8 @@ class OneReview extends React.Component {
 
                     <div className='review-bottom'>
                         <div className='review-left-col'> 
-                            <h1 className='review-header'> {reviewUser.name}'s Reviews {'>'}  {currentRelationship.relationship_name}</h1>
+                            <h1 className='review-header'> 
+                            <Link to={`/friends/${reviewUser.id}`}>{reviewUser.name}'s Reviews</Link> {'>'}  {currentRelationship.relationship_name}</h1>
 
                             <p className='ship_profile_image'> 
                                 <img src={currentRelationship.photo_url} alt='cover' /> 
@@ -95,7 +96,7 @@ class OneReview extends React.Component {
                             <h2> pronounced: {currentRelationship.pronounciation} </h2>
                             <hr />
                             <br />
-                            <h2> {reviewUser.name}'s review</h2>
+                            <Link to={`/friends/${reviewUser.id}`}><h2> {reviewUser.name}'s review</h2></Link>
                             <p>rating: {currentReview.rating}</p> 
                             {/* change this to a star rating with pictures of stars⭐ */}
                             <p>{currentReview.body} </p>
