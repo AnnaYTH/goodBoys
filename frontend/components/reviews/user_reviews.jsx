@@ -103,7 +103,7 @@ class UserReview extends React.Component {
                 <hr />
                 <br />
 
-                <div> {this.props.currentUser.name}'s following these buddies </div>
+                <div className='profile-subheader'> {this.props.currentUser.name}'s following these buddies </div>
 
                 <div className='user-buddies'>
                     {buddies}

@@ -13,7 +13,7 @@ const Header = () => {
 
             <Link to ="/relationships"> All Relationships </Link>
 
-            {/* <Link to="/friends"> All Users </Link> */}
+            <Link to="/friends"> All Users </Link>
             
             <SearchBar />
 
