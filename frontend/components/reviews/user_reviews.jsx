@@ -31,12 +31,7 @@ class UserReview extends React.Component {
 
     listBuddies() {
         const followArr = this.props.currentUser.followIds;
-        const allUsers = Object.values(Object.values(this.props.users));
-
-        // if(allUsers.length < 1){
-        //     return null; 
-        // }
-        debugger; 
+        const allUsers = Object.values(this.props.users);
         const buddyArr = []; 
         // followArr.forEach(userID => {
         //     allUsers.forEach(userObj => {
@@ -59,7 +54,6 @@ class UserReview extends React.Component {
                 }
             }
         }
-        debugger; 
         return buddyArr; 
     }
 
@@ -88,7 +82,7 @@ class UserReview extends React.Component {
         const buddies = this.listBuddies().map((buddy, idx) => {
             return (
                 <div className='userBuddy' key={`userBuddy-${idx}`}>
-                   <p> {buddy.name} </p>     
+                    <Link to={`/friends/${buddy.id}`}>{buddy.name}</Link>
                 </div>
             )
         }); 
@@ -111,7 +105,7 @@ class UserReview extends React.Component {
 
                 <div> {this.props.currentUser.name}'s following these buddies </div>
 
-                <div>
+                <div className='user-buddies'>
                     {buddies}
                 </div>
             </div>
