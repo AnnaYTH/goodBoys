@@ -8,6 +8,7 @@ import Header from '../header';
 import Footer from '../footer';
 // import { getRelationships } from '../../actions/relationship_actions'; 
 import ReactStars from "react-rating-stars-component";
+import { fetchUsers } from '../../actions/session_actions';
 
 const mSTP = (state, ownProps) => {
     return ({
@@ -16,6 +17,7 @@ const mSTP = (state, ownProps) => {
         currentUser: state.entities.users[state.session.id],
         currentReview: state.entities.reviews[ownProps.match.params.id], 
         relationships: state.entities.relationships, 
+        users: state.entities.users, 
     })
 }
 
@@ -24,6 +26,7 @@ const mDTP = dispatch => ({
     getReview: (id) => dispatch(getReview(id)),
     deleteReview: (id) => dispatch(deleteReview(id)), 
     getRelationships: () => dispatch(getRelationships()), 
+    fetchUsers: () => dispatch(fetchUsers()), 
 }); 
 
 class OneReview extends React.Component {
@@ -38,6 +41,7 @@ class OneReview extends React.Component {
         this.props.getReview(this.props.match.params.id); 
         
         this.props.getRelationships(); 
+        this.props.fetchUsers(); 
     }
 
     handleDelete(e) {
@@ -58,6 +62,12 @@ class OneReview extends React.Component {
             return null; 
         }
 
+        const reviewUser = this.props.users[currentReview.user_id]; 
+        if(!reviewUser) {
+            return null; 
+        }
+
+        const loggedUser = this.props.currentUser; 
 
         return (
             <div>
@@ -74,7 +84,7 @@ class OneReview extends React.Component {
 
                     <div className='review-bottom'>
                         <div className='review-left-col'> 
-                            <h1 className='review-header'> {this.props.currentUser.name}'s Reviews {'>'}  {currentRelationship.relationship_name}</h1>
+                            <h1 className='review-header'> {reviewUser.name}'s Reviews {'>'}  {currentRelationship.relationship_name}</h1>
 
                             <p className='ship_profile_image'> 
                                 <img src={currentRelationship.photo_url} alt='cover' /> 
@@ -85,7 +95,7 @@ class OneReview extends React.Component {
                             <h2> pronounced: {currentRelationship.pronounciation} </h2>
                             <hr />
                             <br />
-                            <h2> {this.props.currentUser.name}'s review</h2>
+                            <h2> {reviewUser.name}'s review</h2>
                             <p>rating: {currentReview.rating}</p> 
                             {/* change this to a star rating with pictures of stars⭐ */}
                             <p>{currentReview.body} </p>
@@ -98,7 +108,7 @@ class OneReview extends React.Component {
                             {/* <p>name: {currentReview.name}</p> */}
                         </div>
 
-                        <div className='review-options'>
+                        <div className={loggedUser.name === reviewUser.name ?'review-options' : 'review-options-hidden'}>
                             <p>{currentReview.created_at.split("T")[0]}</p>
                             · 
                             <Link to={`/reviews/${this.props.match.params.id}/edit`} className='review-options'>

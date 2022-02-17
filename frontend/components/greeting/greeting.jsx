@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout }) => {
   );
 
   const personalGreeting = () => {
-
+    // debugger;
     return (
     <hgroup className="profile-body">
       <Header/>
@@ -36,7 +36,7 @@ const Greeting = ({ currentUser, logout }) => {
         </Link>
 
         <hr />
-        <div> {currentUser.name.toUpperCase()}'s recent activity</div>
+        <div> {currentUser.name}'s recent activity</div>
         
         <UserReview/>
 

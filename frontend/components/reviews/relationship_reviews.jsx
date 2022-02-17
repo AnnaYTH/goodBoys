@@ -48,9 +48,10 @@ class RelationshipReview extends React.Component {
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
-                    <Link to={`/reviews/${review.id}`}> Review ID: {review.id}
-                    <p>relationship ID: {review.relationship_id}</p>
-                    <p>reviewer id: {review.user_id} </p>
+                    <Link to={`/reviews/${review.id}`}> 
+                    {/* <p>Review ID: {review.id}</p> */}
+                    {/* <p>relationship ID: {review.relationship_id}</p> */}
+                    {/* <p>reviewer id: {review.user_id} </p> */}
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.body} </p>
@@ -60,11 +61,6 @@ class RelationshipReview extends React.Component {
                 </div>
             )
         })
-
-        // if (!shipReviews) {
-        //     return null; 
-        // }
-        // this null is not doing anything, reviews still do not populate on the first render
 
         return (
             <div> 
