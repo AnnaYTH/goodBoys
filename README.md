@@ -49,6 +49,7 @@ export const addBuddy = (follow) => {
 };
 ```
 This is the first time I can remember passing back more than one argument to the backend, it took me so long to figure out I was not desconstructing the data I was passing back on my util file correctly.
+Users have a profile show page where the current User can follow them, then they will have a quick link on their profile to their friend and they can easily see if they've posted any reviews recently
 
 # Style <a name='style'></a>
 "Having fun isn't hard,
@@ -57,5 +58,6 @@ When you've got a library card."
 
 ![LibraryCard](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/library_card.jpg)
 
-Each relationships has can have multiple reviews from any user
+Each relationship has can have multiple reviews from any user! Users can view a relationship page so see what others have written, from here they can find users that they may want to follow. 
+
 ![Manager](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/manager_ss.jpg)
