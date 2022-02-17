@@ -87,7 +87,6 @@ class UserReview extends React.Component {
             )
         }); 
 
-        
 
         return (
             <div> 
@@ -97,7 +96,7 @@ class UserReview extends React.Component {
                 </div> */}
                 
                 <div>
-                    {userReviews}
+                    {userReviews.length < 1 ? 'You have not written any reviews yet!' : userReviews}
                 </div>
 
                 <hr />
@@ -106,7 +105,7 @@ class UserReview extends React.Component {
                 <div className='profile-subheader'> {this.props.currentUser.name}'s following these buddies </div>
 
                 <div className='user-buddies'>
-                    {buddies}
+                    {buddies.length < 1 ? 'You have not followed anyone yet!' : buddies}
                 </div>
             </div>
         )

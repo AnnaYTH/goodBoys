@@ -1,5 +1,61 @@
 .friend-body {
-    border: solid red 2px; 
     margin-left: 50px; 
     margin-right: 50px; 
+    font-family: 'Lato', sans-serif;
+}
+
+.friend_name {
+    margin-top: 50px; 
+    font-size: 28px; 
+}
+
+.friend-library-card {
+    border: solid 3px #c2e7df; 
+    width: 350px; 
+    height: 170px; 
+    margin-top: 40px; 
+    border-radius: 20px; 
+    padding: 20px; 
+    background-color: #519CC0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 10px 5px 5px #a29d97;
+    margin-bottom: 40px; 
+}
+
+.nypl-logo {
+    height: 120px; 
+    width: auto;
+}
+
+.nypl {
+    font-family: Lato;
+    font-size: 20px; 
+    line-height: 130%;
+    font-weight: 300; 
+}
+
+.nypl-bold {
+    font-family: Lato;
+    font-size: 20px; 
+    font-weight: 900; 
+    line-height: 150%;
+    margin-bottom: 5px; 
+}
+
+.friend-details {
+    font-size: 16px; 
+    line-height: 130%; 
+    font-weight: 400; 
+    font-family: Lato;
+}
+
+.friend_profile_meat {
+    margin: 40px 20px 20px 0px; 
+    min-height: 500px; 
+}
+
+.friend_profile_meat div {
+    line-height: 140%; 
 }

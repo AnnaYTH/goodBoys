@@ -82,7 +82,9 @@ class FriendProfile extends React.Component {
             <div>
                 <Header/>
 
-                <div className='profile-body'>
+                <div className='friend-body'>
+                    <h1 className='friend_name'> {buddy.name} </h1>
+                    <hr />
 
                     <div className='friend-library-card'>
                         <div className='friend-library-card-left'>
@@ -102,7 +104,7 @@ class FriendProfile extends React.Component {
                         </div>
                     </div>
 
-                    <div className='profile_meat'>
+                    <div className='friend_profile_meat'>
                         <hr />
                         <button className="logout_button" onClick={this.toggleFollow}> Follow </button>
                         <hr />

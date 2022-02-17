@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout }) => {
   );
 
   const personalGreeting = () => {
-    debugger;
+
     return (
     <hgroup className="profile-body">
       <Header/>
@@ -26,16 +26,36 @@ const Greeting = ({ currentUser, logout }) => {
         <h1 className='user_name'> {currentUser.name} </h1>
         <hr />
 
-        <div>Email:  {currentUser.email}</div>
+        <div className='friend-library-card'>
+          <div className='friend-library-card-left'>
+            <img className='nypl-logo' src={window.nypl_logo} alt="nypl-logo" />
+          </div>
+
+          {/* logo and colors taken from the NYPL github, thank you! */}
+
+          <div className='friend-library-card-right'>
+            <p className='nypl'> New York </p>
+            <p className='nypl'> Public </p>
+            <p className='nypl-bold'>   Relationships</p>
+            <p className='friend-details'> Name: {currentUser.name} </p>
+            <p className='friend-details'> Email: {currentUser.email} </p>
+            <p className='friend-details'> Member Since: {currentUser.created_at.split("T")[0]} </p>
+          </div>
+        </div>
+        <br />
+        <hr />
+
+        {/* <div>Email:  {currentUser.email}</div>
         <div>Activity: Joined goodBoys on {currentUser.created_at.split("T")[0]} </div>
 
-        <hr />
+        <hr /> */}
 
         <Link to='/'>
           <button className="logout_button" onClick={logout}>Log Out</button>
         </Link>
 
         <hr />
+
         <div className='profile-subheader'> {currentUser.name}'s recent activity</div>
         
         <UserReview/>

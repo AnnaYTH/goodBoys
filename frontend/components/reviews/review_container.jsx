@@ -7,7 +7,7 @@ import { fetchUsers } from '../../actions/session_actions';
 
 
 const mSTP = (state) => {
-
+    
     return ({
         reviews: state.entities.reviews,
         // relationships: state.entities.relationships, 

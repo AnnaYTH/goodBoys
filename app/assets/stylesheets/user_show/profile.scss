@@ -9,6 +9,7 @@
 
 .profile_meat {
     margin: 40px 20px 20px 60px; 
+    min-height: 500px; 
 }
 
 .profile_meat div {
@@ -16,7 +17,7 @@
 }
 
 .user_name {
-    font-size: 20px; 
+    font-size: 28px; 
 }   
 
 .logout_button {
@@ -32,47 +33,4 @@
 
 .profile-subheader {
     font-size: 16px; 
-}
-
-
-// friend_profile
-.friend-library-card {
-    border: solid 3px #c2e7df; 
-    margin-left: 50px; 
-    width: 350px; 
-    height: 170px; 
-    margin-top: 40px; 
-    border-radius: 20px; 
-    padding: 20px; 
-    background-color: #519CC0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 10px 5px 5px #a29d97;
-}
-
-.nypl-logo {
-    height: 120px; 
-    width: auto;
-}
-
-.nypl {
-    font-family: Lato;
-    font-size: 20px; 
-    line-height: 130%;
-    font-weight: 300; 
-}
-
-.nypl-bold {
-    font-family: Lato;
-    font-size: 20px; 
-    font-weight: 900; 
-    line-height: 150%;
-    margin-bottom: 5px; 
-}
-
-.friend-details {
-    font-size: 16px; 
-    line-height: 130%; 
-    font-weight: 400; 
 }
