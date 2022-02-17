@@ -16,7 +16,7 @@
 .header-logo {
     height: 60px; 
     display: flex; 
-    margin-left: 10vw; 
+    margin-left: 50px; 
 }
 
 .left-col {
@@ -35,7 +35,7 @@
     justify-content: space-between;
     background-color: rgb(50,54,45); 
     height: 300px; 
-    margin-left: 10vw; 
+    margin-left: 50px; 
 }
 
 .horizontal-background {
@@ -109,18 +109,22 @@
     flex-wrap: wrap;
     flex-direction: row;
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 14px; 
     height: 150px; 
-    padding: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     line-height: 18px; 
-    margin-left: 7vw; 
-    min-height: 15vw
+
+    margin-right: 100px; 
+    min-height: 15vw;
+    margin-left: 60px; 
 }
 
 .next-friend {
     width: 300px; 
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
 }
 
 .next-friend-head {
@@ -131,7 +135,8 @@
 
 .friends-friending {
     width: 300px; 
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
 }
 
 .friends-friending-head {

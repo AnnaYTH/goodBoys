@@ -34,29 +34,51 @@ class AllReviews extends React.Component {
         const allReviews = reviewArr.map((review, idx) => {
             return (
                 <div className='allReviews' key={`allReviews-${idx}`}>
-                    <Link to={`/reviews/${review.id}`}> Review ID: {review.id}
-                    </Link>
-                    <p>relationship ID: {review.relationship_id}</p>
-                    <Link to={`/friends/${review.user_id}`}>
+                    <Link to={`/reviews/${review.id}`}> 
+                    {/* Review ID: {review.id} */}
+                    {/* <p>relationship ID: {review.relationship_id}</p> */}
+                    {/* <Link to={`/friends/${review.user_id}`}>
                         <p>user ID: {review.user_id}</p>
-                    </Link>
+                    </Link> */}
                     <p>name: {review.name}</p>
                     <p>rating: {review.rating}</p>
                     <p>review: {review.body} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
-                    {/* <hr /> */}
+                    <br />
+                    <br />
+                    <hr />
+                    </Link>
                 </div>
             )
+        })
+
+        const recentReviews = reviewArr.map((review, idx) => {
+            if(idx >= (reviewArr.length - 10) ) {
+                return (
+                    <div className='allReviews' key={`allReviews-${idx}`}>
+                    <Link to={`/reviews/${review.id}`}> 
+                    <p>name: {review.name}</p>
+                    <p>rating: {review.rating}</p>
+                    <p>review: {review.body} </p>
+                    <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                    <br />
+                    <br />
+                    <hr />
+                    </Link>
+                </div>
+                )
+            }
         })
 
 
         return (
             <div>
                 <Header />
-                
-                <h2  className='title_head'>All Reviews</h2>
-                <div>
-                    {allReviews}
+                <div className='recent-review-body'>
+                    <h2 className='title_head'>Recent Reviews</h2>
+                    <div>
+                        {recentReviews}
+                    </div>
                 </div>
 
                 <Footer />

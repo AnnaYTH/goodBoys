@@ -50,9 +50,8 @@ class RelationshipReview extends React.Component {
 
     render() {
         const usersArr = Object.values(this.props.users)
-        // this is when I insert loop to track by user_id from the array
+        // this is when I insert loop to track by user_id from the array - eventually, codeFairies, if you're listening, feel free to chime in
 
-        debugger; 
         const shipReviews = this.state.shipReview.map((review, idx) => {
             return (
                 <div className='shipReview' key={`shipReview-${idx}`}>
@@ -73,6 +72,7 @@ class RelationshipReview extends React.Component {
                     <p>review: {review.body} </p>
                     <p>date reviewed: {review.created_at.split("T")[0]}</p>
                     </Link>
+                    <br />
                     <hr />
                 </div>
             )

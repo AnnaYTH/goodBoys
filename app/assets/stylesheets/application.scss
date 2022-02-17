@@ -24,7 +24,7 @@
 @import"./login.scss"; 
 @import"./relationships/relationship.scss"; 
 @import"./relationships/ship.scss"; 
-@import"./profile.scss"; 
+@import"./user_show/profile.scss"; 
 @import"./reviews/user_reviews.scss";
 @import"./reviews/all_reviews.scss"; 
 @import"./reviews/create_review.scss"; 
@@ -32,3 +32,4 @@
 @import"./relationships/friend.scss"; 
 @import"./search.scss"; 
 @import"./reviews/ship_review.scss"; 
+@import"./user_show/friend.scss"; 

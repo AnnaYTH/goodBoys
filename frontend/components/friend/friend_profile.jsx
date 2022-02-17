@@ -62,16 +62,32 @@ class FriendProfile extends React.Component {
             return null; 
         }
 
+        const friendReviews = this.props.reviews.map((review, idx) => {
+            if(ownProps.match.params.id === review.reviewer_id) {
+                return (
+                    <Link to={`reviews/${review.id}`}>
+                        <p>name: {review.name}</p>
+                        <p>rating: {review.rating}</p>
+                        <p>review: {review.body} </p>
+                        <p>date reviewed: {review.created_at.split("T")[0]}</p>
+                    </Link>
+                )
+            }
+        })
+
         return (
             <div>
                 <Header/>
 
-                <p> Name: {buddy.name} </p>
-                <p> Email: {buddy.email} </p>
-                <p> Member Since: {buddy.created_at.split("T")[0]} </p>
-                {/* Eventually I can add all the reviews that this one user wrote */}
+                <div className='friend-body'>
 
-                <button onClick={this.toggleFollow}> Follow </button>
+                    <p> Name: {buddy.name} </p>
+                    <p> Email: {buddy.email} </p>
+                    <p> Member Since: {buddy.created_at.split("T")[0]} </p>
+
+                    <button onClick={this.toggleFollow}> Follow </button>
+
+                </div>
 
                 <Footer/>
             </div>
