@@ -58,6 +58,6 @@ When you've got a library card."
 
 ![LibraryCard](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/library_card.jpg)
 
-Each relationship has can have multiple reviews from any user! Users can view a relationship page so see what others have written, from here they can find users that they may want to follow. 
+Each relationship can have multiple reviews from any user! Users can view a relationship page to see what others have written, from here they can find users that they may want to follow. 
 
 ![Manager](https://github.com/AnnaYTH/goodBoys/blob/main/app/assets/images/manager_ss.jpg)
