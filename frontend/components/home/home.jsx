@@ -20,9 +20,33 @@ const mSTP = (state, ownProps) => {
     })
 }
 
-const mapDispatchToProps = dispatch => ({
+const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
     getRelationships: () => dispatch(getRelationships()), 
     fetchUsers: () => dispatch(fetchUsers()), 
     followBuddy: (object) => dispatch(followBuddy(object)), 
 });
+
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+
+    componentDidMount(){
+        this.props.fetchUsers(); 
+        this.props.getRelationships(); 
+        this.props.getReviews(); 
+    }
+
+    render() {
+
+        return (
+            <div>
+                Home Component
+            </div>
+        )
+    }
+}
+
+export default connect(mSTP, mDTP)(Home); 
