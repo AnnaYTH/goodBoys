@@ -11,7 +11,6 @@ import Header from '../header';
 import { followBuddy, unfollowBuddy } from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => {
-
     return ({
         currentUser: state.entities.users[state.session.id],
         users: state.entities.users, 
