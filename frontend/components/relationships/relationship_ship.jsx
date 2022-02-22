@@ -5,7 +5,6 @@ import Header from '../header';
 import RelationshipReview from '../reviews/relationship_reviews';
 import { getRelationship, getRelationships } from '../../actions/relationship_actions';
 import { connect } from 'react-redux'; 
-import { getReviews } from '../../util/reviews_api_util';
 
 
 const mSTP = (state, ownProps) => {

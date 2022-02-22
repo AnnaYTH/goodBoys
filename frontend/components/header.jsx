@@ -7,7 +7,7 @@ const Header = () => {
         <div className='header'> 
             <img src={window.gdby_logo} alt='logo' />
 
-            <Link to ="/relationships"> Home </Link>
+            <Link to ="/home"> Home </Link>
 
             <Link to='/reviews'> Recent Reviews </Link>
 

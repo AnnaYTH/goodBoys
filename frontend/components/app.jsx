@@ -24,6 +24,8 @@ import EditReview from './reviews/edit_review';
 import AllFriends from './friend/friend_all'; 
 import FriendProfile from './friend/friend_profile'; 
 
+import Home from "./home/home"; 
+
 const App = () => (
   <div>
     {/* <header>
@@ -46,6 +48,8 @@ const App = () => (
 
       <ProtectedRoute exact path="/friends" component={AllFriends} />
       <ProtectedRoute exact path="/friends/:id" component={FriendProfile} />
+      
+      <ProtectedRoute exact path="/home" component={Home} />
       
       <AuthRoute exact path= "/" component={Splash}/>
     </Switch>
