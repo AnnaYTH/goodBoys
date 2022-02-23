@@ -24,7 +24,7 @@ const mDTP = dispatch => ({
     getReviews: () => dispatch(getReviews()),
     getRelationships: () => dispatch(getRelationships()), 
     fetchUsers: () => dispatch(fetchUsers()), 
-    followBuddy: (object) => dispatch(followBuddy(object)), 
+    // followBuddy: (object) => dispatch(followBuddy(object)), 
 });
 
 class Home extends React.Component {
@@ -41,9 +41,19 @@ class Home extends React.Component {
 
     render() {
 
+        const buddy = this.props.userProfile; 
+        if(!buddy) {
+            return null; 
+        } 
+
         return (
-            <div>
+            <div className='main-body'>
+                <Header />
+
+
                 Home Component
+
+                <Footer />
             </div>
         )
     }
